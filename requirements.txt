@@ -1,0 +1,27 @@
+# Core dependencies
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+pydantic==2.10.3
+python-multipart==0.0.19
+
+# Agent framework & LangChain ecosystem
+deepagents==0.2.4
+
+# LangChain stack (compatible versions)
+langchain>=1.0.2,<2.0.0
+langchain-core>=1.0.0,<2.0.0
+langchain-community>=1.0.0,<2.0.0
+langgraph>=1.0.0,<1.1.0
+
+# Free web search
+duckduckgo-search==7.1.0
+
+# Additional LLM provider modules
+langchain-anthropic>=1.0.0,<2.0.0
+langchain-openai>=0.3.0
+langchain-ollama>=0.2.2
+langchain-google-genai>=2.0.8,<3.0.0
+
+# Utilities
+python-dotenv==1.0.1
+aiofiles==24.1.0
