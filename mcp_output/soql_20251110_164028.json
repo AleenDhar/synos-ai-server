@@ -1,0 +1,52 @@
+[
+  {
+    "attributes": {
+      "type": "Event",
+      "url": "/services/data/v59.0/sobjects/Event/00UP700000TrfacMAB"
+    },
+    "Id": "00UP700000TrfacMAB",
+    "Subject": "Quick Sync x Zycus",
+    "Description": "-- Avoma Note Start --\n Avoma - : Quick Sync x Zycus <> October 01, 2025 at 11:30 AM UTC\n Avoma Meeting: https://app.avoma.com/meetings/95a8cc89-b173-4e74-8e27-f9bd25b2decc/notes\n## Participants\n\n  * Zycus: Ria Shrivastava, Dan Quinn\n\n  * Humain: Majid Abdulelah\n\n## Key Takeaways\n\n  * Procurement focus shifted from HR to procurement; exploring white-label capabilities for a ChatGPT-like interface integrated in enterprise UI.\n  * Strong requirement for automated supplier onboarding with API-based validation of CR, tax IDs and trade licenses per Saudi regulations to prevent fake companies.\n  * Aim to implement a fully automated vendor onboarding process with prepopulated data, AI-driven extraction from VAT certificates, and staged due diligence.\n  * Plan to compile security and architecture requirements into a simple Excel matrix (yes/no plus descriptions) and share internally within this week.\n  * Acknowledged urgency due to PIF-funded startup status, audit compliance gaps and pending budget approvals necessitating rapid solution deployment.\n\n## Action Items\n\n  * Majid Abdulelah\n\n    * Hold an internal meeting with the security team to gather their vendor validation requirements and send Zycus an Excel sheet table of yes/no answers with descriptions\n  * Dan Quinn\n\n    * Send Majid an invite with details for the AI in procurement networking lunch at the Riyadh Hilton on Thursday\n\n## White Labeling & UI Customization\n\n  * Majid inquired about white label capabilities to customize platform branding.\n  * Dan confirmed support for custom logos, color schemes, and SSO integration.\n  * Majid emphasized need for a ChatGPT-style UI with integrated procurement \u2018buy\u2019 functionality.\n\n## AI Chatbot Integration for Procurement\n\n  * Majid outlined approval flow: line-manager approvals followed by procurement manager decision.\n  * Majid described user interaction: typing a purchase request triggers automated PR initiation.\n  * Dan confirmed availability via Microsoft Teams bot or web interface trained on organizational policies.\n\n## Procurement Compliance Requirements\n\n  * Validation required for CR, commercial registration, tax, VAT, CAT and other Saudi government procurement details\n  * Strict verification needed to prevent fake companies entering system using random numbers\n\n## Vendor Onboarding Data Requirements\n\n  * Majid asked how Zycus retrieves and validates Saudi vendor data like CR, tax and VAT.\n  * Majid stressed compliance risk if fake companies register with random numbers.\n  * Majid requested details on automated vs. manual data entry in onboarding flow.\n\n## Security & Compliance Validation\n\n  * Majid raised concern over vendors submitting false data and its impact on compliance.\n  * Majid sought clarification on security measures to prevent unauthorized or counterfeit supplier entries.\n  * Majid asked what due diligence Zycus applies to vendor registrations, including existing suppliers.\n\n## Integration with Validation Authorities\n\n  * Plan to integrate via APIs with local authorities for real-time trade license and personal ID validation\n\n## Regional Deployment & Existing Clients\n\n  * Majid inquired about Zycus\u2019s current client presence in Saudi Arabia.\n  * Dan highlighted Majid Al Fatim Abdul Latif Jamil and upcoming CBRE go-live.\n  * Dan noted recent investments in local hosting for KSA and UAE to accelerate regional growth.\n\n## Automated Supplier Onboarding Process\n\n  * Majid requested a simplified, fully automated end-vendor onboarding process for Abdul Latif Jamil.\n  * Majid asked about time required for a company to self-register with AI-driven prepopulation.\n  * Majid confirmed interest in prepopulated profiles via OCR and AI extraction of supplier documents.\n\n## Automation of Vendor Onboarding\n\n  * CEO mandate: simplify and fully automate end-to-end vendor onboarding process\n\n## AI Assistance in Bid Proposal Process\n\n  * AI will auto-generate technical questionnaires, score supplier responses with weighted criteria, and log any SME overrides in the audit trail\n\n## Audit Challenges & Investment Urgency\n\n  * Majid reported manual procurement tasks causing major audit flags and organizational chaos.\n  * Majid highlighted PIF-backed startup status and upcoming $10,000,000,000 Amazon investment.\n  * Majid emphasized need for rapid implementation pending final budget and resource approval.\n\n## Follow-up Meeting\n\n  * Majid mentioned the possibility of being pulled away for a meeting in Kuwait on Wednesday but intends to be in Riyadh that Wednesday as well and agrees to plan to share details and confirm attendance for the Thursday event.\n  * Dan Quinn mentioned he will be in Riyadh next Wednesday and Thursday (relative to the meeting date 2025-10-01) and invited Majid to a networking lunch at the Riyadh Hilton on Thursday from about 12 to 3 PM with an offer to meet face to face on Wednesday as well.\n\n \n-- Avoma Note End --",
+    "ActivityDate": "2025-10-01",
+    "Who": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Contact/003P700000UjdvDIAR"
+      },
+      "Name": "Majid Abdulelah"
+    },
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000O0NMzIAN"
+      },
+      "Name": "Humain_S2P"
+    },
+    "CreatedDate": "2025-10-01T12:17:47.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Event",
+      "url": "/services/data/v59.0/sobjects/Event/00UP700000TqEuKMAV"
+    },
+    "Id": "00UP700000TqEuKMAV",
+    "Subject": "Quick Sync x Zycus",
+    "Description": "-- Avoma Note Start --\n Avoma - : Quick Sync x Zycus <> October 01, 2025 at 6:00 AM UTC\n Avoma Meeting: https://app.avoma.com/meetings/e6820017-a406-4922-8650-68402beb8fe9/notes\n## Participants\n\n  * Zycus: Ria Shrivastava, Dan Quinn\n\n  * Humain: Majid Abdulelah\n\n## Key Takeaways\n\n  * Dan aims to qualify this opportunity as real before scheduling an in-person meeting in Riyadh on Wednesday or Thursday next week.\n  * Meeting with Majid was rescheduled to 2:30 local time, equating to 1:30 PM Dan\u2019s time for a 15\u201320 minute discussion.\n  * Availability windows were identified as 11:00\u201312:00 and after 15:00 Dan\u2019s time, with a request to avoid back-to-back bookings.\n  * Encouragingly, Majid entered the meeting already considering Zycus\u2019s procurement solution, signaling genuine interest in the project.\n  * Next step involves waiting for Majid\u2019s CEO update and offering alternative time slots if no response is received within a few hours.\n\n## Action Items\n\n  * Ria Shrivastava\n\n    * Suggest meeting slots (today or tomorrow) once Majid responds, based on her calendar availability.\n    * Call Majid in a few hours if no update is received to nudge for meeting time options.\n  * Dan Quinn\n\n    * Prepare for a potential in-person meeting with Majid in Riyadh next Wednesday or Thursday morning if the opportunity qualifies.\n    * Review personal diary to avoid back-to-back meetings when scheduling the follow-up call.\n    * If Majid does not respond, follow up with him and propose a couple of time options for the rescheduled meeting.\n  * Majid Abdulelah\n\n    * Speak with CEO to gather procurement details and then propose a new meeting time slot (e.g., 2:30) to Zycus.\n\n## Opportunity Qualification and Project Update\n\n  * Plan to gather further insight to decide whether to qualify the opportunity after Majid\u2019s update.\n  * Majid will discuss procurement details with the CEO and provide project scope and status updates before reconvening.\n  * Uncertainty on whether the opportunity can be qualified for this quarter or needs to roll into the last quarter.\n  * Majid approached the discussion with Zycus in mind, indicating existing interest in Zycus\u2019s solution.\n\n## Travel and Availability\n\n  * Trip schedule may swap Wednesday for a Kuwait visit, though Thursday remains tentatively available pending final confirmation.\n  * Dan Quinn will be in Riyadh next Wednesday and Thursday with some free time in the morning and afternoon.\n  * Current day availability: free until 11:00 his time (12:00 my), open from 12:00 to 13:00 his time (02:00 my), busy 13:00\u201314:00 his time, then free after 15:00 my time.\n\n## Meeting Reschedule with CEO\n\n  * Majid requests moving the meeting to 14:30 local time as he is about to meet the CEO and needs to discuss procurement details.\n  * Offers flexibility to meet slightly earlier or later if required and expresses willingness to fit additional time options.\n  * Dan confirms 14:30 local equates to 13:30 his time and he can allocate 15\u201320 minutes before his 14:00 call.\n\n## Meeting Rescheduling\n\n  * Meeting moved to 14:30 Majid time, 13:30 Dan time\n  * Timing is flexible with options to schedule earlier or later slots\n  * Call duration limited to 15\u201320 minutes due to Dan's 14:00 call\n\n## Follow-up and Communication Strategy\n\n  * Ria to monitor the calendar and propose alternate slots for continuation if today's schedule becomes unfeasible.\n  * Dan advises avoiding back-to-back scheduling and plans to defer prep until Majid's update arrives.\n  * Agree to reach out with alternative time options if Majid cannot confirm the proposed 14:30 slot.\n  * Team to wait for Majid\u2019s follow-up post-CEO meeting; Ria to call him in a few hours if no response arrives.\n\n## Post-Meeting Strategies\n\n  * Allow Majid to meet CEO first and await update before proposing next steps\n  * If no response in a few hours, Ria to call and send a general nudge\n\n \n-- Avoma Note End --",
+    "ActivityDate": "2025-10-01",
+    "Who": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Contact/003P700000UjdvDIAR"
+      },
+      "Name": "Majid Abdulelah"
+    },
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000O0NMzIAN"
+      },
+      "Name": "Humain_S2P"
+    },
+    "CreatedDate": "2025-10-01T06:20:56.000+0000"
+  }
+]

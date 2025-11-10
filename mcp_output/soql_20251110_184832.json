@@ -1,0 +1,534 @@
+[
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000bT4HqMAK"
+    },
+    "Id": "00TP700000bT4HqMAK",
+    "Subject": "Sharing quick reads with GM specific to Cost savings amindst corporate re-structuring",
+    "Description": "Sharing materials specific to cost savings",
+    "ActivityDate": "2025-11-03",
+    "Status": "Planned",
+    "WhoId": "0030O000021OsfyQAC",
+    "Who": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Contact/0030O000021OsfyQAC"
+      },
+      "Name": "Louisa Cotter"
+    },
+    "WhatId": "006P700000LwrZJIAZ",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000LwrZJIAZ"
+      },
+      "Name": "PerthAirport_S2P_2025"
+    },
+    "CreatedDate": "2025-10-30T08:23:13.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000bTSZxMAO"
+    },
+    "Id": "00TP700000bTSZxMAO",
+    "Subject": "Extending Invitation to prospect for PLan Sydney Event",
+    "Description": "PLan invitation: preferably the on-ground one",
+    "ActivityDate": "2025-10-30",
+    "Status": "Planned",
+    "WhoId": "0030O000021OsfyQAC",
+    "Who": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Contact/0030O000021OsfyQAC"
+      },
+      "Name": "Louisa Cotter"
+    },
+    "WhatId": "006P700000LwrZJIAZ",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000LwrZJIAZ"
+      },
+      "Name": "PerthAirport_S2P_2025"
+    },
+    "CreatedDate": "2025-10-30T08:24:29.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000aDLMuMAO"
+    },
+    "Id": "00TP700000aDLMuMAO",
+    "Subject": "[Outreach] [Call] [outbound] [Conversation - Neutral] Outbound call to Louisa Cotter [Neutral Update]",
+    "Description": "Spoke to Louisa Cotter (CPO): they are having some internal processes that needs their immediate attention. She will give us a call once it gets resolved and will take the conversation forward.",
+    "ActivityDate": "2025-10-14",
+    "Status": "Completed",
+    "WhoId": "0030O000021OsfyQAC",
+    "Who": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Contact/0030O000021OsfyQAC"
+      },
+      "Name": "Louisa Cotter"
+    },
+    "WhatId": "006P700000LwrZJIAZ",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000LwrZJIAZ"
+      },
+      "Name": "PerthAirport_S2P_2025"
+    },
+    "CreatedDate": "2025-10-14T06:45:25.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000Zzmv6MAB"
+    },
+    "Id": "00TP700000Zzmv6MAB",
+    "Subject": "[Clari - Email Sent] Intro to Adam Hasan - Zycus Regional Sales Director for WA",
+    "Description": "Hi Louisa,\nI hope you're well.I just wanted to introduce you to your new point of contact at Zycus, Adam Hasan, who will be taking care of Western Australian organisations and government bodies.\nAdam is across the conversations we have had thus far so he can pick up where we left off.He'll reach out shortly to introduce himself and see if there is anything he can help with.In the meantime, please see below his details for your reference.\nAdam HasanSales Director - ANZ+61 420 434 343adam.hasan@zycus.comLinkedIn Profile\nWishing you all the best.\nLuke Dougherty\nRegional Sales Director @ Zycus\n+61 411 220 880",
+    "ActivityDate": "2025-10-10",
+    "Status": "Completed",
+    "WhoId": "0030O000021OsfyQAC",
+    "Who": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Contact/0030O000021OsfyQAC"
+      },
+      "Name": "Louisa Cotter"
+    },
+    "WhatId": "006P700000LwrZJIAZ",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000LwrZJIAZ"
+      },
+      "Name": "PerthAirport_S2P_2025"
+    },
+    "CreatedDate": "2025-10-10T05:40:03.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000ZmcDMMAZ"
+    },
+    "Id": "00TP700000ZmcDMMAZ",
+    "Subject": "[Outreach] [Email] [Out] Zycus Named Customers\u2019 Choice in Gartner Peer Insights for Source-to-Pay Suites",
+    "Description": "From: \"Adwaita Bhaduri\" <adwaita.bhaduri@Zycus.AI>\r\nTo: \"Pablo Alcorta\" <pablo.alcorta@perthairport.com.au>\r\n\r\nGreetings Pablo,\r\n\r\nHope you're doing well!\r\n\r\nZycus, a Gartner-ranked Source-to-Pay automation leader, helps organizations like Insignia Financials, Victoria\u2019s Department of Treasury & Finance, Nissan, and H&M streamline procurement, reduce friction, and manage supplier risk.\r\n\r\nI\u2019m excited to share that Zycus has been named a Customers\u2019 Choice in the 2025 Gartner Peer Insights \u201cVoice of the Customer\u201d for Source-to-Pay Suites, based entirely on client feedback.\r\n\r\nZycus Named Customers' Choice in 2025 Gartner Peer Insights\r\n\r\n\r\nFeel free to reach out if you\u2019d like more information or something interesting to read.\r\n\r\n\r\nKind Regards, \r\nAdwaita 'Addy' Bhaduri\r\nBusiness Development | APAC \r\nZYCUS:Gartner, and Forrester Ranked Leader: Source-to-Pay",
+    "ActivityDate": "2025-10-06",
+    "Status": "Completed",
+    "WhoId": "003P700000HtnuNIAR",
+    "Who": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Contact/003P700000HtnuNIAR"
+      },
+      "Name": "Pablo Alcorta"
+    },
+    "WhatId": "006P700000LwrZJIAZ",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000LwrZJIAZ"
+      },
+      "Name": "PerthAirport_S2P_2025"
+    },
+    "CreatedDate": "2025-10-06T07:27:08.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000Y3rniMAB"
+    },
+    "Id": "00TP700000Y3rniMAB",
+    "Subject": "[Clari - Email Sent] Re: Procurement Tech - Perth AP & Zycus",
+    "Description": "Hi Louisa,\nThanks for sending this detail through, it helps us design a focused demo for Perth Airport.What are your thoughts on in person or via Teams?We can do via Teams sometime in the next week or in person, we can do sometime the week of the 22ndSeptember if that suits ?\n\nbest regards,\nLuke Dougherty\nRegional Sales Director @ Zycus\n+61 411 220 880\n\n\nFrom: Louisa Cotter <Louisa.Cotter@perthairport.com.au>\nSent: Wednesday, August 27, 2025 4:34 PM\nTo: Luke Dougherty <luke.dougherty@zycus.com>\nSubject: RE: Procurement Tech - Perth AP & Zycus Many thanks Luke\nHere are some information on some of the painpoints and challenges \nThe pain points for us at the moment is the multiple approvals and we need a transparent process which also controls governance\nProcurement Plan approval through TeamsAssessment Summary Report approval through TeamsApproval Workflow through Tech OneContract Execution through DocusignRaising PO is through TechOne\nWe are looking for efficiencies and how we conduct our process the very high level activity is provided belowAI desk that takes you through process, derived from Procurement Policy or processProcurement RequestProcurement Plan & ApprovalChoice use of Precedent Contracts(note we have triggers in the back end which will trigger which the relevant contract template)Rfx, including choosing suppliers, issuing rfx to suppliers and where it gets stored,Rfx assessment category weighting & assessorsRfx Assessment by the assessors and consensus & final resultsRecommendation for Award Summary & ApprovalLegal departures and reviewsContract executionInsurances andPurchase OrderReportingFinancial Assessment DocuSign integrationContract Management functionality, score card, including WHSDelegation or Authority, i.e we have the same person with different delegations (i.e budgeted and unbudgeted, can this be captured)\nLouisa Cotter \nGeneral Manager Procurement\n\n\n\nLevel 2, 2 George Wiencke Drive (Opposite T3 & T4), Perth Airport WA 6105\nPO Box 6, Cloverdale WA 6985 \nT (08) 6278 8317 M 0400 926 017 \nwww.perthairport.com.au\nJoin Our Talent Community\n\nFrom: Luke Dougherty <luke.dougherty@zycus.com> \nSent: Friday, 22 August 2025 9:04 AM\nTo: Louisa Cotter <Louisa.Cotter@perthairport.com.au>\nSubject: Re: Procurement Tech - Perth AP & Zycus\n** Perth Airport Security WARNING:This email originated from outside of the organisation - Do not click links or open attachments unless you recognise the sender and know the content is safe **\nHi Louisa,\nIt was good to meet you in person yesterday.\nBased on our conversation, it sounds like Zycus can provide a compelling option to Perth Airport, so I would be interested to learn more about your requirements and then respond with a personalised live demo to you and your colleagues, executing these requirements and test cases in Zycus.\nAttached are a few links I believe you will find interesting:\nSmarter & Easier Source to Pay\nIntelligent Contract Management\nUnified Supplier Management\nSimplified & Compliant Procurement powered by Microsoft Teams\nIf you can send me some requirements details and a suggestion of when you would like an in-person presentation,\nwe will get to work on it.\nAny questions, please contact me.\nSafe travels home.\nbest regards,\nLuke Dougherty\nRegional Sales Director @ Zycus\n+61 411 220 880\nFrom:Louisa Cotter <Louisa.Cotter@perthairport.com.au>\nSent:Wednesday, August 20, 2025 5:10 AM\nTo:Luke Dougherty <luke.dougherty@zycus.com>\nSubject:Re: Procurement Tech - Perth AP & Zycus \nHi Luke\nI am still good for Thursday 10am as per your calendar invite and we can meet at the Sofitel lobby if this good for you.\nRegards\nLouisaLouisa Cotter\nGeneral Manager Procurement\n\n\n\nLevel 2, 2 George Wiencke Drive (Opposite T3 & T4), Perth Airport WA 6105\nPO Box 6, Cloverdale WA 6985\nT(08) 6278 8317 M 0400 926 017\nwww.perthairport.com.au\nJoin Our Talent Community\n\n\nIMPORTANT MESSAGE FROM PERTH AIRPORT PTY LTD This email is confidential. If you are not the intended recipient you must not disclose or use the information contained in it. If you have received this email in error please notify us immediately by return email and delete the document. Perth Airport is not responsible for any changes made to a document other than those made by Perth Airport or for the effect of the changes on the document's meaning. Perth Airport accepts no liability for any damage caused by this email or its attachments due to viruses interference interception corruption or unauthorised access.\nOn 19 Aug 2025, at 2:49\u202fpm, Luke Dougherty <luke.dougherty@zycus.com> wrote:",
+    "ActivityDate": "2025-09-01",
+    "Status": "Completed",
+    "WhoId": "0030O000021OsfyQAC",
+    "Who": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Contact/0030O000021OsfyQAC"
+      },
+      "Name": "Louisa Cotter"
+    },
+    "WhatId": "006P700000LwrZJIAZ",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000LwrZJIAZ"
+      },
+      "Name": "PerthAirport_S2P_2025"
+    },
+    "CreatedDate": "2025-09-01T08:41:49.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000XprfGMAR"
+    },
+    "Id": "00TP700000XprfGMAR",
+    "Subject": "[Clari - Email Received] RE: Procurement Tech - Perth AP & Zycus",
+    "Description": "Many thanks Luke\nLouisa Cotter \nGeneral Manager Procurement\n\n\n\nLevel 2, 2 George Wiencke Drive (Opposite T3 & T4), Perth Airport WA 6105\nPO Box 6, Cloverdale WA 6985 \nT (08) 6278 8317 M 0400 926 017 \nwww.perthairport.com.au\nJoin Our Talent Community\n\nFrom: Luke Dougherty <luke.dougherty@zycus.com> \nSent: Wednesday, 27 August 2025 4:37 PM\nTo: Louisa Cotter <Louisa.Cotter@perthairport.com.au>\nSubject: Re: Procurement Tech - Perth AP & Zycus\n** Perth Airport Security WARNING:This email originated from outside of the organisation - Do not click links or open attachments unless you recognise the sender and know the content is safe **\nHi Louisa,Thanks for sending through the requirements plus the challenges and pain points you need to resolve.I\u2019ve shared this information with the Solutions Team and will come back to you tomorrow with some suggested dates.\nbest regards\nLuke Dougherty\nRegional Director @ Zycus\nFrom: Louisa Cotter <Louisa.Cotter@perthairport.com.au>\nSent: Wednesday, August 27, 2025 6:28:38 PM\nTo: Luke Dougherty <luke.dougherty@zycus.com>\nSubject: RE: Procurement Tech - Perth AP & Zycus \nHi Luke\nWe hope to try and get the demo as soon as possible please\nRegards\nLouisa\nLouisa Cotter \nGeneral Manager Procurement\n\n\n\nLevel 2, 2 George Wiencke Drive (Opposite T3 & T4), Perth Airport WA 6105\nPO Box 6, Cloverdale WA 6985 \nT (08) 6278 8317 M 0400 926 017 \nwww.perthairport.com.au\nJoin Our Talent Community\n\nFrom: Louisa Cotter <Louisa.Cotter@perthairport.com.au> \nSent: Wednesday, 27 August 2025 2:35 PM\nTo: Luke Dougherty <luke.dougherty@zycus.com>\nSubject: RE: Procurement Tech - Perth AP & Zycus\nMany thanks Luke\nHere are some information on some of the painpoints and challenges \nThe pain points for us at the moment is the multiple approvals and we need a transparent process which also controls governance\nProcurement Plan approval through TeamsAssessment Summary Report approval through TeamsApproval Workflow through Tech OneContract Execution through DocusignRaising PO is through TechOne\nWe are looking for efficiencies and how we conduct our process the very high level activity is provided belowAI desk that takes you through process, derived from Procurement Policy or processProcurement RequestProcurement Plan & ApprovalChoice use of Precedent Contracts(note we have triggers in the back end which will trigger which the relevant contract template)Rfx, including choosing suppliers, issuing rfx to suppliers and where it gets stored,Rfx assessment category weighting & assessorsRfx Assessment by the assessors and consensus & final resultsRecommendation for Award Summary & ApprovalLegal departures and reviewsContract executionInsurances andPurchase OrderReportingFinancial Assessment DocuSign integrationContract Management functionality, score card, including WHSDelegation or Authority, i.e we have the same person with different delegations (i.e budgeted and unbudgeted, can this be captured)\nLouisa Cotter \nGeneral Manager Procurement\n\n\n\nLevel 2, 2 George Wiencke Drive (Opposite T3 & T4), Perth Airport WA 6105\nPO Box 6, Cloverdale WA 6985 \nT (08) 6278 8317 M 0400 926 017 \nwww.perthairport.com.au\nJoin Our Talent Community\n\nFrom: Luke Dougherty <luke.dougherty@zycus.com> \nSent: Friday, 22 August 2025 9:04 AM\nTo: Louisa Cotter <Louisa.Cotter@perthairport.com.au>\nSubject: Re: Procurement Tech - Perth AP & Zycus\n** Perth Airport Security WARNING:This email originated from outside of the organisation - Do not click links or open attachments unless you recognise the sender and know the content is safe **\nHi Louisa,\nIt was good to meet you in person yesterday.\nBased on our conversation, it sounds like Zycus can provide a compelling option to Perth Airport, so I would be interested to learn more about your requirements and then respond with a personalised live demo to you and your colleagues, executing these requirements and test cases in Zycus.\nAttached are a few links I believe you will find interesting:\nSmarter & Easier Source to Pay\nIntelligent Contract Management\nUnified Supplier Management\nSimplified & Compliant Procurement powered by Microsoft Teams\nIf you can send me some requirements details and a suggestion of when you would like an in-person presentation,\nwe will get to work on it.\nAny questions, please contact me.\nSafe travels home.\nbest regards,\nLuke Dougherty\nRegional Sales Director @ Zycus\n+61 411 220 880\nFrom:Louisa Cotter <Louisa.Cotter@perthairport.com.au>\nSent:Wednesday, August 20, 2025 5:10 AM\nTo:Luke Dougherty <luke.dougherty@zycus.com>\nSubject:Re: Procurement Tech - Perth AP & Zycus \nHi Luke\nI am still good for Thursday 10am as per your calendar invite and we can meet at the Sofitel lobby if this good for you.\nRegards\nLouisaLouisa Cotter\nGeneral Manager Procurement\n\n\n\nLevel 2, 2 George Wiencke Drive (Opposite T3 & T4), Perth Airport WA 6105\nPO Box 6, Cloverdale WA 6985\nT(08) 6278 8317 M 0400 926 017\nwww.perthairport.com.au\nJoin Our Talent Community\n\n\nIMPORTANT MESSAGE FROM PERTH AIRPORT PTY LTD This email is confidential. If you are not the intended recipient you must not disclose or use the information contained in it. If you have received this email in error please notify us immediately by return email and delete the document. Perth Airport is not responsible for any changes made to a document other than those made by Perth Airport or for the effect of the changes on the document's meaning. Perth Airport accepts no liability for any damage caused by this email or its attachments due to viruses interference interception corruption or unauthorised access.\nOn 19 Aug 2025, at 2:49\u202fpm, Luke Dougherty <luke.dougherty@zycus.com> wrote:",
+    "ActivityDate": "2025-08-27",
+    "Status": "Completed",
+    "WhoId": "0030O000021OsfyQAC",
+    "Who": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Contact/0030O000021OsfyQAC"
+      },
+      "Name": "Louisa Cotter"
+    },
+    "WhatId": "006P700000LwrZJIAZ",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000LwrZJIAZ"
+      },
+      "Name": "PerthAirport_S2P_2025"
+    },
+    "CreatedDate": "2025-08-27T11:39:21.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000XprfFMAR"
+    },
+    "Id": "00TP700000XprfFMAR",
+    "Subject": "[Clari - Email Sent] Re: Procurement Tech - Perth AP & Zycus",
+    "Description": "Hi Louisa,Thanks for sending through the requirements plus the challenges and pain points you need to resolve.I\u2019ve shared this information with the Solutions Team and will come back to you tomorrow with some suggested dates.\n\nbest regards\nLuke DoughertyRegional Director @ ZycusFrom: Louisa Cotter <Louisa.Cotter@perthairport.com.au>\nSent: Wednesday, August 27, 2025 6:28:38 PM\nTo: Luke Dougherty <luke.dougherty@zycus.com>\nSubject: RE: Procurement Tech - Perth AP & Zycus Hi Luke\nWe hope to try and get the demo as soon as possible please\nRegards\nLouisa\nLouisa Cotter \nGeneral Manager Procurement\n\n\n\nLevel 2, 2 George Wiencke Drive (Opposite T3 & T4), Perth Airport WA 6105\nPO Box 6, Cloverdale WA 6985 \nT (08) 6278 8317 M 0400 926 017 \nwww.perthairport.com.au\nJoin Our Talent Community\n\nFrom: Louisa Cotter <Louisa.Cotter@perthairport.com.au> \nSent: Wednesday, 27 August 2025 2:35 PM\nTo: Luke Dougherty <luke.dougherty@zycus.com>\nSubject: RE: Procurement Tech - Perth AP & Zycus\nMany thanks Luke\nHere are some information on some of the painpoints and challenges \nThe pain points for us at the moment is the multiple approvals and we need a transparent process which also controls governance\nProcurement Plan approval through TeamsAssessment Summary Report approval through TeamsApproval Workflow through Tech OneContract Execution through DocusignRaising PO is through TechOne\nWe are looking for efficiencies and how we conduct our process the very high level activity is provided belowAI desk that takes you through process, derived from Procurement Policy or processProcurement RequestProcurement Plan & ApprovalChoice use of Precedent Contracts(note we have triggers in the back end which will trigger which the relevant contract template)Rfx, including choosing suppliers, issuing rfx to suppliers and where it gets stored,Rfx assessment category weighting & assessorsRfx Assessment by the assessors and consensus & final resultsRecommendation for Award Summary & ApprovalLegal departures and reviewsContract executionInsurances andPurchase OrderReportingFinancial Assessment DocuSign integrationContract Management functionality, score card, including WHSDelegation or Authority, i.e we have the same person with different delegations (i.e budgeted and unbudgeted, can this be captured)\nLouisa Cotter \nGeneral Manager Procurement\n\n\n\nLevel 2, 2 George Wiencke Drive (Opposite T3 & T4), Perth Airport WA 6105\nPO Box 6, Cloverdale WA 6985 \nT (08) 6278 8317 M 0400 926 017 \nwww.perthairport.com.au\nJoin Our Talent Community\n\nFrom: Luke Dougherty <luke.dougherty@zycus.com> \nSent: Friday, 22 August 2025 9:04 AM\nTo: Louisa Cotter <Louisa.Cotter@perthairport.com.au>\nSubject: Re: Procurement Tech - Perth AP & Zycus\n** Perth Airport Security WARNING:This email originated from outside of the organisation - Do not click links or open attachments unless you recognise the sender and know the content is safe **\nHi Louisa,\nIt was good to meet you in person yesterday.\nBased on our conversation, it sounds like Zycus can provide a compelling option to Perth Airport, so I would be interested to learn more about your requirements and then respond with a personalised live demo to you and your colleagues, executing these requirements and test cases in Zycus.\nAttached are a few links I believe you will find interesting:\nSmarter & Easier Source to Pay\nIntelligent Contract Management\nUnified Supplier Management\nSimplified & Compliant Procurement powered by Microsoft Teams\nIf you can send me some requirements details and a suggestion of when you would like an in-person presentation,\nwe will get to work on it.\nAny questions, please contact me.\nSafe travels home.\nbest regards,\nLuke Dougherty\nRegional Sales Director @ Zycus\n+61 411 220 880\nFrom:Louisa Cotter <Louisa.Cotter@perthairport.com.au>\nSent:Wednesday, August 20, 2025 5:10 AM\nTo:Luke Dougherty <luke.dougherty@zycus.com>\nSubject:Re: Procurement Tech - Perth AP & Zycus \nHi Luke\nI am still good for Thursday 10am as per your calendar invite and we can meet at the Sofitel lobby if this good for you.\nRegards\nLouisaLouisa Cotter\nGeneral Manager Procurement\n\n\n\nLevel 2, 2 George Wiencke Drive (Opposite T3 & T4), Perth Airport WA 6105\nPO Box 6, Cloverdale WA 6985\nT(08) 6278 8317 M 0400 926 017\nwww.perthairport.com.au\nJoin Our Talent Community\n\n\nIMPORTANT MESSAGE FROM PERTH AIRPORT PTY LTD This email is confidential. If you are not the intended recipient you must not disclose or use the information contained in it. If you have received this email in error please notify us immediately by return email and delete the document. Perth Airport is not responsible for any changes made to a document other than those made by Perth Airport or for the effect of the changes on the document's meaning. Perth Airport accepts no liability for any damage caused by this email or its attachments due to viruses interference interception corruption or unauthorised access.\nOn 19 Aug 2025, at 2:49\u202fpm, Luke Dougherty <luke.dougherty@zycus.com> wrote:",
+    "ActivityDate": "2025-08-27",
+    "Status": "Completed",
+    "WhoId": "0030O000021OsfyQAC",
+    "Who": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Contact/0030O000021OsfyQAC"
+      },
+      "Name": "Louisa Cotter"
+    },
+    "WhatId": "006P700000LwrZJIAZ",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000LwrZJIAZ"
+      },
+      "Name": "PerthAirport_S2P_2025"
+    },
+    "CreatedDate": "2025-08-27T11:39:21.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000XprfEMAR"
+    },
+    "Id": "00TP700000XprfEMAR",
+    "Subject": "[Clari - Email Received] RE: Procurement Tech - Perth AP & Zycus",
+    "Description": "Hi Luke\nWe hope to try and get the demo as soon as possible please\nRegards\nLouisa\nLouisa Cotter \nGeneral Manager Procurement\n\n\n\nLevel 2, 2 George Wiencke Drive (Opposite T3 & T4), Perth Airport WA 6105\nPO Box 6, Cloverdale WA 6985 \nT (08) 6278 8317 M 0400 926 017 \nwww.perthairport.com.au\nJoin Our Talent Community\n\nFrom: Louisa Cotter <Louisa.Cotter@perthairport.com.au> \nSent: Wednesday, 27 August 2025 2:35 PM\nTo: Luke Dougherty <luke.dougherty@zycus.com>\nSubject: RE: Procurement Tech - Perth AP & Zycus\nMany thanks Luke\nHere are some information on some of the painpoints and challenges \nThe pain points for us at the moment is the multiple approvals and we need a transparent process which also controls governance\nProcurement Plan approval through TeamsAssessment Summary Report approval through TeamsApproval Workflow through Tech OneContract Execution through DocusignRaising PO is through TechOne\nWe are looking for efficiencies and how we conduct our process the very high level activity is provided belowAI desk that takes you through process, derived from Procurement Policy or processProcurement RequestProcurement Plan & ApprovalChoice use of Precedent Contracts(note we have triggers in the back end which will trigger which the relevant contract template)Rfx, including choosing suppliers, issuing rfx to suppliers and where it gets stored,Rfx assessment category weighting & assessorsRfx Assessment by the assessors and consensus & final resultsRecommendation for Award Summary & ApprovalLegal departures and reviewsContract executionInsurances andPurchase OrderReportingFinancial Assessment DocuSign integrationContract Management functionality, score card, including WHSDelegation or Authority, i.e we have the same person with different delegations (i.e budgeted and unbudgeted, can this be captured)\nLouisa Cotter \nGeneral Manager Procurement\n\n\n\nLevel 2, 2 George Wiencke Drive (Opposite T3 & T4), Perth Airport WA 6105\nPO Box 6, Cloverdale WA 6985 \nT (08) 6278 8317 M 0400 926 017 \nwww.perthairport.com.au\nJoin Our Talent Community\n\nFrom: Luke Dougherty <luke.dougherty@zycus.com> \nSent: Friday, 22 August 2025 9:04 AM\nTo: Louisa Cotter <Louisa.Cotter@perthairport.com.au>\nSubject: Re: Procurement Tech - Perth AP & Zycus\n** Perth Airport Security WARNING:This email originated from outside of the organisation - Do not click links or open attachments unless you recognise the sender and know the content is safe **\nHi Louisa,\nIt was good to meet you in person yesterday.\nBased on our conversation, it sounds like Zycus can provide a compelling option to Perth Airport, so I would be interested to learn more about your requirements and then respond with a personalised live demo to you and your colleagues, executing these requirements and test cases in Zycus.\nAttached are a few links I believe you will find interesting:\nSmarter & Easier Source to Pay\nIntelligent Contract Management\nUnified Supplier Management\nSimplified & Compliant Procurement powered by Microsoft Teams\nIf you can send me some requirements details and a suggestion of when you would like an in-person presentation,\nwe will get to work on it.\nAny questions, please contact me.\nSafe travels home.\nbest regards,\nLuke Dougherty\nRegional Sales Director @ Zycus\n+61 411 220 880\nFrom:Louisa Cotter <Louisa.Cotter@perthairport.com.au>\nSent:Wednesday, August 20, 2025 5:10 AM\nTo:Luke Dougherty <luke.dougherty@zycus.com>\nSubject:Re: Procurement Tech - Perth AP & Zycus \nHi Luke\nI am still good for Thursday 10am as per your calendar invite and we can meet at the Sofitel lobby if this good for you.\nRegards\nLouisaLouisa Cotter\nGeneral Manager Procurement\n\n\n\nLevel 2, 2 George Wiencke Drive (Opposite T3 & T4), Perth Airport WA 6105\nPO Box 6, Cloverdale WA 6985\nT(08) 6278 8317 M 0400 926 017\nwww.perthairport.com.au\nJoin Our Talent Community\n\n\nIMPORTANT MESSAGE FROM PERTH AIRPORT PTY LTD This email is confidential. If you are not the intended recipient you must not disclose or use the information contained in it. If you have received this email in error please notify us immediately by return email and delete the document. Perth Airport is not responsible for any changes made to a document other than those made by Perth Airport or for the effect of the changes on the document's meaning. Perth Airport accepts no liability for any damage caused by this email or its attachments due to viruses interference interception corruption or unauthorised access.\nOn 19 Aug 2025, at 2:49\u202fpm, Luke Dougherty <luke.dougherty@zycus.com> wrote:",
+    "ActivityDate": "2025-08-27",
+    "Status": "Completed",
+    "WhoId": "0030O000021OsfyQAC",
+    "Who": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Contact/0030O000021OsfyQAC"
+      },
+      "Name": "Louisa Cotter"
+    },
+    "WhatId": "006P700000LwrZJIAZ",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000LwrZJIAZ"
+      },
+      "Name": "PerthAirport_S2P_2025"
+    },
+    "CreatedDate": "2025-08-27T11:39:21.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000XonxJMAR"
+    },
+    "Id": "00TP700000XonxJMAR",
+    "Subject": "[Clari - Email Received] RE: Procurement Tech - Perth AP & Zycus",
+    "Description": "Many thanks Luke\nHere are some information on some of the painpoints and challenges \nThe pain points for us at the moment is the multiple approvals and we need a transparent process which also controls governance\nProcurement Plan approval through TeamsAssessment Summary Report approval through TeamsApproval Workflow through Tech OneContract Execution through DocusignRaising PO is through TechOne\nWe are looking for efficiencies and how we conduct our process the very high level activity is provided belowAI desk that takes you through process, derived from Procurement Policy or processProcurement RequestProcurement Plan & ApprovalChoice use of Precedent Contracts(note we have triggers in the back end which will trigger which the relevant contract template)Rfx, including choosing suppliers, issuing rfx to suppliers and where it gets stored,Rfx assessment category weighting & assessorsRfx Assessment by the assessors and consensus & final resultsRecommendation for Award Summary & ApprovalLegal departures and reviewsContract executionInsurances andPurchase OrderReportingFinancial Assessment DocuSign integrationContract Management functionality, score card, including WHSDelegation or Authority, i.e we have the same person with different delegations (i.e budgeted and unbudgeted, can this be captured)\nLouisa Cotter \nGeneral Manager Procurement\n\n\n\nLevel 2, 2 George Wiencke Drive (Opposite T3 & T4), Perth Airport WA 6105\nPO Box 6, Cloverdale WA 6985 \nT (08) 6278 8317 M 0400 926 017 \nwww.perthairport.com.au\nJoin Our Talent Community\n\nFrom: Luke Dougherty <luke.dougherty@zycus.com> \nSent: Friday, 22 August 2025 9:04 AM\nTo: Louisa Cotter <Louisa.Cotter@perthairport.com.au>\nSubject: Re: Procurement Tech - Perth AP & Zycus\n** Perth Airport Security WARNING:This email originated from outside of the organisation - Do not click links or open attachments unless you recognise the sender and know the content is safe **\nHi Louisa,\nIt was good to meet you in person yesterday.\nBased on our conversation, it sounds like Zycus can provide a compelling option to Perth Airport, so I would be interested to learn more about your requirements and then respond with a personalised live demo to you and your colleagues, executing these requirements and test cases in Zycus.\nAttached are a few links I believe you will find interesting:\nSmarter & Easier Source to Pay\nIntelligent Contract Management\nUnified Supplier Management\nSimplified & Compliant Procurement powered by Microsoft Teams\nIf you can send me some requirements details and a suggestion of when you would like an in-person presentation,\nwe will get to work on it.\nAny questions, please contact me.\nSafe travels home.\nbest regards,\nLuke Dougherty\nRegional Sales Director @ Zycus\n+61 411 220 880\nFrom:Louisa Cotter <Louisa.Cotter@perthairport.com.au>\nSent:Wednesday, August 20, 2025 5:10 AM\nTo:Luke Dougherty <luke.dougherty@zycus.com>\nSubject:Re: Procurement Tech - Perth AP & Zycus \nHi Luke\nI am still good for Thursday 10am as per your calendar invite and we can meet at the Sofitel lobby if this good for you.\nRegards\nLouisaLouisa Cotter\nGeneral Manager Procurement\n\n\n\nLevel 2, 2 George Wiencke Drive (Opposite T3 & T4), Perth Airport WA 6105\nPO Box 6, Cloverdale WA 6985\nT(08) 6278 8317 M 0400 926 017\nwww.perthairport.com.au\nJoin Our Talent Community\n\n\nIMPORTANT MESSAGE FROM PERTH AIRPORT PTY LTD This email is confidential. If you are not the intended recipient you must not disclose or use the information contained in it. If you have received this email in error please notify us immediately by return email and delete the document. Perth Airport is not responsible for any changes made to a document other than those made by Perth Airport or for the effect of the changes on the document's meaning. Perth Airport accepts no liability for any damage caused by this email or its attachments due to viruses interference interception corruption or unauthorised access.\nOn 19 Aug 2025, at 2:49\u202fpm, Luke Dougherty <luke.dougherty@zycus.com> wrote:",
+    "ActivityDate": "2025-08-27",
+    "Status": "Completed",
+    "WhoId": "0030O000021OsfyQAC",
+    "Who": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Contact/0030O000021OsfyQAC"
+      },
+      "Name": "Louisa Cotter"
+    },
+    "WhatId": "006P700000LwrZJIAZ",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000LwrZJIAZ"
+      },
+      "Name": "PerthAirport_S2P_2025"
+    },
+    "CreatedDate": "2025-08-27T08:40:06.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000XaJUOMA3"
+    },
+    "Id": "00TP700000XaJUOMA3",
+    "Subject": "[Clari - Email Sent] Re: Procurement Tech - Perth AP & Zycus",
+    "Description": "Hi Louisa,\nIt was good to meet you in person yesterday.Based on our conversation, it sounds like Zycus can provide a compelling option to Perth Airport, so I would be interested to learn more about your requirements and then respond with a personalised live demo to you and your colleagues, executing these requirements and test cases in Zycus.\nAttached are a few links I believe you will find interesting:\nSmarter & Easier Source to Pay\nIntelligent Contract Management\nUnified Supplier Management\nSimplified & Compliant Procurement powered by Microsoft Teams\nIf you can send me some requirements details and a suggestion of when you would like an in-person presentation,we will get to work on it.Any questions, please contact me.\nSafe travels home.\n\nbest regards,\nLuke Dougherty\nRegional Sales Director @ Zycus\n+61 411 220 880\n\n\n\n\nFrom:Louisa Cotter <Louisa.Cotter@perthairport.com.au>\nSent:Wednesday, August 20, 2025 5:10 AM\nTo:Luke Dougherty <luke.dougherty@zycus.com>\nSubject:Re: Procurement Tech - Perth AP & Zycus \nHi Luke\nI am still good for Thursday 10am as per your calendar invite and we can meet at the Sofitel lobby if this good for you.\nRegards\nLouisaLouisa Cotter\nGeneral Manager Procurement\n\n\n\nLevel 2, 2 George Wiencke Drive (Opposite T3 & T4), Perth Airport WA 6105\nPO Box 6, Cloverdale WA 6985\nT(08) 6278 8317 M 0400 926 017\nwww.perthairport.com.au\nJoin Our Talent Community\n\n\nIMPORTANT MESSAGE FROM PERTH AIRPORT PTY LTD This email is confidential. If you are not the intended recipient you must not disclose or use the information contained in it. If you have received this email in error please notify us immediately by return email and delete the document. Perth Airport is not responsible for any changes made to a document other than those made by Perth Airport or for the effect of the changes on the document's meaning. Perth Airport accepts no liability for any damage caused by this email or its attachments due to viruses interference interception corruption or unauthorised access.On 19 Aug 2025, at 2:49\u202fpm, Luke Dougherty <luke.dougherty@zycus.com> wrote:",
+    "ActivityDate": "2025-08-22",
+    "Status": "Completed",
+    "WhoId": "0030O000021OsfyQAC",
+    "Who": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Contact/0030O000021OsfyQAC"
+      },
+      "Name": "Louisa Cotter"
+    },
+    "WhatId": "006P700000LwrZJIAZ",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000LwrZJIAZ"
+      },
+      "Name": "PerthAirport_S2P_2025"
+    },
+    "CreatedDate": "2025-08-22T02:39:36.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000XN6I5MAL"
+    },
+    "Id": "00TP700000XN6I5MAL",
+    "Subject": "Procurement Tech - Perth AP & Zycus Follow up",
+    "Description": null,
+    "ActivityDate": "2025-08-21",
+    "Status": "Completed",
+    "WhoId": "0030O000021OsfyQAC",
+    "Who": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Contact/0030O000021OsfyQAC"
+      },
+      "Name": "Louisa Cotter"
+    },
+    "WhatId": "006P700000LwrZJIAZ",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000LwrZJIAZ"
+      },
+      "Name": "PerthAirport_S2P_2025"
+    },
+    "CreatedDate": "2025-08-18T07:47:40.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000XTPwQMAX"
+    },
+    "Id": "00TP700000XTPwQMAX",
+    "Subject": "[Clari - Email Sent] Re: Procurement Tech - Perth AP & Zycus",
+    "Description": "Hi Louisa,\nSounds good, look forward to meeting you then.\n\nbest regards,\nLuke Dougherty\nRegional Sales Director @ Zycus\n+61 411 220 880\n\n\n\n\nFrom:Louisa Cotter <Louisa.Cotter@perthairport.com.au>\nSent:Wednesday, August 20, 2025 5:10 AM\nTo:Luke Dougherty <luke.dougherty@zycus.com>\nSubject:Re: Procurement Tech - Perth AP & Zycus \nHi Luke\nI am still good for Thursday 10am as per your calendar invite and we can meet at the Sofitel lobby if this good for you.\nRegards\nLouisaLouisa Cotter\nGeneral Manager Procurement\n\n\n\nLevel 2, 2 George Wiencke Drive (Opposite T3 & T4), Perth Airport WA 6105\nPO Box 6, Cloverdale WA 6985\nT(08) 6278 8317 M 0400 926 017\nwww.perthairport.com.au\nJoin Our Talent Community\n\n\nIMPORTANT MESSAGE FROM PERTH AIRPORT PTY LTD This email is confidential. If you are not the intended recipient you must not disclose or use the information contained in it. If you have received this email in error please notify us immediately by return email and delete the document. Perth Airport is not responsible for any changes made to a document other than those made by Perth Airport or for the effect of the changes on the document's meaning. Perth Airport accepts no liability for any damage caused by this email or its attachments due to viruses interference interception corruption or unauthorised access.On 19 Aug 2025, at 2:49\u202fpm, Luke Dougherty <luke.dougherty@zycus.com> wrote:\n\n\ufeff** Perth Airport Security WARNING:This email originated from outside of the organisation - Do not click links or open attachments unless you recognise the sender and know the content is safe **Hi Louisa,\nJust checking if this still suits you to catch up tomorrow morning?If you'd prefer to reschedule to focus on the conference, I'll be sad but I'll understand \ud83d\ude42Whatever suits you best.\n\nbest regards,\nLuke Dougherty\nRegional Sales Director @ Zycus\n+61 411 220 880\n\n<Outlook-dxqtdxnl.png>\nFrom:Luke Dougherty\nSent:Saturday, August 16, 2025 4:00 PM\nTo:Louisa Cotter <louisa.cotter@perthairport.com.au>\nCc:Adwaita Bhaduri <adwaita.bhaduri@zycus.com>\nSubject:Procurement Tech - Perth AP & Zycus\nWhen:Thursday, August 21, 2025 10:00 AM-10:30 AM.\nWhere:Lobby - Sofitel Darling Harbour________________________________________________________________________________Microsoft Teams Need help?Join the meeting nowMeeting ID: 462 531 435 049 5Passcode: bV6Hh36XFor organizers: Meeting options This call will be recorded for enhancing customer experience. By joining this call, you consent to the recording of the call. If you do not want the call to be recorded, then please inform the host. Refer to Privacy Policy for more information.Org help | Privacy and security________________________________________________________________________________",
+    "ActivityDate": "2025-08-19",
+    "Status": "Completed",
+    "WhoId": "0030O000021OsfyQAC",
+    "Who": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Contact/0030O000021OsfyQAC"
+      },
+      "Name": "Louisa Cotter"
+    },
+    "WhatId": "006P700000LwrZJIAZ",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000LwrZJIAZ"
+      },
+      "Name": "PerthAirport_S2P_2025"
+    },
+    "CreatedDate": "2025-08-19T23:39:18.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000XStU6MAL"
+    },
+    "Id": "00TP700000XStU6MAL",
+    "Subject": "[Clari - Email Received] Re: Procurement Tech - Perth AP & Zycus",
+    "Description": "Hi Luke\nI am still good for Thursday 10am as per your calendar invite and we can meet at the Sofitel lobby if this good for you.\nRegards\nLouisaLouisa Cotter \nGeneral Manager Procurement\n\n\n\nLevel 2, 2 George Wiencke Drive (Opposite T3 & T4), Perth Airport WA 6105\nPO Box 6, Cloverdale WA 6985 \nT (08) 6278 8317 M 0400 926 017 \nwww.perthairport.com.au\nJoin Our Talent Community\n\n\nIMPORTANT MESSAGE FROM PERTH AIRPORT PTY LTD This email is confidential. If you are not the intended recipient you must not disclose or use the information contained in it. If you have received this email in error please notify us immediately by return email and delete the document. Perth Airport is not responsible for any changes made to a document other than those made by Perth Airport or for the effect of the changes on the document's meaning. Perth Airport accepts no liability for any damage caused by this email or its attachments due to viruses interference interception corruption or unauthorised access.On 19 Aug 2025, at 2:49\u202fpm, Luke Dougherty <luke.dougherty@zycus.com> wrote:\n\n\ufeff ** Perth Airport Security WARNING:This email originated from outside of the organisation - Do not click links or open attachments unless you recognise the sender and know the content is safe **Hi Louisa,\nJust checking if this still suits you to catch up tomorrow morning?If you'd prefer to reschedule to focus on the conference, I'll be sad but I'll understand \ud83d\ude42Whatever suits you best.\n\nbest regards,\nLuke Dougherty\nRegional Sales Director @ Zycus\n+61 411 220 880\n\n\n<Outlook-dxqtdxnl.png>\n\nFrom:Luke Dougherty\nSent:Saturday, August 16, 2025 4:00 PM\nTo:Louisa Cotter <louisa.cotter@perthairport.com.au>\nCc:Adwaita Bhaduri <adwaita.bhaduri@zycus.com>\nSubject:Procurement Tech - Perth AP & Zycus\nWhen:Thursday, August 21, 2025 10:00 AM-10:30 AM.\nWhere:Lobby - Sofitel Darling Harbour________________________________________________________________________________Microsoft Teams Need help?Join the meeting nowMeeting ID: 462 531 435 049 5Passcode: bV6Hh36XFor organizers: Meeting options This call will be recorded for enhancing customer experience. By joining this call, you consent to the recording of the call. If you do not want the call to be recorded, then please inform the host. Refer to Privacy Policy for more information.Org help | Privacy and security________________________________________________________________________________",
+    "ActivityDate": "2025-08-19",
+    "Status": "Completed",
+    "WhoId": "0030O000021OsfyQAC",
+    "Who": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Contact/0030O000021OsfyQAC"
+      },
+      "Name": "Louisa Cotter"
+    },
+    "WhatId": "006P700000LwrZJIAZ",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000LwrZJIAZ"
+      },
+      "Name": "PerthAirport_S2P_2025"
+    },
+    "CreatedDate": "2025-08-19T20:41:10.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000XPsSRMA1"
+    },
+    "Id": "00TP700000XPsSRMA1",
+    "Subject": "[Clari - Email Sent] Re: Procurement Tech - Perth AP & Zycus",
+    "Description": "Hi Louisa,\nJust checking if this still suits you to catch up tomorrow morning?If you'd prefer to reschedule to focus on the conference, I'll be sad but I'll understand \ud83d\ude42Whatever suits you best.\n\nbest regards,\nLuke Dougherty\nRegional Sales Director @ Zycus\n+61 411 220 880\n\n\n\nFrom:Luke Dougherty\nSent:Saturday, August 16, 2025 4:00 PM\nTo:Louisa Cotter <louisa.cotter@perthairport.com.au>\nCc:Adwaita Bhaduri <adwaita.bhaduri@zycus.com>\nSubject:Procurement Tech - Perth AP & Zycus\nWhen:Thursday, August 21, 2025 10:00 AM-10:30 AM.\nWhere:Lobby - Sofitel Darling Harbour________________________________________________________________________________Microsoft Teams Need help?Join the meeting nowMeeting ID: 462 531 435 049 5Passcode: bV6Hh36XFor organizers: Meeting options This call will be recorded for enhancing customer experience. By joining this call, you consent to the recording of the call. If you do not want the call to be recorded, then please inform the host. Refer to Privacy Policy for more information.Org help | Privacy and security________________________________________________________________________________",
+    "ActivityDate": "2025-08-19",
+    "Status": "Completed",
+    "WhoId": "0030O000021OsfyQAC",
+    "Who": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Contact/0030O000021OsfyQAC"
+      },
+      "Name": "Louisa Cotter"
+    },
+    "WhatId": "006P700000LwrZJIAZ",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000LwrZJIAZ"
+      },
+      "Name": "PerthAirport_S2P_2025"
+    },
+    "CreatedDate": "2025-08-19T05:40:21.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000XIGbmMAH"
+    },
+    "Id": "00TP700000XIGbmMAH",
+    "Subject": "[Clari - Email Sent] Re: Zycus - Transformational Procurement",
+    "Description": "Hi Louisa,\nThat works for me, I\u2019ll send a calendar invite on Monday and look forward to meeting you then.\nbest regards\nLuke DoughertyRegional Director @ ZycusFrom: Louisa Cotter <Louisa.Cotter@perthairport.com.au>\nSent: Friday, August 15, 2025 5:40:20 PM\nTo: Luke Dougherty <luke.dougherty@zycus.com>\nCc: Adwaita Bhaduri <adwaita.bhaduri@zycus.com>\nSubject: RE: Zycus - Transformational Procurement Hi Luke,\nI can be free at 10am Thursday, is it ok to meet you at the lobby of the SOFITEL SYDNEY DARLING HARBOUR, thats where the my existing conference is and can step out at 10am.\nRegards\nLouisa\nLouisa Cotter \nGeneral Manager Procurement\n\n\n\nLevel 2, 2 George Wiencke Drive (Opposite T3 & T4), Perth Airport WA 6105\nPO Box 6, Cloverdale WA 6985 \nT (08) 6278 8317 M 0400 926 017 \nwww.perthairport.com.au\nJoin Our Talent Community\n\nFrom: Luke Dougherty <luke.dougherty@zycus.com> \nSent: Friday, 15 August 2025 9:52 AM\nTo: Louisa Cotter <Louisa.Cotter@perthairport.com.au>\nCc: Adwaita Bhaduri <adwaita.bhaduri@zycus.com>\nSubject: Re: Zycus - Transformational Procurement\nYou don't often get email from luke.dougherty@zycus.com. Learn why this is important \n** Perth Airport Security WARNING:This email originated from outside of the organisation - Do not click links or open attachments unless you recognise the sender and know the content is safe **\nHi Louisa,\nThanks for your email and suggested time.\nVery keen to facilitate a session for you but we're in Melbourne for the first half of next week.Any chance you're still here on Thursday and Friday ?\nbest regards,\nLuke Dougherty\nRegional Sales Director @ Zycus\n+61 411 220 880\nFrom:Louisa Cotter <Louisa.Cotter@perthairport.com.au>\nSent:Friday, August 15, 2025 5:31 AM\nTo:Luke Dougherty <luke.dougherty@zycus.com>\nCc:Adwaita Bhaduri <adwaita.bhaduri@zycus.com>\nSubject:Re: Zycus - Transformational Procurement \nHi Luke\nThanks for reaching out, I will be in Sydney next week for a couple of conferences and have a couple of hours available Tuesday morning to discuss the zycus program. I would be keen on doing a demo on how this interfaces with MS teams and do a demo of the process again.\nI\u2019d like to also note that we have TechOne as an ERP and zycus and want to me sure this won\u2019t t be an issue with connection. Please let me know if you\u2019re available.\nRegards\nLouisaLouisa Cotter\nGeneral Manager Procurement\n\n\n\nLevel 2, 2 George Wiencke Drive (Opposite T3 & T4), Perth Airport WA 6105\nPO Box 6, Cloverdale WA 6985\nT(08) 6278 8317 M 0400 926 017\nwww.perthairport.com.au\nJoin Our Talent Community\n\nOn 30 Jul 2025, at 8:31\u202fam, Luke Dougherty <luke.dougherty@zycus.com> wrote:\n\ufeff\nSome people who received this message don't often get email from luke.dougherty@zycus.com. Learn why this is important\n** Perth Airport Security WARNING:This email originated from outside of the organisation - Do not click links or open attachments unless you recognise the sender and know the content is safe **\nHi Louisa,\nGood to connect with you.\nFurther to Adwaita's message, if you're interested, I'd love to have a chat to see where Perth Airport is on the digital procurement journey and discuss if we can be any assistance now or in future.\nZycus really are bringing efficient, cost saving, digital workflows to enterprise organisations everywhere.For example, our partnership with Microsoft to make MS Teams the organisation's interface to Procurementis a game changer for ease of use, compliance and AI enhanced workflows.\nWould you like to connect sometime in the next week or so to discuss procurement tech at Perth Airport ?\nbest regards,\nLuke Dougherty\nRegional Sales Director @ Zycus\n+61 411 220 880\n<Outlook-uhas1jdr.png>\nFrom:Adwaita Bhaduri <adwaita.bhaduri@zycus.com>\nSent:Tuesday, July 29, 2025 2:54 PM\nTo:Louisa Cotter <Louisa.Cotter@perthairport.com.au>\nCc:Pablo Alcorta <Pablo.Alcorta@perthairport.com.au>; Luke Dougherty <luke.dougherty@zycus.com>\nSubject:Re: Zycus\nHello Louisa,\nHope you\u2019ve been keeping well. I understand that you have several conflicting priorities so, I'll keep this short. We have a quick update from our side.\nOur previous Regional Sales Director, Stanley Chia, has recently moved on from Zycus. Going forward, your new point of contact will be Luke Dougherty, our current Regional Sales Director (cc\u2019d here). Luke is well aware of the conversations you had with Stanley and would be more than happy to connect with your team.\nIf there are any updates on your side or any need for further demos or discussions, please don\u2019t hesitate to reach out to either of us.\nKindRegards,Adwaita 'Addy'Bhaduri\nBusiness Development|APACZYCUS:Gartner, and Forrester Ranked Leader: Source-to-PayOn Mon, Jun 23, 2025 Stanley Chia wrote:\nHi again Louisa, I hope you had a great weekend.Looking forward to hearing from you towards the end of this week.Have a great day!\nStanley Chia\nDirector of Sales - ANZ\n+61 493 660 777\nstanley.chia@zycus.com\n<V9K0vqlIinCv_huhdi-9y25YPhpftF_WOMvK40Mz8No>\nFrom:Louisa Cotter <Louisa.Cotter@perthairport.com.au>\nSent:Thursday, June 19, 2025 9:16 AM\nTo:Stanley Chia <stanley.chia@zycus.com>\nCc:Pablo Alcorta <Pablo.Alcorta@perthairport.com.au>; Tanya Rajesh <tanya.rajesh@zycus.com>\nSubject:Re: ZycusGood Morning Stanley,\nThank you for your email, we are still reviewing the proposal. As mentioned we quite liked the system and would like to explore this further.\nI hope to come back to you by the end of next week, I have conferences and training sessions to attend until mid next week.\nRegards\nLouisaLouisa Cotter\nGeneral Manager Procurement\n<g_e5_T_ctFJLnXscUELn8EgM-vJefXxZ-bIYHHMmXNE>\nLevel 2, 2 George Wiencke Drive (Opposite T3 & T4), Perth Airport WA 6105\nPO Box 6, Cloverdale WA 6985\nT(08) 6278 8317 M0400 926 017\nwww.perthairport.com.au\nJoin Our Talent Community\n<MjuzmpNbgSojYUgFpkon3LDQrPiWvx0f5lzDoJAiD3U>\n<CEtYGzAffKkHcpQCa-RXnUVcwqPmjnIRw4y2Qkjk2Hg>\n<_ApXOCls7CneCYwHEON89w0-SZ_CeqJOcPduxKZosJw>\n<9EBDXnPqJwvdwVKQ_JP5krA2io1hExrzJUcYbRbmAsM>\n<ZVhOV7a5hZ-bwBx2erOe_ppmdwctC3CtfxAEaToDW-o>\nOn 17 Jun 2025, at 11:29\u202fam, Stanley Chia <stanley.chia@zycus.com> wrote:\n** Perth Airport Security WARNING:This email originated from outside of the organisation - Do not clicklinks or open attachments unless you recognise the sender and know the content is safe **\nHi Louisa, Pablo, greetings from Zycus.Reaching out to you on account of the ball park proposal below, which has been greatly discounted,would love an opportunity to discuss it with you and answer any questions you may have.Based on the feedback from our last demo, I'm confident we have theright solution and would like to dive deeper into our solution.Thank you!\nStanley\nStanley Chia\nDirector of Sales - ANZ\n+61 493 660 777\nstanley.chia@zycus.com\n<Outlook-o5wpn1a1.png>\nFrom:Stanley Chia <stanley.chia@zycus.com>\nSent:Thursday, June 12, 2025 2:03 PM\nTo:Louisa Cotter <Louisa.Cotter@perthairport.com.au>; Pablo Alcorta <Pablo.Alcorta@perthairport.com.au>\nSubject:Re: Zycus\nGood afternoon Louisa, Pablo,\nFurther to your request last week for a ball-park enterprise pricing to cover the license needs for Perth Airport, I'd like to first provide some context to the Zycus pricing model.Firstly, Zycus is a Saas software provider, hence our Customers don't actually \"buy\" our software, rather, they pay a yearly subscription cost that allows them to use the software for a year until the agreement is renewed.Our typical agreement is for 5-years.The license subscription cost is largely based on the number and type of users and the modules in scope.In best interest of our Customers, we leverage economies of scale which means we provide better discounts with higher number of modules and users, typicallyin a bundle as opposed to ala carte or by line item.This takes into considerationpresent and future user requirements, budget, timing etc.and represents the most optimum way to purchase Zycus licenses.A mentioned during out meeting, our objective isto provide licenses that would cover our Customer's needs over the entire Agreement period.There are no mechanisms in place that would escalate the subscription costs over the life of the licenses agreement.\nThat said, we have projected the number of users in the ballpark of 10 Power Users, 20 Business Users in the draft license pricing.A one-time implementation fee has also been estimated to expose the true costs, completely free of any hidden or surprisecharges.This number is contingent on the complexityof the implementation which includes the integration with your ERP system.We strongly encourage a scoping session to be performed so as to enable us to develop a project scope.Based on ROI modelling,we typically see ROI's of at least 8-15 times the investment, typically within a 3 year period.This price includes the key modules including iSourcing, iContract, iSupplier, Merlin Intake and all the accompanying Gen AI infused into each of these modules.We have incorporated some growth into that number for the duration of the Agreement.\nThe price estimate for the above as follows:\n<image.png>\nPlease note that the pricing above does not constitute an offer or a proposal and is subject to the Management's approval.At Zycus, we meet you where you're at.We are very flexible in our payment terms, and in many instances, where it makes sense, help our Customers time invoices and payments in a manner that leverages available current FY funds and next FY's funds.While wehave our own license agreement, we are also open to using Perth Airport's purchase agreements.Please let me know if you have any questions.I'm suggesting the following next steps:A quick Team's call to go through the commercial aspects of the attached and answer any questions you may have.A deeper dive into the solution set and functionality, as well as how we envision our solution to bring value add to Perth Airport's business needs.Do let me know if there are any questions.Thanks and warm regards,\nStanley Chia\nDirector of Sales - ANZ\n+61 493 660 777\nstanley.chia@zycus.com\n<Outlook-fzrjnoxv.png>\nFrom:Louisa Cotter <Louisa.Cotter@perthairport.com.au>\nSent:Friday, June 6, 2025 10:50 AM\nTo:Stanley Chia <stanley.chia@zycus.com>; Pablo Alcorta <Pablo.Alcorta@perthairport.com.au>\nSubject:RE: Zycus\nMany thanksStanley\nI look forward to your response on commercials\nRegards\nLouisa\nLouisa Cotter\nGeneral Manager Procurement\n<Emailsiglogo_c7fed1a3-8a9d-4bb6-8bc6-dd80bf558e01.png>\nLevel 2, 2 George Wiencke Drive (Opposite T3 & T4), Perth Airport WA 6105\nPO Box 6, Cloverdale WA 6985\nT(08) 6278 8317 M0400 926 017\nwww.perthairport.com.au\nJoinOur Talent Community\n<Title_06_0b3898ca-c21a-49eb-b7f6-025ff9bdff29.png>\n<SocialLink_Facebook_32x32_91200431-fa61-46c9-a795-9b32b6b68ae6.png>\n<SocialLink_Twitter_32x32_a30aa13b-054b-4b13-8796-b304c2b2cf70.png>\n<SocialLink_Instagram_32x32_90b742ba-59ec-4255-aa07-fe97f51e95d3.png>\n<SocialLink_Linkedin_32x32_b29ff058-d2a8-4e92-9f9c-7a2119d5c740.png>\nIMPORTANT MESSAGE FROM PERTH AIRPORT PTY LTD This email is confidential. If you are not the intended recipient you must not disclose or use the information contained in it. If you have received this email in error please notify us immediately by return emailand delete the document. Perth Airport is not responsible for any changes made to a document other than those made by Perth Airport or for the effect of the changes on the document's meaning. Perth Airport accepts no liability for any damage caused by thisemail or its attachments due to viruses interference interception corruption or unauthorised access.\nFrom:Stanley Chia <stanley.chia@zycus.com>\nSent:Thursday, 5 June 2025 5:14 PM\nTo:Louisa Cotter <Louisa.Cotter@perthairport.com.au>; Pablo Alcorta <Pablo.Alcorta@perthairport.com.au>\nSubject:Zycus\n** Perth Airport Security WARNING:Thisemail originated from outside of the organisation - Do not click links or open attachments unless you recognise the sender and know the content is safe **\nHi Louisa, Pablo,\nQuick note to say thank you for your time yesterday, I hope the presentation was informative and helpful.I shall get back to you shortly on the commercials so we can schedule a deeper dive into the Zycus solution.Meanwhile, pls let us know if you have any questions.Rgds\nStanleyGet Outlookfor iOS",
+    "ActivityDate": "2025-08-15",
+    "Status": "Completed",
+    "WhoId": "0030O000021OsfyQAC",
+    "Who": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Contact/0030O000021OsfyQAC"
+      },
+      "Name": "Louisa Cotter"
+    },
+    "WhatId": "006P700000LwrZJIAZ",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000LwrZJIAZ"
+      },
+      "Name": "PerthAirport_S2P_2025"
+    },
+    "CreatedDate": "2025-08-15T11:40:12.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000XI3uFMAT"
+    },
+    "Id": "00TP700000XI3uFMAT",
+    "Subject": "[Clari - Email Received] RE: Zycus - Transformational Procurement",
+    "Description": "Hi Luke,\nI can be free at 10am Thursday, is it ok to meet you at the lobby of the SOFITEL SYDNEY DARLING HARBOUR, thats where the my existing conference is and can step out at 10am.\nRegards\nLouisa\nLouisa Cotter \nGeneral Manager Procurement\n\n\n\nLevel 2, 2 George Wiencke Drive (Opposite T3 & T4), Perth Airport WA 6105\nPO Box 6, Cloverdale WA 6985 \nT (08) 6278 8317 M 0400 926 017 \nwww.perthairport.com.au\nJoin Our Talent Community\n\nFrom: Luke Dougherty <luke.dougherty@zycus.com> \nSent: Friday, 15 August 2025 9:52 AM\nTo: Louisa Cotter <Louisa.Cotter@perthairport.com.au>\nCc: Adwaita Bhaduri <adwaita.bhaduri@zycus.com>\nSubject: Re: Zycus - Transformational Procurement\nYou don't often get email from luke.dougherty@zycus.com. Learn why this is important \n** Perth Airport Security WARNING:This email originated from outside of the organisation - Do not click links or open attachments unless you recognise the sender and know the content is safe **\nHi Louisa,\nThanks for your email and suggested time.\nVery keen to facilitate a session for you but we're in Melbourne for the first half of next week.Any chance you're still here on Thursday and Friday ?\nbest regards,\nLuke Dougherty\nRegional Sales Director @ Zycus\n+61 411 220 880\nFrom:Louisa Cotter <Louisa.Cotter@perthairport.com.au>\nSent:Friday, August 15, 2025 5:31 AM\nTo:Luke Dougherty <luke.dougherty@zycus.com>\nCc:Adwaita Bhaduri <adwaita.bhaduri@zycus.com>\nSubject:Re: Zycus - Transformational Procurement \nHi Luke\nThanks for reaching out, I will be in Sydney next week for a couple of conferences and have a couple of hours available Tuesday morning to discuss the zycus program. I would be keen on doing a demo on how this interfaces with MS teams and do a demo of the process again.\nI\u2019d like to also note that we have TechOne as an ERP and zycus and want to me sure this won\u2019t t be an issue with connection. Please let me know if you\u2019re available.\nRegards\nLouisaLouisa Cotter\nGeneral Manager Procurement\n\n\n\nLevel 2, 2 George Wiencke Drive (Opposite T3 & T4), Perth Airport WA 6105\nPO Box 6, Cloverdale WA 6985\nT(08) 6278 8317 M 0400 926 017\nwww.perthairport.com.au\nJoin Our Talent Community\n\nOn 30 Jul 2025, at 8:31\u202fam, Luke Dougherty <luke.dougherty@zycus.com> wrote:\n\ufeff\nSome people who received this message don't often get email from luke.dougherty@zycus.com. Learn why this is important\n** Perth Airport Security WARNING:This email originated from outside of the organisation - Do not click links or open attachments unless you recognise the sender and know the content is safe **\nHi Louisa,\nGood to connect with you.\nFurther to Adwaita's message, if you're interested, I'd love to have a chat to see where Perth Airport is on the digital procurement journey and discuss if we can be any assistance now or in future.\nZycus really are bringing efficient, cost saving, digital workflows to enterprise organisations everywhere.For example, our partnership with Microsoft to make MS Teams the organisation's interface to Procurementis a game changer for ease of use, compliance and AI enhanced workflows.\nWould you like to connect sometime in the next week or so to discuss procurement tech at Perth Airport ?\nbest regards,\nLuke Dougherty\nRegional Sales Director @ Zycus\n+61 411 220 880\n<Outlook-uhas1jdr.png>\nFrom:Adwaita Bhaduri <adwaita.bhaduri@zycus.com>\nSent:Tuesday, July 29, 2025 2:54 PM\nTo:Louisa Cotter <Louisa.Cotter@perthairport.com.au>\nCc:Pablo Alcorta <Pablo.Alcorta@perthairport.com.au>; Luke Dougherty <luke.dougherty@zycus.com>\nSubject:Re: Zycus\nHello Louisa,\nHope you\u2019ve been keeping well. I understand that you have several conflicting priorities so, I'll keep this short. We have a quick update from our side.\nOur previous Regional Sales Director, Stanley Chia, has recently moved on from Zycus. Going forward, your new point of contact will be Luke Dougherty, our current Regional Sales Director (cc\u2019d here). Luke is well aware of the conversations you had with Stanley and would be more than happy to connect with your team.\nIf there are any updates on your side or any need for further demos or discussions, please don\u2019t hesitate to reach out to either of us.\nKindRegards,Adwaita 'Addy'Bhaduri\nBusiness Development|APACZYCUS:Gartner, and Forrester Ranked Leader: Source-to-PayOn Mon, Jun 23, 2025 Stanley Chia wrote:\nHi again Louisa, I hope you had a great weekend.Looking forward to hearing from you towards the end of this week.Have a great day!\nStanley Chia\nDirector of Sales - ANZ\n+61 493 660 777\nstanley.chia@zycus.com\n<V9K0vqlIinCv_huhdi-9y25YPhpftF_WOMvK40Mz8No>\nFrom:Louisa Cotter <Louisa.Cotter@perthairport.com.au>\nSent:Thursday, June 19, 2025 9:16 AM\nTo:Stanley Chia <stanley.chia@zycus.com>\nCc:Pablo Alcorta <Pablo.Alcorta@perthairport.com.au>; Tanya Rajesh <tanya.rajesh@zycus.com>\nSubject:Re: ZycusGood Morning Stanley,\nThank you for your email, we are still reviewing the proposal. As mentioned we quite liked the system and would like to explore this further.\nI hope to come back to you by the end of next week, I have conferences and training sessions to attend until mid next week.\nRegards\nLouisaLouisa Cotter\nGeneral Manager Procurement\n<g_e5_T_ctFJLnXscUELn8EgM-vJefXxZ-bIYHHMmXNE>\nLevel 2, 2 George Wiencke Drive (Opposite T3 & T4), Perth Airport WA 6105\nPO Box 6, Cloverdale WA 6985\nT(08) 6278 8317 M0400 926 017\nwww.perthairport.com.au\nJoin Our Talent Community\n<MjuzmpNbgSojYUgFpkon3LDQrPiWvx0f5lzDoJAiD3U>\n<CEtYGzAffKkHcpQCa-RXnUVcwqPmjnIRw4y2Qkjk2Hg>\n<_ApXOCls7CneCYwHEON89w0-SZ_CeqJOcPduxKZosJw>\n<9EBDXnPqJwvdwVKQ_JP5krA2io1hExrzJUcYbRbmAsM>\n<ZVhOV7a5hZ-bwBx2erOe_ppmdwctC3CtfxAEaToDW-o>\nOn 17 Jun 2025, at 11:29\u202fam, Stanley Chia <stanley.chia@zycus.com> wrote:\n** Perth Airport Security WARNING:This email originated from outside of the organisation - Do not clicklinks or open attachments unless you recognise the sender and know the content is safe **\nHi Louisa, Pablo, greetings from Zycus.Reaching out to you on account of the ball park proposal below, which has been greatly discounted,would love an opportunity to discuss it with you and answer any questions you may have.Based on the feedback from our last demo, I'm confident we have theright solution and would like to dive deeper into our solution.Thank you!\nStanley\nStanley Chia\nDirector of Sales - ANZ\n+61 493 660 777\nstanley.chia@zycus.com\n<Outlook-o5wpn1a1.png>\nFrom:Stanley Chia <stanley.chia@zycus.com>\nSent:Thursday, June 12, 2025 2:03 PM\nTo:Louisa Cotter <Louisa.Cotter@perthairport.com.au>; Pablo Alcorta <Pablo.Alcorta@perthairport.com.au>\nSubject:Re: Zycus\nGood afternoon Louisa, Pablo,\nFurther to your request last week for a ball-park enterprise pricing to cover the license needs for Perth Airport, I'd like to first provide some context to the Zycus pricing model.Firstly, Zycus is a Saas software provider, hence our Customers don't actually \"buy\" our software, rather, they pay a yearly subscription cost that allows them to use the software for a year until the agreement is renewed.Our typical agreement is for 5-years.The license subscription cost is largely based on the number and type of users and the modules in scope.In best interest of our Customers, we leverage economies of scale which means we provide better discounts with higher number of modules and users, typicallyin a bundle as opposed to ala carte or by line item.This takes into considerationpresent and future user requirements, budget, timing etc.and represents the most optimum way to purchase Zycus licenses.A mentioned during out meeting, our objective isto provide licenses that would cover our Customer's needs over the entire Agreement period.There are no mechanisms in place that would escalate the subscription costs over the life of the licenses agreement.\nThat said, we have projected the number of users in the ballpark of 10 Power Users, 20 Business Users in the draft license pricing.A one-time implementation fee has also been estimated to expose the true costs, completely free of any hidden or surprisecharges.This number is contingent on the complexityof the implementation which includes the integration with your ERP system.We strongly encourage a scoping session to be performed so as to enable us to develop a project scope.Based on ROI modelling,we typically see ROI's of at least 8-15 times the investment, typically within a 3 year period.This price includes the key modules including iSourcing, iContract, iSupplier, Merlin Intake and all the accompanying Gen AI infused into each of these modules.We have incorporated some growth into that number for the duration of the Agreement.\nThe price estimate for the above as follows:\n<image.png>\nPlease note that the pricing above does not constitute an offer or a proposal and is subject to the Management's approval.At Zycus, we meet you where you're at.We are very flexible in our payment terms, and in many instances, where it makes sense, help our Customers time invoices and payments in a manner that leverages available current FY funds and next FY's funds.While wehave our own license agreement, we are also open to using Perth Airport's purchase agreements.Please let me know if you have any questions.I'm suggesting the following next steps:A quick Team's call to go through the commercial aspects of the attached and answer any questions you may have.A deeper dive into the solution set and functionality, as well as how we envision our solution to bring value add to Perth Airport's business needs.Do let me know if there are any questions.Thanks and warm regards,\nStanley Chia\nDirector of Sales - ANZ\n+61 493 660 777\nstanley.chia@zycus.com\n<Outlook-fzrjnoxv.png>\nFrom:Louisa Cotter <Louisa.Cotter@perthairport.com.au>\nSent:Friday, June 6, 2025 10:50 AM\nTo:Stanley Chia <stanley.chia@zycus.com>; Pablo Alcorta <Pablo.Alcorta@perthairport.com.au>\nSubject:RE: Zycus\nMany thanksStanley\nI look forward to your response on commercials\nRegards\nLouisa\nLouisa Cotter\nGeneral Manager Procurement\n<Emailsiglogo_c7fed1a3-8a9d-4bb6-8bc6-dd80bf558e01.png>\nLevel 2, 2 George Wiencke Drive (Opposite T3 & T4), Perth Airport WA 6105\nPO Box 6, Cloverdale WA 6985\nT(08) 6278 8317 M0400 926 017\nwww.perthairport.com.au\nJoinOur Talent Community\n<Title_06_0b3898ca-c21a-49eb-b7f6-025ff9bdff29.png>\n<SocialLink_Facebook_32x32_91200431-fa61-46c9-a795-9b32b6b68ae6.png>\n<SocialLink_Twitter_32x32_a30aa13b-054b-4b13-8796-b304c2b2cf70.png>\n<SocialLink_Instagram_32x32_90b742ba-59ec-4255-aa07-fe97f51e95d3.png>\n<SocialLink_Linkedin_32x32_b29ff058-d2a8-4e92-9f9c-7a2119d5c740.png>\nIMPORTANT MESSAGE FROM PERTH AIRPORT PTY LTD This email is confidential. If you are not the intended recipient you must not disclose or use the information contained in it. If you have received this email in error please notify us immediately by return emailand delete the document. Perth Airport is not responsible for any changes made to a document other than those made by Perth Airport or for the effect of the changes on the document's meaning. Perth Airport accepts no liability for any damage caused by thisemail or its attachments due to viruses interference interception corruption or unauthorised access.\nFrom:Stanley Chia <stanley.chia@zycus.com>\nSent:Thursday, 5 June 2025 5:14 PM\nTo:Louisa Cotter <Louisa.Cotter@perthairport.com.au>; Pablo Alcorta <Pablo.Alcorta@perthairport.com.au>\nSubject:Zycus\n** Perth Airport Security WARNING:Thisemail originated from outside of the organisation - Do not click links or open attachments unless you recognise the sender and know the content is safe **\nHi Louisa, Pablo,\nQuick note to say thank you for your time yesterday, I hope the presentation was informative and helpful.I shall get back to you shortly on the commercials so we can schedule a deeper dive into the Zycus solution.Meanwhile, pls let us know if you have any questions.Rgds\nStanleyGet Outlookfor iOS",
+    "ActivityDate": "2025-08-15",
+    "Status": "Completed",
+    "WhoId": "0030O000021OsfyQAC",
+    "Who": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Contact/0030O000021OsfyQAC"
+      },
+      "Name": "Louisa Cotter"
+    },
+    "WhatId": "006P700000LwrZJIAZ",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000LwrZJIAZ"
+      },
+      "Name": "PerthAirport_S2P_2025"
+    },
+    "CreatedDate": "2025-08-15T08:39:23.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000XHah3MAD"
+    },
+    "Id": "00TP700000XHah3MAD",
+    "Subject": "[Clari - Email Sent] Re: Zycus - Transformational Procurement",
+    "Description": "Hi Louisa,\nThanks for your email and suggested time.Very keen to facilitate a session for you but we're in Melbourne for the first half of next week.Any chance you're still here on Thursday and Friday ?\n\nbest regards,\nLuke Dougherty\nRegional Sales Director @ Zycus\n+61 411 220 880\n\n\n\n\nFrom:Louisa Cotter <Louisa.Cotter@perthairport.com.au>\nSent:Friday, August 15, 2025 5:31 AM\nTo:Luke Dougherty <luke.dougherty@zycus.com>\nCc:Adwaita Bhaduri <adwaita.bhaduri@zycus.com>\nSubject:Re: Zycus - Transformational Procurement \n\nHi Luke\nThanks for reaching out, I will be in Sydney next week for a couple of conferences and have a couple of hours available Tuesday morning to discuss the zycus program. I would be keen on doing a demo on how this interfaces with MS teams and do a demo of the process again.\nI\u2019d like to also note that we have TechOne as an ERP and zycus and want to me sure this won\u2019t t be an issue with connection. Please let me know if you\u2019re available.\nRegards\nLouisaLouisa Cotter\nGeneral Manager Procurement\n\n\n\nLevel 2, 2 George Wiencke Drive (Opposite T3 & T4), Perth Airport WA 6105\nPO Box 6, Cloverdale WA 6985\nT(08) 6278 8317 M 0400 926 017\nwww.perthairport.com.au\nJoin Our Talent Community\n\nOn 30 Jul 2025, at 8:31\u202fam, Luke Dougherty <luke.dougherty@zycus.com> wrote:\n\n\ufeffSome people who received this message don't often get email from luke.dougherty@zycus.com. Learn why this is important** Perth Airport Security WARNING:This email originated from outside of the organisation - Do not click links or open attachments unless you recognise the sender and know the content is safe **Hi Louisa,\nGood to connect with you.\nFurther to Adwaita's message, if you're interested, I'd love to have a chat to see where Perth Airport is on the digital procurement journey and discuss if we can be any assistance now or in future.\nZycus really are bringing efficient, cost saving, digital workflows to enterprise organisations everywhere.For example, our partnership with Microsoft to make MS Teams the organisation's interface to Procurementis a game changer for ease of use, compliance and AI enhanced workflows.\nWould you like to connect sometime in the next week or so to discuss procurement tech at Perth Airport ?\n\nbest regards,\nLuke Dougherty\nRegional Sales Director @ Zycus\n+61 411 220 880\n\n<Outlook-uhas1jdr.png>\n\nFrom:Adwaita Bhaduri <adwaita.bhaduri@zycus.com>\nSent:Tuesday, July 29, 2025 2:54 PM\nTo:Louisa Cotter <Louisa.Cotter@perthairport.com.au>\nCc:Pablo Alcorta <Pablo.Alcorta@perthairport.com.au>; Luke Dougherty <luke.dougherty@zycus.com>\nSubject:Re: Zycus\nHello Louisa,\nHope you\u2019ve been keeping well. I understand that you have several conflicting priorities so, I'll keep this short. We have a quick update from our side.\nOur previous Regional Sales Director, Stanley Chia, has recently moved on from Zycus. Going forward, your new point of contact will be Luke Dougherty, our current Regional Sales Director (cc\u2019d here). Luke is well aware of the conversations you had with Stanley and would be more than happy to connect with your team.\nIf there are any updates on your side or any need for further demos or discussions, please don\u2019t hesitate to reach out to either of us.\nKindRegards,Adwaita 'Addy'BhaduriBusiness Development|APACZYCUS:Gartner, and Forrester Ranked Leader: Source-to-PayOn Mon, Jun 23, 2025 Stanley Chia wrote:\nHi again Louisa, I hope you had a great weekend.Looking forward to hearing from you towards the end of this week.Have a great day!Stanley ChiaDirector of Sales - ANZ+61 493 660 777stanley.chia@zycus.com<V9K0vqlIinCv_huhdi-9y25YPhpftF_WOMvK40Mz8No>\n\n\n\nFrom:Louisa Cotter <Louisa.Cotter@perthairport.com.au>Sent:Thursday, June 19, 2025 9:16 AMTo:Stanley Chia <stanley.chia@zycus.com>Cc:Pablo Alcorta <Pablo.Alcorta@perthairport.com.au>; Tanya Rajesh <tanya.rajesh@zycus.com>Subject:Re: ZycusGood Morning Stanley,\nThank you for your email, we are still reviewing the proposal. As mentioned we quite liked the system and would like to explore this further.\nI hope to come back to you by the end of next week, I have conferences and training sessions to attend until mid next week.\nRegards\nLouisaLouisa Cotter\nGeneral Manager Procurement\n<g_e5_T_ctFJLnXscUELn8EgM-vJefXxZ-bIYHHMmXNE>Level 2, 2 George Wiencke Drive (Opposite T3 & T4), Perth Airport WA 6105PO Box 6, Cloverdale WA 6985T(08) 6278 8317 M0400 926 017\nwww.perthairport.com.auJoin Our Talent Community\n<MjuzmpNbgSojYUgFpkon3LDQrPiWvx0f5lzDoJAiD3U><CEtYGzAffKkHcpQCa-RXnUVcwqPmjnIRw4y2Qkjk2Hg><_ApXOCls7CneCYwHEON89w0-SZ_CeqJOcPduxKZosJw><9EBDXnPqJwvdwVKQ_JP5krA2io1hExrzJUcYbRbmAsM>\n<ZVhOV7a5hZ-bwBx2erOe_ppmdwctC3CtfxAEaToDW-o>On 17 Jun 2025, at 11:29\u202fam, Stanley Chia <stanley.chia@zycus.com> wrote:\n\n** Perth Airport Security WARNING:This email originated from outside of the organisation - Do not clicklinks or open attachments unless you recognise the sender and know the content is safe **Hi Louisa, Pablo, greetings from Zycus.Reaching out to you on account of the ball park proposal below, which has been greatly discounted,would love an opportunity to discuss it with you and answer any questions you may have.Based on the feedback from our last demo, I'm confident we have theright solution and would like to dive deeper into our solution.Thank you!\nStanleyStanley ChiaDirector of Sales - ANZ+61 493 660 777stanley.chia@zycus.com<Outlook-o5wpn1a1.png>\n\n\n\nFrom:Stanley Chia <stanley.chia@zycus.com>Sent:Thursday, June 12, 2025 2:03 PMTo:Louisa Cotter <Louisa.Cotter@perthairport.com.au>; Pablo Alcorta <Pablo.Alcorta@perthairport.com.au>Subject:Re: Zycus\nGood afternoon Louisa, Pablo,Further to your request last week for a ball-park enterprise pricing to cover the license needs for Perth Airport, I'd like to first provide some context to the Zycus pricing model.Firstly, Zycus is a Saas software provider, hence our Customers don't actually \"buy\" our software, rather, they pay a yearly subscription cost that allows them to use the software for a year until the agreement is renewed.Our typical agreement is for 5-years.The license subscription cost is largely based on the number and type of users and the modules in scope.In best interest of our Customers, we leverage economies of scale which means we provide better discounts with higher number of modules and users, typicallyin a bundle as opposed to ala carte or by line item.This takes into considerationpresent and future user requirements, budget, timing etc.and represents the most optimum way to purchase Zycus licenses.A mentioned during out meeting, our objective isto provide licenses that would cover our Customer's needs over the entire Agreement period.There are no mechanisms in place that would escalate the subscription costs over the life of the licenses agreement.That said, we have projected the number of users in the ballpark of 10 Power Users, 20 Business Users in the draft license pricing.A one-time implementation fee has also been estimated to expose the true costs, completely free of any hidden or surprisecharges.This number is contingent on the complexityof the implementation which includes the integration with your ERP system.We strongly encourage a scoping session to be performed so as to enable us to develop a project scope.Based on ROI modelling,we typically see ROI's of at least 8-15 times the investment, typically within a 3 year period.This price includes the key modules including iSourcing, iContract, iSupplier, Merlin Intake and all the accompanying Gen AI infused into each of these modules.We have incorporated some growth into that number for the duration of the Agreement.The price estimate for the above as follows:<image.png>Please note that the pricing above does not constitute an offer or a proposal and is subject to the Management's approval.At Zycus, we meet you where you're at.We are very flexible in our payment terms, and in many instances, where it makes sense, help our Customers time invoices and payments in a manner that leverages available current FY funds and next FY's funds.While wehave our own license agreement, we are also open to using Perth Airport's purchase agreements.Please let me know if you have any questions.I'm suggesting the following next steps:A quick Team's call to go through the commercial aspects of the attached and answer any questions you may have.A deeper dive into the solution set and functionality, as well as how we envision our solution to bring value add to Perth Airport's business needs.Do let me know if there are any questions.Thanks and warm regards,Stanley ChiaDirector of Sales - ANZ+61 493 660 777stanley.chia@zycus.com<Outlook-fzrjnoxv.png>\n\nFrom:Louisa Cotter <Louisa.Cotter@perthairport.com.au>Sent:Friday, June 6, 2025 10:50 AMTo:Stanley Chia <stanley.chia@zycus.com>; Pablo Alcorta <Pablo.Alcorta@perthairport.com.au>Subject:RE: ZycusMany thanksStanleyI look forward to your response on commercialsRegardsLouisaLouisa Cotter\nGeneral Manager Procurement\n<Emailsiglogo_c7fed1a3-8a9d-4bb6-8bc6-dd80bf558e01.png>\n\nLevel 2, 2 George Wiencke Drive (Opposite T3 & T4), Perth Airport WA 6105PO Box 6, Cloverdale WA 6985T(08) 6278 8317 M0400 926 017\nwww.perthairport.com.auJoinOur Talent Community<Title_06_0b3898ca-c21a-49eb-b7f6-025ff9bdff29.png>\n\n<SocialLink_Facebook_32x32_91200431-fa61-46c9-a795-9b32b6b68ae6.png><SocialLink_Twitter_32x32_a30aa13b-054b-4b13-8796-b304c2b2cf70.png><SocialLink_Instagram_32x32_90b742ba-59ec-4255-aa07-fe97f51e95d3.png><SocialLink_Linkedin_32x32_b29ff058-d2a8-4e92-9f9c-7a2119d5c740.png>\n\nIMPORTANT MESSAGE FROM PERTH AIRPORT PTY LTD This email is confidential. If you are not the intended recipient you must not disclose or use the information contained in it. If you have received this email in error please notify us immediately by return emailand delete the document. Perth Airport is not responsible for any changes made to a document other than those made by Perth Airport or for the effect of the changes on the document's meaning. Perth Airport accepts no liability for any damage caused by thisemail or its attachments due to viruses interference interception corruption or unauthorised access.From:Stanley Chia <stanley.chia@zycus.com>Sent:Thursday, 5 June 2025 5:14 PMTo:Louisa Cotter <Louisa.Cotter@perthairport.com.au>; Pablo Alcorta <Pablo.Alcorta@perthairport.com.au>Subject:Zycus** Perth Airport Security WARNING:Thisemail originated from outside of the organisation - Do not click links or open attachments unless you recognise the sender and know the content is safe **Hi Louisa, Pablo,Quick note to say thank you for your time yesterday, I hope the presentation was informative and helpful.I shall get back to you shortly on the commercials so we can schedule a deeper dive into the Zycus solution.Meanwhile, pls let us know if you have any questions.RgdsStanleyGet Outlookfor iOS",
+    "ActivityDate": "2025-08-15",
+    "Status": "Completed",
+    "WhoId": "0030O000021OsfyQAC",
+    "Who": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Contact/0030O000021OsfyQAC"
+      },
+      "Name": "Louisa Cotter"
+    },
+    "WhatId": "006P700000LwrZJIAZ",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000LwrZJIAZ"
+      },
+      "Name": "PerthAirport_S2P_2025"
+    },
+    "CreatedDate": "2025-08-15T02:39:37.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000XGwiGMAT"
+    },
+    "Id": "00TP700000XGwiGMAT",
+    "Subject": "[Clari - Email Received] Re: Zycus - Transformational Procurement",
+    "Description": "Hi Luke\nThanks for reaching out, I will be in Sydney next week for a couple of conferences and have a couple of hours available Tuesday morning to discuss the zycus program. I would be keen on doing a demo on how this interfaces with MS teams and do a demo of the process again.\nI\u2019d like to also note that we have TechOne as an ERP and zycus and want to me sure this won\u2019t t be an issue with connection. Please let me know if you\u2019re available.\nRegards\nLouisaLouisa Cotter \nGeneral Manager Procurement\n\n\n\nLevel 2, 2 George Wiencke Drive (Opposite T3 & T4), Perth Airport WA 6105\nPO Box 6, Cloverdale WA 6985 \nT (08) 6278 8317 M 0400 926 017 \nwww.perthairport.com.au\nJoin Our Talent Community\n\nOn 30 Jul 2025, at 8:31\u202fam, Luke Dougherty <luke.dougherty@zycus.com> wrote:\n\n\ufeff Some people who received this message don't often get email from luke.dougherty@zycus.com. Learn why this is important ** Perth Airport Security WARNING:This email originated from outside of the organisation - Do not click links or open attachments unless you recognise the sender and know the content is safe **Hi Louisa,\nGood to connect with you.\nFurther to Adwaita's message, if you're interested, I'd love to have a chat to see where Perth Airport is on the digital procurement journey and discuss if we can be any assistance now or in future.\nZycus really are bringing efficient, cost saving, digital workflows to enterprise organisations everywhere.For example, our partnership with Microsoft to make MS Teams the organisation's interface to Procurementis a game changer for ease of use, compliance and AI enhanced workflows.\nWould you like to connect sometime in the next week or so to discuss procurement tech at Perth Airport ?\n\nbest regards,\nLuke Dougherty\nRegional Sales Director @ Zycus\n+61 411 220 880\n\n\n<Outlook-uhas1jdr.png>\n\n\nFrom:Adwaita Bhaduri <adwaita.bhaduri@zycus.com>\nSent:Tuesday, July 29, 2025 2:54 PM\nTo:Louisa Cotter <Louisa.Cotter@perthairport.com.au>\nCc:Pablo Alcorta <Pablo.Alcorta@perthairport.com.au>; Luke Dougherty <luke.dougherty@zycus.com>\nSubject:Re: Zycus \nHello Louisa,\nHope you\u2019ve been keeping well. I understand that you have several conflicting priorities so, I'll keep this short. We have a quick update from our side.\nOur previous Regional Sales Director, Stanley Chia, has recently moved on from Zycus. Going forward, your new point of contact will be Luke Dougherty, our current Regional Sales Director (cc\u2019d here). Luke is well aware of the conversations you had with Stanley and would be more than happy to connect with your team.\nIf there are any updates on your side or any need for further demos or discussions, please don\u2019t hesitate to reach out to either of us.\nKindRegards,Adwaita 'Addy'BhaduriBusiness Development|APACZYCUS:Gartner, and Forrester Ranked Leader: Source-to-PayOn Mon, Jun 23, 2025 Stanley Chia wrote:\nHi again Louisa, I hope you had a great weekend.Looking forward to hearing from you towards the end of this week.Have a great day!Stanley ChiaDirector of Sales - ANZ+61 493 660 777stanley.chia@zycus.com<V9K0vqlIinCv_huhdi-9y25YPhpftF_WOMvK40Mz8No>\n\n\n\nFrom:Louisa Cotter <Louisa.Cotter@perthairport.com.au>Sent:Thursday, June 19, 2025 9:16 AMTo:Stanley Chia <stanley.chia@zycus.com>Cc:Pablo Alcorta <Pablo.Alcorta@perthairport.com.au>; Tanya Rajesh <tanya.rajesh@zycus.com>Subject:Re: ZycusGood Morning Stanley,\nThank you for your email, we are still reviewing the proposal. As mentioned we quite liked the system and would like to explore this further.\nI hope to come back to you by the end of next week, I have conferences and training sessions to attend until mid next week.\nRegards\nLouisaLouisa Cotter\nGeneral Manager Procurement\n<g_e5_T_ctFJLnXscUELn8EgM-vJefXxZ-bIYHHMmXNE>Level 2, 2 George Wiencke Drive (Opposite T3 & T4), Perth Airport WA 6105PO Box 6, Cloverdale WA 6985T(08) 6278 8317 M0400 926 017\nwww.perthairport.com.auJoin Our Talent Community\n<MjuzmpNbgSojYUgFpkon3LDQrPiWvx0f5lzDoJAiD3U><CEtYGzAffKkHcpQCa-RXnUVcwqPmjnIRw4y2Qkjk2Hg><_ApXOCls7CneCYwHEON89w0-SZ_CeqJOcPduxKZosJw><9EBDXnPqJwvdwVKQ_JP5krA2io1hExrzJUcYbRbmAsM>\n<ZVhOV7a5hZ-bwBx2erOe_ppmdwctC3CtfxAEaToDW-o>On 17 Jun 2025, at 11:29\u202fam, Stanley Chia <stanley.chia@zycus.com> wrote:\n\n** Perth Airport Security WARNING:This email originated from outside of the organisation - Do not clicklinks or open attachments unless you recognise the sender and know the content is safe **Hi Louisa, Pablo, greetings from Zycus.Reaching out to you on account of the ball park proposal below, which has been greatly discounted,would love an opportunity to discuss it with you and answer any questions you may have.Based on the feedback from our last demo, I'm confident we have theright solution and would like to dive deeper into our solution.Thank you!\nStanleyStanley ChiaDirector of Sales - ANZ+61 493 660 777stanley.chia@zycus.com<Outlook-o5wpn1a1.png>\n\n\n\nFrom:Stanley Chia <stanley.chia@zycus.com>Sent:Thursday, June 12, 2025 2:03 PMTo:Louisa Cotter <Louisa.Cotter@perthairport.com.au>; Pablo Alcorta <Pablo.Alcorta@perthairport.com.au>Subject:Re: Zycus\nGood afternoon Louisa, Pablo,Further to your request last week for a ball-park enterprise pricing to cover the license needs for Perth Airport, I'd like to first provide some context to the Zycus pricing model.Firstly, Zycus is a Saas software provider, hence our Customers don't actually \"buy\" our software, rather, they pay a yearly subscription cost that allows them to use the software for a year until the agreement is renewed.Our typical agreement is for 5-years.The license subscription cost is largely based on the number and type of users and the modules in scope.In best interest of our Customers, we leverage economies of scale which means we provide better discounts with higher number of modules and users, typicallyin a bundle as opposed to ala carte or by line item.This takes into considerationpresent and future user requirements, budget, timing etc.and represents the most optimum way to purchase Zycus licenses.A mentioned during out meeting, our objective isto provide licenses that would cover our Customer's needs over the entire Agreement period.There are no mechanisms in place that would escalate the subscription costs over the life of the licenses agreement.That said, we have projected the number of users in the ballpark of 10 Power Users, 20 Business Users in the draft license pricing.A one-time implementation fee has also been estimated to expose the true costs, completely free of any hidden or surprisecharges.This number is contingent on the complexityof the implementation which includes the integration with your ERP system.We strongly encourage a scoping session to be performed so as to enable us to develop a project scope.Based on ROI modelling,we typically see ROI's of at least 8-15 times the investment, typically within a 3 year period.This price includes the key modules including iSourcing, iContract, iSupplier, Merlin Intake and all the accompanying Gen AI infused into each of these modules.We have incorporated some growth into that number for the duration of the Agreement.The price estimate for the above as follows:<image.png>Please note that the pricing above does not constitute an offer or a proposal and is subject to the Management's approval.At Zycus, we meet you where you're at.We are very flexible in our payment terms, and in many instances, where it makes sense, help our Customers time invoices and payments in a manner that leverages available current FY funds and next FY's funds.While wehave our own license agreement, we are also open to using Perth Airport's purchase agreements.Please let me know if you have any questions.I'm suggesting the following next steps:A quick Team's call to go through the commercial aspects of the attached and answer any questions you may have.A deeper dive into the solution set and functionality, as well as how we envision our solution to bring value add to Perth Airport's business needs.Do let me know if there are any questions.Thanks and warm regards,Stanley ChiaDirector of Sales - ANZ+61 493 660 777stanley.chia@zycus.com<Outlook-fzrjnoxv.png>\n\nFrom:Louisa Cotter <Louisa.Cotter@perthairport.com.au>Sent:Friday, June 6, 2025 10:50 AMTo:Stanley Chia <stanley.chia@zycus.com>; Pablo Alcorta <Pablo.Alcorta@perthairport.com.au>Subject:RE: ZycusMany thanksStanleyI look forward to your response on commercialsRegardsLouisaLouisa Cotter\nGeneral Manager Procurement\n<Emailsiglogo_c7fed1a3-8a9d-4bb6-8bc6-dd80bf558e01.png>\n\nLevel 2, 2 George Wiencke Drive (Opposite T3 & T4), Perth Airport WA 6105PO Box 6, Cloverdale WA 6985T(08) 6278 8317 M0400 926 017\nwww.perthairport.com.auJoinOur Talent Community<Title_06_0b3898ca-c21a-49eb-b7f6-025ff9bdff29.png>\n\n<SocialLink_Facebook_32x32_91200431-fa61-46c9-a795-9b32b6b68ae6.png><SocialLink_Twitter_32x32_a30aa13b-054b-4b13-8796-b304c2b2cf70.png><SocialLink_Instagram_32x32_90b742ba-59ec-4255-aa07-fe97f51e95d3.png><SocialLink_Linkedin_32x32_b29ff058-d2a8-4e92-9f9c-7a2119d5c740.png>\n\nIMPORTANT MESSAGE FROM PERTH AIRPORT PTY LTD This email is confidential. If you are not the intended recipient you must not disclose or use the information contained in it. If you have received this email in error please notify us immediately by return emailand delete the document. Perth Airport is not responsible for any changes made to a document other than those made by Perth Airport or for the effect of the changes on the document's meaning. Perth Airport accepts no liability for any damage caused by thisemail or its attachments due to viruses interference interception corruption or unauthorised access.From:Stanley Chia <stanley.chia@zycus.com>Sent:Thursday, 5 June 2025 5:14 PMTo:Louisa Cotter <Louisa.Cotter@perthairport.com.au>; Pablo Alcorta <Pablo.Alcorta@perthairport.com.au>Subject:Zycus** Perth Airport Security WARNING:Thisemail originated from outside of the organisation - Do not click links or open attachments unless you recognise the sender and know the content is safe **Hi Louisa, Pablo,Quick note to say thank you for your time yesterday, I hope the presentation was informative and helpful.I shall get back to you shortly on the commercials so we can schedule a deeper dive into the Zycus solution.Meanwhile, pls let us know if you have any questions.RgdsStanleyGet Outlookfor iOS",
+    "ActivityDate": "2025-08-14",
+    "Status": "Completed",
+    "WhoId": "0030O000021OsfyQAC",
+    "Who": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Contact/0030O000021OsfyQAC"
+      },
+      "Name": "Louisa Cotter"
+    },
+    "WhatId": "006P700000LwrZJIAZ",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000LwrZJIAZ"
+      },
+      "Name": "PerthAirport_S2P_2025"
+    },
+    "CreatedDate": "2025-08-14T20:40:11.000+0000"
+  }
+]

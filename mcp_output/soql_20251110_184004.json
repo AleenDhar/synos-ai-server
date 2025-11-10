@@ -1,0 +1,368 @@
+[
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000ZpLvuMAF"
+    },
+    "Id": "00TP700000ZpLvuMAF",
+    "Subject": "[Outreach] [Email] [Out] Recognized for Powering Global Procurement Transformation",
+    "Description": "From: \"Divya Deora\" <divya.deora@zycus.com>\r\nTo: \"Christopher Hart\" <christopher.hart@sdguthrie.com>\r\n\r\nDear Christopher,\r\n\r\nWhen you're leading transformation at a global scale, peer proof matters. That\u2019s why we\u2019re proud to share that Zycus has been named a 2025 Customers\u2019 Choice in the Gartner\u00ae Peer Insights\u2122 \u201cVoice of the Customer\u201d for Source-to-Pay Suites.\r\n\r\n\r\nWhat leaders like you value:\r\n \u2714 4.6/5 overall rating across 67 verified reviews\r\n \u2714 95% would recommend Zycus \u2014 top in category\r\n \u2714 High marks in Deployment, Product Capability, and Support\r\n\r\n\r\nFor global transformation heads, this means more than accolades \u2014 it signals faster rollout, lower integration friction, and a future-ready AI-native platform built for scale.\r\n\r\nView Report to see why transformation leaders choose Zycus to drive enterprise outcomes.\r\n\r\nWarm regards,\r\nDivya Deora\r\nBusiness Development | APAC\r\nZYCUS\r\nGartner, and Forrester Ranked Leader: Source-to-Pay Software\r\n \r\n\r\n\r\n\r\nIf you'd like me to stop sending you emails, please click here",
+    "ActivityDate": "2025-10-07",
+    "Status": "Completed",
+    "WhoId": "003P700000MsozFIAR",
+    "Who": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Contact/003P700000MsozFIAR"
+      },
+      "Name": "Christopher Hart"
+    },
+    "WhatId": "006P700000NYz3rIAD",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000NYz3rIAD"
+      },
+      "Name": "SD Guthrie_2025"
+    },
+    "CreatedDate": "2025-10-07T01:39:58.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000ZpLkbMAF"
+    },
+    "Id": "00TP700000ZpLkbMAF",
+    "Subject": "[Outreach] [Email] [Out] Why Your Peers Endorse Zycus for Group Procurement",
+    "Description": "From: \"Divya Deora\" <divya.deora@zycus.com>\r\nTo: \"Asmawatti Othman\" <asmawatti.othman@sdguthrie.com>\r\n\r\nDear Asmawatti,\r\n\r\nWhen you lead Group Procurement, confidence in technology decisions is critical \u2014 not just features, but proof. \r\n\r\nThat\u2019s why we\u2019re proud to share that Zycus was named a 2025 Customers\u2019 Choice in Gartner\u00ae Peer Insights\u2122 for Source-to-Pay Suites.\r\n\r\n\r\nYour peers chose Zycus because:\r\n \u2714 4.6/5 overall rating from 67 verified reviews\r\n \u2714 95% recommendation rate \u2014 the highest in the category\r\n \u2714 Consistent excellence across Deployment, Support, and Product Capabilities\r\n\r\n\r\nFor group-level procurement leaders navigating complexity, this isn\u2019t just validation \u2014 it\u2019s risk mitigation. Zycus delivers speed, scale, and built-in compliance, backed by outcomes, not promises.\r\n\r\nView Reportto see how Zycus compares and why others trust us to deliver.\r\n\r\nWarm regards,\r\nDivya Deora\r\nBusiness Development | APAC\r\nZYCUS\r\nGartner, and Forrester Ranked Leader: Source-to-Pay Software\r\n \r\n\r\n\r\n\r\nIf you'd like me to stop sending you emails, please click here",
+    "ActivityDate": "2025-10-07",
+    "Status": "Completed",
+    "WhoId": "0036700003uroRTAAY",
+    "Who": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Contact/0036700003uroRTAAY"
+      },
+      "Name": "Asmawatti Othman"
+    },
+    "WhatId": "006P700000NYz3rIAD",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000NYz3rIAD"
+      },
+      "Name": "SD Guthrie_2025"
+    },
+    "CreatedDate": "2025-10-07T01:32:37.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000ZpL6JMAV"
+    },
+    "Id": "00TP700000ZpL6JMAV",
+    "Subject": "[Outreach] [Email] [Out] Why Senior Procurement Leaders Are Choosing Zycus",
+    "Description": "From: \"Divya Deora\" <divya.deora@zycus.com>\r\nTo: \"Salina Saaduddin\" <salina.saaduddin@sdguthrie.com>\r\n\r\nDear Salina,\r\n\r\nAs a Senior Manager navigating procurement transformation, having confidence in your platform matters. That\u2019s why it\u2019s significant that Zycus was named a 2025 Customers\u2019 Choice in Gartner\u00ae Peer Insights\u2122 for Source-to-Pay Suites.\r\n\r\n\r\nHere\u2019s what your peers experienced:\r\n \u2714 4.6/5 overall rating from 67 verified reviews\r\n \u2714 95% would recommend Zycus \u2014 highest among peers\r\n \u2714 High marks across Product Capability, Support, and Deployment\r\n\r\n\r\nFor leaders like you, this recognition reflects more than satisfaction \u2014 it confirms that Zycus delivers measurable outcomes, seamless compliance, and fast time-to-value.\r\n\r\nView Here to see why Zycus is trusted by procurement leaders globally.\r\n\r\nKind regards,\r\nDivya Deora\r\nBusiness Development | APAC\r\nZYCUS\r\nGartner, and Forrester Ranked Leader: Source-to-Pay Software\r\n \r\n\r\n\r\n\r\nIf you'd like me to stop sending you emails, please click here",
+    "ActivityDate": "2025-10-07",
+    "Status": "Completed",
+    "WhoId": "003P700000RxzBDIAZ",
+    "Who": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Contact/003P700000RxzBDIAZ"
+      },
+      "Name": "Salina Saaduddin"
+    },
+    "WhatId": "006P700000NYz3rIAD",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000NYz3rIAD"
+      },
+      "Name": "SD Guthrie_2025"
+    },
+    "CreatedDate": "2025-10-07T01:36:09.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000ZpHx8MAF"
+    },
+    "Id": "00TP700000ZpHx8MAF",
+    "Subject": "[Outreach] [Email] [Out] Trusted by Your Peers for Policy-Driven Procurement",
+    "Description": "From: \"Divya Deora\" <divya.deora@zycus.com>\r\nTo: \"Hartini Hanafi\" <hartini.hanafi@sdguthrie.com>\r\n\r\nDear Hartini,\r\n\r\nWhen policy, compliance, and tender governance sit at the core of your role, peer validation becomes essential. That\u2019s why it\u2019s worth noting: Zycus has been named a 2025 Customers\u2019 Choice in the Gartner\u00ae Peer Insights\u2122 \u201cVoice of the Customer\u201d for Source-to-Pay Suites.\r\n\r\n\r\nHere\u2019s what stood out to your peers:\r\n \u2714 4.6/5 overall rating from 67 verified reviews\r\n \u2714 95% would recommend Zycus \u2014 industry-leading\r\n \u2714 Strong performance in Deployment, Compliance, and Support\r\n\r\n\r\nAs a senior leader overseeing tender and compliance processes, this recognition signals what matters most \u2014 built-in governance, seamless audits, and user adoption without added complexity.\r\n\r\nView Here to see why Zycus is the trusted choice for policy-first procurement.\r\n\r\nBest regards,\r\nDivya Deora\r\nBusiness Development | APAC\r\nZYCUS\r\nGartner, and Forrester Ranked Leader: Source-to-Pay Software\r\n \r\n\r\n\r\n\r\nIf you'd like me to stop sending you emails, please click here",
+    "ActivityDate": "2025-10-07",
+    "Status": "Completed",
+    "WhoId": "003P700000169WJIAY",
+    "Who": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Contact/003P700000169WJIAY"
+      },
+      "Name": "Hartini Hanafi"
+    },
+    "WhatId": "006P700000NYz3rIAD",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000NYz3rIAD"
+      },
+      "Name": "SD Guthrie_2025"
+    },
+    "CreatedDate": "2025-10-07T01:34:36.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000ZpFVYMA3"
+    },
+    "Id": "00TP700000ZpFVYMA3",
+    "Subject": "[Outreach] [Email] [Out] Why Procurement Leaders Like You Choose Zycus",
+    "Description": "From: \"Divya Deora\" <divya.deora@zycus.com>\r\nTo: \"Shankar Ganesh\" <shankar.ganesh@sdguthrie.com>\r\n\r\nDear Shankar,\r\n\r\nWith growing pressure to deliver savings, drive compliance, and modernize procurement, the stakes for technology decisions have never been higher. That\u2019s why it matters that Zycus was just recognized as a 2025 Customers\u2019 Choice in the Gartner\u00ae Peer Insights\u2122 \u201cVoice of the Customer\u201d for Source-to-Pay Suites.\r\n\r\n\r\nWhat your peers are saying:\r\n \u2714 4.6/5 average rating across 67 verified reviews\r\n \u2714 95% would recommend Zycus \u2014 the highest among peers\r\n \u2714 High scores across Product Capabilities, Deployment, and Support\r\n\r\n\r\nAs Head of Procurement (Downstream), we believe this recognition offers you third-party validation of what Zycus delivers: faster deployment, built-in compliance, and tangible ROI.\r\n\r\nView Report to see why procurement leaders across industries trust Zycus to deliver outcomes, not just automation.\r\n\r\nBest regards,\r\nDivya Deora\r\nBusiness Development | APAC\r\nZYCUS\r\nGartner, and Forrester Ranked Leader: Source-to-Pay Software\r\n \r\n\r\n\r\n\r\nIf you'd like me to stop sending you emails, please click here",
+    "ActivityDate": "2025-10-07",
+    "Status": "Completed",
+    "WhoId": "003P700000UXTDIIA5",
+    "Who": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Contact/003P700000UXTDIIA5"
+      },
+      "Name": "Shankar Ganesh"
+    },
+    "WhatId": "006P700000NYz3rIAD",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000NYz3rIAD"
+      },
+      "Name": "SD Guthrie_2025"
+    },
+    "CreatedDate": "2025-10-07T01:30:23.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000ZLUjrMAH"
+    },
+    "Id": "00TP700000ZLUjrMAH",
+    "Subject": "Prospect's gone cold ? No inbound since last 14 days",
+    "Description": "Opportunity Health",
+    "ActivityDate": "2025-09-26",
+    "Status": "Planned",
+    "WhoId": null,
+    "Who": null,
+    "WhatId": "006P700000NYz3rIAD",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000NYz3rIAD"
+      },
+      "Name": "SD Guthrie_2025"
+    },
+    "CreatedDate": "2025-09-26T05:40:54.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000ZLUjqMAH"
+    },
+    "Id": "00TP700000ZLUjqMAH",
+    "Subject": "Identify more contact roles",
+    "Description": "Opportunity Health",
+    "ActivityDate": "2025-09-26",
+    "Status": "Planned",
+    "WhoId": null,
+    "Who": null,
+    "WhatId": "006P700000NYz3rIAD",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000NYz3rIAD"
+      },
+      "Name": "SD Guthrie_2025"
+    },
+    "CreatedDate": "2025-09-26T05:40:54.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000ZLUjpMAH"
+    },
+    "Id": "00TP700000ZLUjpMAH",
+    "Subject": "Decision Maker is not identified",
+    "Description": "Opportunity Health",
+    "ActivityDate": "2025-09-26",
+    "Status": "Planned",
+    "WhoId": null,
+    "Who": null,
+    "WhatId": "006P700000NYz3rIAD",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000NYz3rIAD"
+      },
+      "Name": "SD Guthrie_2025"
+    },
+    "CreatedDate": "2025-09-26T05:40:54.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000ZLUjoMAH"
+    },
+    "Id": "00TP700000ZLUjoMAH",
+    "Subject": "Log a planned meeting",
+    "Description": "Opportunity Health",
+    "ActivityDate": "2025-09-26",
+    "Status": "Planned",
+    "WhoId": null,
+    "Who": null,
+    "WhatId": "006P700000NYz3rIAD",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000NYz3rIAD"
+      },
+      "Name": "SD Guthrie_2025"
+    },
+    "CreatedDate": "2025-09-26T05:40:54.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000ZLUjnMAH"
+    },
+    "Id": "00TP700000ZLUjnMAH",
+    "Subject": "Keep the engagement multi-threaded",
+    "Description": "Opportunity Health",
+    "ActivityDate": "2025-09-26",
+    "Status": "Planned",
+    "WhoId": null,
+    "Who": null,
+    "WhatId": "006P700000NYz3rIAD",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000NYz3rIAD"
+      },
+      "Name": "SD Guthrie_2025"
+    },
+    "CreatedDate": "2025-09-26T05:40:54.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000ZLUjmMAH"
+    },
+    "Id": "00TP700000ZLUjmMAH",
+    "Subject": "Low Prospect Inbound Communication",
+    "Description": "Opportunity Health",
+    "ActivityDate": "2025-09-26",
+    "Status": "Planned",
+    "WhoId": null,
+    "Who": null,
+    "WhatId": "006P700000NYz3rIAD",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000NYz3rIAD"
+      },
+      "Name": "SD Guthrie_2025"
+    },
+    "CreatedDate": "2025-09-26T05:40:54.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000ZLUjlMAH"
+    },
+    "Id": "00TP700000ZLUjlMAH",
+    "Subject": "Build an org chart and map all the key contacts",
+    "Description": "Opportunity Health",
+    "ActivityDate": "2025-09-26",
+    "Status": "Planned",
+    "WhoId": null,
+    "Who": null,
+    "WhatId": "006P700000NYz3rIAD",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000NYz3rIAD"
+      },
+      "Name": "SD Guthrie_2025"
+    },
+    "CreatedDate": "2025-09-26T05:40:54.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000ZLUjkMAH"
+    },
+    "Id": "00TP700000ZLUjkMAH",
+    "Subject": "10 days without email outbound. Send follow-ups",
+    "Description": "Opportunity Health",
+    "ActivityDate": "2025-09-26",
+    "Status": "Planned",
+    "WhoId": null,
+    "Who": null,
+    "WhatId": "006P700000NYz3rIAD",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000NYz3rIAD"
+      },
+      "Name": "SD Guthrie_2025"
+    },
+    "CreatedDate": "2025-09-26T05:40:54.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000ZLUjjMAH"
+    },
+    "Id": "00TP700000ZLUjjMAH",
+    "Subject": "Get clarity on the evaluation stages and influence the process",
+    "Description": "Opportunity Health",
+    "ActivityDate": "2025-09-26",
+    "Status": "Planned",
+    "WhoId": null,
+    "Who": null,
+    "WhatId": "006P700000NYz3rIAD",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000NYz3rIAD"
+      },
+      "Name": "SD Guthrie_2025"
+    },
+    "CreatedDate": "2025-09-26T05:40:54.000+0000"
+  },
+  {
+    "attributes": {
+      "type": "Task",
+      "url": "/services/data/v59.0/sobjects/Task/00TP700000YlYlpMAF"
+    },
+    "Id": "00TP700000YlYlpMAF",
+    "Subject": "Conf Call",
+    "Description": null,
+    "ActivityDate": "2025-09-02",
+    "Status": "Completed",
+    "WhoId": "003P700000169WJIAY",
+    "Who": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Contact/003P700000169WJIAY"
+      },
+      "Name": "Hartini Hanafi"
+    },
+    "WhatId": "006P700000NYz3rIAD",
+    "What": {
+      "attributes": {
+        "type": "Name",
+        "url": "/services/data/v59.0/sobjects/Opportunity/006P700000NYz3rIAD"
+      },
+      "Name": "SD Guthrie_2025"
+    },
+    "CreatedDate": "2025-09-15T07:29:46.000+0000"
+  }
+]

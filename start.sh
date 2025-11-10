@@ -63,10 +63,12 @@ if [ ! -f ".env" ]; then
     read -p "Press Enter to continue or Ctrl+C to exit and edit .env..."
 fi
 
-# Check for ANTHROPIC_API_KEY
+# Load environment variables
 source .env 2>/dev/null
-if [ -z "$ANTHROPIC_API_KEY" ] || [ "$ANTHROPIC_API_KEY" = "your_anthropic_api_key_here" ]; then
-    if [[ ! "$MODEL" =~ ^(ollama|google_genai) ]]; then
+
+# Check for ANTHROPIC_API_KEY only if using Anthropic model
+if [[ "$MODEL" =~ ^anthropic ]]; then
+    if [ -z "$ANTHROPIC_API_KEY" ] || [ "$ANTHROPIC_API_KEY" = "your_anthropic_api_key_here" ]; then
         echo ""
         echo "❌ ANTHROPIC_API_KEY not set in .env file"
         echo "   Please add your Anthropic API key to the .env file"
