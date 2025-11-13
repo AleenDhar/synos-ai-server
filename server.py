@@ -1,6 +1,6 @@
 """DeepAgent Server - AI Agentic Server with Web UI
 
-Features: Web search, Deep research, MCP server support, Custom tools, Streaming responses
+Features: Web search, Deep research, MCP server support, Custom tools, Streaming responses, Headless browser control
 Supported Models: Claude (Anthropic), GPT-4 (OpenAI), Gemini (Google), Ollama (Local)
 """
 
@@ -205,7 +205,8 @@ class AgentManager:
     async def initialize_agent(self, 
                               instructions: Optional[str] = None,
                               enable_research: bool = True,
-                              model: Optional[str] = None):
+                              model: Optional[str] = None,
+                              headless: bool = True):
         """Initialize the DeepAgent with all tools and configurations"""
         
         # Built-in tools
@@ -216,7 +217,39 @@ class AgentManager:
         
         # Load custom tools
         custom_tools = self.custom_tools_loader.load_tools_from_directory(config.CUSTOM_TOOLS_DIR)
-        tools.extend(custom_tools)
+        
+        # Wrap browser tools to enforce headless mode
+        wrapped_custom_tools = []
+        for tool in custom_tools:
+            if tool.name in ['browser_research', 'browser_research_multiple', 'browser_interactive_research']:
+                # Create wrapped version that automatically includes headless parameter
+                original_func = tool.coroutine if hasattr(tool, 'coroutine') else tool.func
+                
+                def create_wrapped_browser_tool(original, headless_val):
+                    async def wrapped_func(*args, **kwargs):
+                        # Force headless parameter
+                        kwargs['headless'] = headless_val
+                        if asyncio.iscoroutinefunction(original):
+                            return await original(*args, **kwargs)
+                        else:
+                            return original(*args, **kwargs)
+                    return wrapped_func
+                
+                wrapped_func = create_wrapped_browser_tool(original_func, headless)
+                
+                from langchain_core.tools import StructuredTool
+                wrapped_tool = StructuredTool(
+                    name=tool.name,
+                    description=tool.description + f" (Browser mode: {'headless/invisible' if headless else 'visible/slow'})",
+                    coroutine=wrapped_func,
+                    args_schema=tool.args_schema
+                )
+                wrapped_custom_tools.append(wrapped_tool)
+                print(f"✓ Wrapped browser tool: {tool.name} with headless={headless}")
+            else:
+                wrapped_custom_tools.append(tool)
+        
+        tools.extend(wrapped_custom_tools)
         
         # Load MCP tools and wrap them to save large responses
         enabled_mcp_servers = self.mcp_config_manager.get_enabled_servers()
@@ -378,16 +411,25 @@ Be specific about what needs improvement."""
             
             subagents = [research_sub_agent, critique_sub_agent]
         
-        # Default instructions
+        # Default instructions with browser mode guidance
         if instructions is None:
-            instructions = """You are an expert AI assistant with access to web search, MCP tools, and file operations.
+            browser_mode = "headless=True (invisible, fast)" if headless else "headless=False (visible, slow)"
+            instructions = f"""You are an expert AI assistant with access to web search, MCP tools, browser automation, and file operations.
 
 CAPABILITIES:
 - Web search using DuckDuckGo (free, no API key needed)
+- Browser automation with Playwright (currently in {browser_mode} mode)
 - MCP tools for database operations, APIs, and integrations
 - File operations (write_file, read_file, edit_file, ls, grep_search, glob_search)
 - Deep research using specialized research agents
 - Custom tools for specialized tasks
+
+🌐 BROWSER AUTOMATION INSTRUCTIONS:
+- Current browser mode: {browser_mode}
+- ALWAYS pass headless={headless} to browser_research and browser_research_multiple tools
+- Use browser tools after max 3-5 DuckDuckGo searches (don't over-search!)
+- For deep research: search → get URLs → use browser_research_multiple
+- Never make more than 5 consecutive DuckDuckGo searches
 
 🚨 CRITICAL RESPONSE RULES 🚨
 
@@ -402,7 +444,7 @@ CORRECT RESPONSE FORMAT:
 ✅ "The account has 5 open opportunities totaling $2.5M."
 
 INCORRECT RESPONSE FORMAT:
-❌ '{"attributes":{"type":"Opportunity","url":"/services/data/v59.0/sobjects/Opportunity/006P700000O0NMzIAN"},"Id":"006P700000O0NMzIAN"...'
+❌ Pasting raw JSON like: {{"attributes":{{"type":"Opportunity"}},"Id":"006P700000O0NMzIAN"...}}
 ❌ Pasting entire JSON objects
 ❌ Including raw database records
 ❌ Showing truncated data messages like "... (Response truncated. Total size: 38694 chars)"
@@ -425,18 +467,6 @@ The truncated data you receive contains ALL the information you need to answer t
 - DO NOT try to read saved files
 - Just extract and summarize the information naturally
 
-EXAMPLE INTERACTION:
-
-User: "What's the status of opportunity 006P700000O0NMzIAN?"
-
-Your internal process:
-1. Call get_record tool → receives truncated JSON with opportunity data
-2. Extract: Name="Humain_S2P", Stage="Qualified", Amount=160000, CloseDate="2026-04-01"
-3. Respond with summary
-
-Your response:
-"The opportunity 'Humain_S2P' (ID: 006P700000O0NMzIAN) is currently in the Qualified stage with an amount of $160,000. The expected close date is April 1, 2026."
-
 REMEMBER: Users want insights, not data dumps. Be conversational and helpful!"""
         
         # Use provided model or default from config
@@ -446,6 +476,7 @@ REMEMBER: Users want insights, not data dumps. Be conversational and helpful!"""
         print(f"Creating agent with model: {selected_model}")
         print(f"Number of tools: {len(tools)}")
         print(f"Tool names: {[t.name for t in tools]}")
+        print(f"Browser mode: {'headless' if headless else 'visible'}")
         
         self.agent = create_deep_agent(
             tools=tools,
@@ -464,13 +495,13 @@ REMEMBER: Users want insights, not data dumps. Be conversational and helpful!"""
             await self.initialize_agent()
         return self.agent
     
-    async def reinitialize_agent(self, instructions: Optional[str] = None, model: Optional[str] = None):
+    async def reinitialize_agent(self, instructions: Optional[str] = None, model: Optional[str] = None, headless: bool = True):
         """Reinitialize agent (useful after config changes)"""
         self.agent = None
         if self.mcp_client:
             # Clean up old MCP client if exists
             self.mcp_client = None
-        return await self.initialize_agent(instructions, model=model)
+        return await self.initialize_agent(instructions, model=model, headless=headless)
 
 # ============================================================================
 # FASTAPI APP
@@ -478,7 +509,7 @@ REMEMBER: Users want insights, not data dumps. Be conversational and helpful!"""
 
 app = FastAPI(
     title="DeepAgent Server",
-    description="AI Agentic Server with Web UI, Free Search, Deep Research, and MCP Support",
+    description="AI Agentic Server with Web UI, Free Search, Deep Research, MCP Support, and Headless Browser Control",
     version="1.0.0"
 )
 
@@ -508,6 +539,7 @@ class ChatRequest(BaseModel):
     enable_research: bool = True
     system_prompt: Optional[str] = None
     model: Optional[str] = None  # e.g., "openai:gpt-4", "anthropic:claude-sonnet-4"
+    headless: bool = True  # Browser mode: True = invisible/fast, False = visible/slow
 
 class StructuredChatRequest(BaseModel):
     messages: List[ChatMessage]
@@ -515,10 +547,12 @@ class StructuredChatRequest(BaseModel):
     system_prompt: Optional[str] = None
     model: Optional[str] = None
     enable_research: bool = False
+    headless: bool = True  # Browser mode: True = invisible/fast, False = visible/slow
 
 class ConfigRequest(BaseModel):
     instructions: Optional[str] = None
     enable_research: bool = True
+    headless: bool = True
 
 class MCPServerConfig(BaseModel):
     command: str
@@ -537,13 +571,14 @@ async def root():
 
 @app.post("/api/chat")
 async def chat(request: ChatRequest):
-    """Chat endpoint with streaming support"""
+    """Chat endpoint with streaming support and browser headless control"""
     try:
-        # If custom system prompt or model provided, reinitialize agent
-        if request.system_prompt or request.model:
+        # If custom system prompt, model, or headless mode provided, reinitialize agent
+        if request.system_prompt or request.model or request.headless != True:
             await agent_manager.reinitialize_agent(
                 instructions=request.system_prompt,
-                model=request.model
+                model=request.model,
+                headless=request.headless
             )
         
         agent = await agent_manager.get_agent()
@@ -641,16 +676,17 @@ async def chat(request: ChatRequest):
 
 @app.post("/api/chat/structured")
 async def structured_chat(request: StructuredChatRequest):
-    """Chat endpoint with structured output support (JSON schema)"""
+    """Chat endpoint with structured output support (JSON schema) and browser headless control"""
     try:
         from langchain_core.output_parsers import JsonOutputParser
         from langchain_core.prompts import ChatPromptTemplate
         
-        # If custom system prompt or model provided, reinitialize agent
-        if request.system_prompt or request.model:
+        # If custom system prompt, model, or headless mode provided, reinitialize agent
+        if request.system_prompt or request.model or request.headless != True:
             await agent_manager.reinitialize_agent(
                 instructions=request.system_prompt,
-                model=request.model
+                model=request.model,
+                headless=request.headless
             )
         
         agent = await agent_manager.get_agent()
@@ -678,6 +714,7 @@ async def structured_chat(request: StructuredChatRequest):
         print(f"\n{'='*60}")
         print(f"[STRUCTURED OUTPUT REQUEST]")
         print(f"Schema: {json.dumps(request.structured_output_format, indent=2)}")
+        print(f"Browser mode: {'headless' if request.headless else 'visible'}")
         print(f"{'='*60}\n")
         
         result = await agent.ainvoke({"messages": messages})
@@ -771,7 +808,10 @@ async def get_config():
 async def update_config(request: ConfigRequest):
     """Update agent configuration"""
     try:
-        await agent_manager.reinitialize_agent(instructions=request.instructions)
+        await agent_manager.reinitialize_agent(
+            instructions=request.instructions,
+            headless=request.headless
+        )
         return {"status": "success", "message": "Agent reinitialized"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
@@ -875,6 +915,7 @@ if __name__ == "__main__":
 ║  ✓ MCP server support (dynamic tools)                       ║
 ║  ✓ Custom tools integration                                 ║
 ║  ✓ Streaming responses                                      ║
+║  ✓ Headless browser control (API parameter)                ║
 ║  ✓ Web UI for easy interaction                             ║
 ╠══════════════════════════════════════════════════════════════╣
 ║  Starting on: http://{config.HOST}:{config.PORT}                        ║

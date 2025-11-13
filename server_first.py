@@ -1,11 +1,13 @@
-"""
-DeepAgent Server - AI Agentic Server with Web UI
+"""DeepAgent Server - AI Agentic Server with Web UI
+
 Features: Web search, Deep research, MCP server support, Custom tools, Streaming responses
 Supported Models: Claude (Anthropic), GPT-4 (OpenAI), Gemini (Google), Ollama (Local)
 """
+
 import asyncio
 import json
 import os
+import logging
 from typing import List, Dict, Any, Optional, Literal
 from datetime import datetime
 
@@ -22,6 +24,10 @@ import dotenv
 
 # Load environment variables from .env file
 dotenv.load_dotenv()
+
+# Configure logging to suppress verbose MCP warnings
+logging.getLogger("fastmcp").setLevel(logging.ERROR)
+logging.getLogger("mcp").setLevel(logging.ERROR)
 
 # ============================================================================
 # CONFIGURATION
@@ -56,7 +62,6 @@ def get_current_time() -> str:
     """Get the current date and time."""
     return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-
 # ============================================================================
 # CUSTOM TOOLS LOADER
 # ============================================================================
@@ -66,8 +71,8 @@ class CustomToolsLoader:
     
     @staticmethod
     def load_tools_from_directory(directory: str) -> List[Any]:
-        """
-        Load custom tools from Python files in a directory.
+        """Load custom tools from Python files in a directory.
+        
         Each file should define functions with @tool decorator.
         """
         tools = []
@@ -75,16 +80,15 @@ class CustomToolsLoader:
         if not os.path.exists(directory):
             os.makedirs(directory)
             # Create example tool file
-            example_tool = '''"""
-Example custom tool
+            example_tool = '''"""Example custom tool
+
 Define your tools here using @tool decorator
 """
 from langchain_core.tools import tool
 
 @tool
 def example_calculator(a: float, b: float, operation: str = "add") -> float:
-    """
-    Perform basic arithmetic operations.
+    """Perform basic arithmetic operations.
     
     Args:
         a: First number
@@ -117,12 +121,9 @@ def example_calculator(a: float, b: float, operation: str = "add") -> float:
         for filename in os.listdir(directory):
             if filename.endswith(".py") and not filename.startswith("__"):
                 filepath = os.path.join(directory, filename)
-                
                 try:
                     # Load module
-                    spec = importlib.util.spec_from_file_location(
-                        filename[:-3], filepath
-                    )
+                    spec = importlib.util.spec_from_file_location(filename[:-3], filepath)
                     module = importlib.util.module_from_spec(spec)
                     sys.modules[filename[:-3]] = module
                     spec.loader.exec_module(module)
@@ -133,12 +134,10 @@ def example_calculator(a: float, b: float, operation: str = "add") -> float:
                         if hasattr(attr, "name") and hasattr(attr, "description"):
                             tools.append(attr)
                             print(f"Loaded custom tool: {attr.name}")
-                
                 except Exception as e:
                     print(f"Error loading tools from {filename}: {e}")
         
         return tools
-
 
 # ============================================================================
 # MCP CONFIGURATION MANAGER
@@ -181,13 +180,14 @@ class MCPConfigManager:
         """Get only enabled MCP servers"""
         mcp_servers = self.config.get("mcp_servers", {})
         enabled_servers = {}
+        
         for name, config in mcp_servers.items():
             if config.get("enabled", False):
                 # Remove 'enabled' field before passing to MCP client
                 server_config = {k: v for k, v in config.items() if k != "enabled"}
                 enabled_servers[name] = server_config
+        
         return enabled_servers
-
 
 # ============================================================================
 # AGENT MANAGER
@@ -202,11 +202,10 @@ class AgentManager:
         self.agent = None
         self.mcp_client = None
     
-    async def initialize_agent(
-        self,
-        instructions: Optional[str] = None,
-        enable_research: bool = True
-    ):
+    async def initialize_agent(self, 
+                              instructions: Optional[str] = None,
+                              enable_research: bool = True,
+                              model: Optional[str] = None):
         """Initialize the DeepAgent with all tools and configurations"""
         
         # Built-in tools
@@ -216,24 +215,34 @@ class AgentManager:
         ]
         
         # Load custom tools
-        custom_tools = self.custom_tools_loader.load_tools_from_directory(
-            config.CUSTOM_TOOLS_DIR
-        )
+        custom_tools = self.custom_tools_loader.load_tools_from_directory(config.CUSTOM_TOOLS_DIR)
         tools.extend(custom_tools)
         
         # Load MCP tools and wrap them to save large responses
         enabled_mcp_servers = self.mcp_config_manager.get_enabled_servers()
         print(f"Enabled MCP servers: {list(enabled_mcp_servers.keys())}")
+        
         if enabled_mcp_servers:
             try:
                 from langchain_mcp_adapters.client import MultiServerMCPClient
                 from langchain_core.tools import StructuredTool
                 import json
+                import sys
+                import io
                 
                 print("Creating MCP client...")
-                self.mcp_client = MultiServerMCPClient(enabled_mcp_servers)
-                print("Getting MCP tools...")
-                mcp_tools = await self.mcp_client.get_tools()
+                
+                # Suppress MCP schema warnings by temporarily redirecting stderr
+                old_stderr = sys.stderr
+                sys.stderr = io.StringIO()
+                
+                try:
+                    self.mcp_client = MultiServerMCPClient(enabled_mcp_servers)
+                    print("Getting MCP tools...")
+                    mcp_tools = await self.mcp_client.get_tools()
+                finally:
+                    # Restore stderr
+                    sys.stderr = old_stderr
                 
                 # Wrap each MCP tool to save large responses
                 def wrap_mcp_tool(original_tool):
@@ -246,13 +255,28 @@ class AgentManager:
                             result = await original_func(*args, **kwargs)
                         else:
                             result = original_func(*args, **kwargs)
-                            if asyncio.iscoroutine(result):
-                                result = await result
+                        
+                        if asyncio.iscoroutine(result):
+                            result = await result
+                        
+                        # Convert result to proper format
+                        # Handle tuple results from MCP tools
+                        if isinstance(result, tuple):
+                            # MCP tools often return (data, metadata) tuples
+                            result = result[0] if len(result) > 0 else result
+                        
+                        # Try to parse if it's a JSON string
+                        if isinstance(result, str):
+                            try:
+                                result = json.loads(result)
+                            except:
+                                pass  # Keep as string if not JSON
                         
                         # Check if response is large
-                        result_str = str(result)
+                        result_str = json.dumps(result) if isinstance(result, (dict, list)) else str(result)
+                        
                         if len(result_str) > 10000:
-                            # Save to file for debugging/logging purposes
+                            # Save to file silently (no console output)
                             os.makedirs("mcp_output", exist_ok=True)
                             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
                             filename = f"mcp_output/{original_tool.name}_{timestamp}.json"
@@ -266,24 +290,40 @@ class AgentManager:
                                 except:
                                     f.write(result_str)
                             
-                            print(f"[BACKGROUND] Saved large {original_tool.name} response ({len(result_str)} chars) to {filename}")
-                            
-                            # Return a smart truncated version that the agent can actually use
-                            # Extract key information if it's JSON
+                            # Extract key information for preview
+                            # Return actual data but truncated intelligently
                             if isinstance(result, dict):
-                                # For dict results, return a summarized version
-                                summary = {k: v for k, v in list(result.items())[:20]}  # First 20 keys
-                                truncated = json.dumps(summary, indent=2)[:3000]
-                                return f"{truncated}\n\n... (Response truncated - showing first portion of data. Total size: {len(result_str)} chars)"
+                                # For dict, keep important fields and truncate long values
+                                truncated_result = {}
+                                for key, value in result.items():
+                                    if isinstance(value, str) and len(value) > 200:
+                                        truncated_result[key] = value[:200] + "..."
+                                    else:
+                                        truncated_result[key] = value
+                                return truncated_result
+                            
                             elif isinstance(result, list):
-                                # For list results, return first few items
-                                summary = result[:5]  # First 5 items
-                                truncated = json.dumps(summary, indent=2)[:3000]
-                                return f"{truncated}\n\n... (Response truncated - showing first {len(summary)} items. Total items: {len(result)})"
+                                # For list, return first 5 items
+                                truncated_list = []
+                                for item in result[:5]:
+                                    if isinstance(item, dict):
+                                        truncated_item = {}
+                                        for key, value in item.items():
+                                            if isinstance(value, str) and len(value) > 200:
+                                                truncated_item[key] = value[:200] + "..."
+                                            else:
+                                                truncated_item[key] = value
+                                        truncated_list.append(truncated_item)
+                                    else:
+                                        truncated_list.append(item)
+                                
+                                if len(result) > 5:
+                                    return truncated_list + [f"... and {len(result) - 5} more items"]
+                                return truncated_list
+                            
                             else:
-                                # For string results, return first portion
-                                truncated = result_str[:3000]
-                                return f"{truncated}\n\n... (Response truncated. Total size: {len(result_str)} chars)"
+                                # For strings, return first 2000 chars
+                                return result_str[:2000] + "..." if len(result_str) > 2000 else result_str
                         
                         return result
                     
@@ -301,6 +341,7 @@ class AgentManager:
                 
                 print(f"Loaded and wrapped {len(mcp_tools)} MCP tools from {len(enabled_mcp_servers)} servers")
                 print(f"MCP tool names: {[t.name for t in mcp_tools]}")
+                
             except ImportError:
                 print("Warning: langchain-mcp-adapters not installed. MCP support disabled.")
                 print("Install with: pip install langchain-mcp-adapters")
@@ -348,45 +389,61 @@ CAPABILITIES:
 - Deep research using specialized research agents
 - Custom tools for specialized tasks
 
-IMPORTANT: HANDLING LARGE DATA RESPONSES
-When MCP tools return very large data (>10k chars), you will receive a truncated but usable portion:
-- For JSON objects: First 20 keys with their values
-- For JSON arrays: First 5 items
-- For text: First 3000 characters
+🚨 CRITICAL RESPONSE RULES 🚨
 
-This truncated data is COMPLETE and USABLE for analysis. You should:
-✅ Analyze the truncated data directly - it contains the key information
-✅ Extract relevant information from what you received
-✅ Answer the user's question based on the data provided
-✅ If you see "Response truncated", that's normal - work with what you have
+1. NEVER include raw tool outputs in your response
+2. NEVER paste JSON data, API responses, or database records directly
+3. ALWAYS extract and summarize the key information
+4. Your response should be human-readable, not machine data
 
-DO NOT:
-❌ Try to call the same tool again to get "full" data
-❌ Try to read files or search for more data
-❌ Get stuck in loops
+CORRECT RESPONSE FORMAT:
+✅ "The opportunity 'Humain_S2P' has an amount of $160,000 and closes on April 1, 2026."
+✅ "I found 3 related documents: Document A, Document B, and Document C."
+✅ "The account has 5 open opportunities totaling $2.5M."
 
-The truncation is intelligent - it gives you the most important parts of the response.
+INCORRECT RESPONSE FORMAT:
+❌ '{"attributes":{"type":"Opportunity","url":"/services/data/v59.0/sobjects/Opportunity/006P700000O0NMzIAN"},"Id":"006P700000O0NMzIAN"...'
+❌ Pasting entire JSON objects
+❌ Including raw database records
+❌ Showing truncated data messages like "... (Response truncated. Total size: 38694 chars)"
 
-WORKFLOW FOR DATABASE/MCP TASKS:
-1. Call the MCP tool to get data
-2. Analyze the data returned (even if truncated)
-3. Extract the information needed to answer the question
-4. Provide a clear answer to the user
-5. Move on to the next task
+WORKFLOW:
+1. Call the necessary tools to get data
+2. ANALYZE the data internally (don't show this to user)
+3. EXTRACT the key information that answers the question
+4. RESPOND with a clear, human-readable summary
 
-WORKFLOW FOR RESEARCH TASKS:
-1. Break complex questions into sub-topics
-2. Use research-agent for deep investigation of each topic
-3. Save findings to files (e.g., research_topic1.md)
-4. Synthesize information into a comprehensive answer
-5. Use critique-agent to review quality
-6. Refine based on feedback
+HANDLING LARGE DATA:
+When tools return large data (>10,000 chars), they are automatically:
+1. Saved to a file in the background (you don't need to do anything)
+2. Truncated intelligently to show you the key information
+3. Long text fields are shortened to 200 characters
 
-Always use web search for current information and events.
-Be thorough but concise in your final answers."""
+The truncated data you receive contains ALL the information you need to answer the question.
+- Use the data directly - it has all key fields
+- DO NOT mention truncation or saved files to the user
+- DO NOT try to read saved files
+- Just extract and summarize the information naturally
+
+EXAMPLE INTERACTION:
+
+User: "What's the status of opportunity 006P700000O0NMzIAN?"
+
+Your internal process:
+1. Call get_record tool → receives truncated JSON with opportunity data
+2. Extract: Name="Humain_S2P", Stage="Qualified", Amount=160000, CloseDate="2026-04-01"
+3. Respond with summary
+
+Your response:
+"The opportunity 'Humain_S2P' (ID: 006P700000O0NMzIAN) is currently in the Qualified stage with an amount of $160,000. The expected close date is April 1, 2026."
+
+REMEMBER: Users want insights, not data dumps. Be conversational and helpful!"""
+        
+        # Use provided model or default from config
+        selected_model = model or config.MODEL
         
         # Create agent
-        print(f"Creating agent with model: {config.MODEL}")
+        print(f"Creating agent with model: {selected_model}")
         print(f"Number of tools: {len(tools)}")
         print(f"Tool names: {[t.name for t in tools]}")
         
@@ -394,13 +451,11 @@ Be thorough but concise in your final answers."""
             tools=tools,
             system_prompt=instructions,
             subagents=subagents,
-            model=config.MODEL,
-            debug=True
+            model=selected_model,
+            debug=False  # Disable debug to prevent verbose tool response logging
         )
-     
         
         print(f"Agent initialized with {len(tools)} tools and {len(subagents)} subagents")
-        
         return self.agent
     
     async def get_agent(self):
@@ -409,14 +464,13 @@ Be thorough but concise in your final answers."""
             await self.initialize_agent()
         return self.agent
     
-    async def reinitialize_agent(self, instructions: Optional[str] = None):
+    async def reinitialize_agent(self, instructions: Optional[str] = None, model: Optional[str] = None):
         """Reinitialize agent (useful after config changes)"""
         self.agent = None
         if self.mcp_client:
             # Clean up old MCP client if exists
             self.mcp_client = None
-        return await self.initialize_agent(instructions)
-
+        return await self.initialize_agent(instructions, model=model)
 
 # ============================================================================
 # FASTAPI APP
@@ -440,7 +494,6 @@ app.add_middleware(
 # Global agent manager
 agent_manager = AgentManager()
 
-
 # ============================================================================
 # API MODELS
 # ============================================================================
@@ -449,24 +502,29 @@ class ChatMessage(BaseModel):
     role: str
     content: str
 
-
 class ChatRequest(BaseModel):
     messages: List[ChatMessage]
     stream: bool = True
     enable_research: bool = True
+    system_prompt: Optional[str] = None
+    model: Optional[str] = None  # e.g., "openai:gpt-4", "anthropic:claude-sonnet-4"
 
+class StructuredChatRequest(BaseModel):
+    messages: List[ChatMessage]
+    structured_output_format: Dict[str, Any]  # JSON schema for structured output
+    system_prompt: Optional[str] = None
+    model: Optional[str] = None
+    enable_research: bool = False
 
 class ConfigRequest(BaseModel):
     instructions: Optional[str] = None
     enable_research: bool = True
-
 
 class MCPServerConfig(BaseModel):
     command: str
     args: List[str]
     env: Optional[Dict[str, str]] = None
     enabled: bool = True
-
 
 # ============================================================================
 # API ENDPOINTS
@@ -477,13 +535,17 @@ async def root():
     """Serve the web UI"""
     return HTMLResponse(content=open("index.html").read())
 
-
 @app.post("/api/chat")
 async def chat(request: ChatRequest):
-    """
-    Chat endpoint with streaming support
-    """
+    """Chat endpoint with streaming support"""
     try:
+        # If custom system prompt or model provided, reinitialize agent
+        if request.system_prompt or request.model:
+            await agent_manager.reinitialize_agent(
+                instructions=request.system_prompt,
+                model=request.model
+            )
+        
         agent = await agent_manager.get_agent()
         
         # Convert messages to agent format
@@ -492,21 +554,79 @@ async def chat(request: ChatRequest):
             for msg in request.messages
         ]
         
+        # Limit conversation history to prevent context overflow
+        # Keep only the last 10 messages (5 exchanges)
+        if len(messages) > 10:
+            print(f"⚠️  Truncating conversation history from {len(messages)} to 10 messages")
+            messages = messages[-10:]
+        
         if request.stream:
             async def generate():
                 try:
-                    async for chunk in agent.astream(
-                        {"messages": messages},
-                        stream_mode="values"
-                    ):
-                        if "messages" in chunk and chunk["messages"]:
-                            last_message = chunk["messages"][-1]
-                            if hasattr(last_message, 'content'):
-                                yield f"data: {json.dumps({'content': str(last_message.content), 'done': False})}\n\n"
+                    final_response = ""
+                    step_count = 0
+                    seen_tool_calls = set()
                     
-                    yield f"data: {json.dumps({'content': '', 'done': True})}\n\n"
+                    # Use stream_mode="values" to get complete state updates
+                    async for chunk in agent.astream({"messages": messages}, stream_mode="values"):
+                        if "messages" not in chunk or not chunk["messages"]:
+                            continue
+                        
+                        # Get the last message in the conversation
+                        last_message = chunk["messages"][-1]
+                        msg_type = type(last_message).__name__
+                        
+                        # Handle AIMessage with tool calls
+                        if msg_type == "AIMessage" and hasattr(last_message, 'tool_calls') and last_message.tool_calls:
+                            for tool_call in last_message.tool_calls:
+                                # Create unique identifier for this tool call
+                                tool_call_id = f"{tool_call.get('name', 'unknown')}_{tool_call.get('id', '')}"
+                                
+                                # Skip if we've already seen this tool call
+                                if tool_call_id in seen_tool_calls:
+                                    continue
+                                seen_tool_calls.add(tool_call_id)
+                                
+                                step_count += 1
+                                tool_name = tool_call.get('name', 'unknown')
+                                tool_args = tool_call.get('args', {})
+                                
+                                # Log tool call to console
+                                print(f"\n{'='*60}")
+                                print(f"[AGENT THINKING] Step {step_count}: Calling tool")
+                                print(f"Tool: {tool_name}")
+                                print(f"Args: {json.dumps(tool_args, indent=2)}")
+                                print(f"{'='*60}\n")
+                                
+                                # Stream thinking message to client
+                                yield f"data: {json.dumps({'type': 'thinking', 'content': f'Calling {tool_name}...'})}\n\n"
+                        
+                        # Handle AIMessage with content (final response)
+                        elif msg_type == "AIMessage" and hasattr(last_message, 'content') and last_message.content:
+                            content = str(last_message.content).strip()
+                            
+                            # Only update if content has changed
+                            if content and content != final_response:
+                                final_response = content
+                                # Stream the complete content (not incremental)
+                                yield f"data: {json.dumps({'type': 'token', 'content': content})}\n\n"
+                    
+                    # Send final event and log complete output
+                    if final_response:
+                        print(f"\n{'='*60}")
+                        print(f"[AGENT OUTPUT]")
+                        print(final_response)
+                        print(f"{'='*60}\n")
+                        
+                        yield f"data: {json.dumps({'type': 'final', 'content': final_response})}\n\n"
+                    else:
+                        yield f"data: {json.dumps({'type': 'final', 'content': 'Task completed.'})}\n\n"
+                    
                 except Exception as e:
-                    yield f"data: {json.dumps({'error': str(e), 'done': True})}\n\n"
+                    import traceback
+                    error_detail = f"{str(e)}\n{traceback.format_exc()}"
+                    print(f"Error in generate: {error_detail}")
+                    yield f"data: {json.dumps({'type': 'error', 'content': str(e)})}\n\n"
             
             return StreamingResponse(generate(), media_type="text/event-stream")
         else:
@@ -519,12 +639,88 @@ async def chat(request: ChatRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+@app.post("/api/chat/structured")
+async def structured_chat(request: StructuredChatRequest):
+    """Chat endpoint with structured output support (JSON schema)"""
+    try:
+        from langchain_core.output_parsers import JsonOutputParser
+        from langchain_core.prompts import ChatPromptTemplate
+        
+        # If custom system prompt or model provided, reinitialize agent
+        if request.system_prompt or request.model:
+            await agent_manager.reinitialize_agent(
+                instructions=request.system_prompt,
+                model=request.model
+            )
+        
+        agent = await agent_manager.get_agent()
+        
+        # Convert messages to agent format
+        messages = [
+            {"role": msg.role, "content": msg.content}
+            for msg in request.messages
+        ]
+        
+        # Limit conversation history
+        if len(messages) > 10:
+            print(f"⚠️  Truncating conversation history from {len(messages)} to 10 messages")
+            messages = messages[-10:]
+        
+        # Add structured output instruction to the last user message
+        schema_str = json.dumps(request.structured_output_format, indent=2)
+        structured_instruction = f"\n\nIMPORTANT: You MUST respond with valid JSON matching this exact schema:\n{schema_str}\n\nDo not include any text outside the JSON object."
+        
+        # Append instruction to last message
+        if messages and messages[-1]["role"] == "user":
+            messages[-1]["content"] += structured_instruction
+        
+        # Get response from agent
+        print(f"\n{'='*60}")
+        print(f"[STRUCTURED OUTPUT REQUEST]")
+        print(f"Schema: {json.dumps(request.structured_output_format, indent=2)}")
+        print(f"{'='*60}\n")
+        
+        result = await agent.ainvoke({"messages": messages})
+        response_content = result["messages"][-1].content
+        
+        # Try to parse as JSON
+        try:
+            # Extract JSON from response (in case there's extra text)
+            import re
+            json_match = re.search(r'\{.*\}', response_content, re.DOTALL)
+            if json_match:
+                json_str = json_match.group(0)
+                structured_data = json.loads(json_str)
+            else:
+                structured_data = json.loads(response_content)
+            
+            print(f"\n{'='*60}")
+            print(f"[STRUCTURED OUTPUT]")
+            print(json.dumps(structured_data, indent=2))
+            print(f"{'='*60}\n")
+            
+            return {
+                "data": structured_data,
+                "raw_response": response_content,
+                "success": True
+            }
+        except json.JSONDecodeError as e:
+            print(f"⚠️  Failed to parse JSON: {e}")
+            return {
+                "data": None,
+                "raw_response": response_content,
+                "success": False,
+                "error": f"Failed to parse JSON: {str(e)}"
+            }
+    
+    except Exception as e:
+        import traceback
+        print(f"Error in structured_chat: {traceback.format_exc()}")
+        raise HTTPException(status_code=500, detail=str(e))
 
 @app.websocket("/ws/chat")
 async def websocket_chat(websocket: WebSocket):
-    """
-    WebSocket endpoint for real-time chat
-    """
+    """WebSocket endpoint for real-time chat"""
     await websocket.accept()
     
     try:
@@ -536,10 +732,7 @@ async def websocket_chat(websocket: WebSocket):
             messages = data.get("messages", [])
             
             # Stream response
-            async for chunk in agent.astream(
-                {"messages": messages},
-                stream_mode="values"
-            ):
+            async for chunk in agent.astream({"messages": messages}, stream_mode="values"):
                 if "messages" in chunk and chunk["messages"]:
                     last_message = chunk["messages"][-1]
                     if hasattr(last_message, 'content'):
@@ -565,7 +758,6 @@ async def websocket_chat(websocket: WebSocket):
         })
         await websocket.close()
 
-
 @app.get("/api/config")
 async def get_config():
     """Get current configuration"""
@@ -575,24 +767,19 @@ async def get_config():
         "custom_tools_dir": config.CUSTOM_TOOLS_DIR
     }
 
-
 @app.post("/api/config")
 async def update_config(request: ConfigRequest):
     """Update agent configuration"""
     try:
-        await agent_manager.reinitialize_agent(
-            instructions=request.instructions
-        )
+        await agent_manager.reinitialize_agent(instructions=request.instructions)
         return {"status": "success", "message": "Agent reinitialized"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-
 
 @app.get("/api/mcp/servers")
 async def get_mcp_servers():
     """Get MCP server configurations"""
     return agent_manager.mcp_config_manager.config.get("mcp_servers", {})
-
 
 @app.post("/api/mcp/servers/{server_name}")
 async def add_mcp_server(server_name: str, server_config: MCPServerConfig):
@@ -617,9 +804,9 @@ async def add_mcp_server(server_name: str, server_config: MCPServerConfig):
             await agent_manager.reinitialize_agent()
         
         return {"status": "success", "message": f"MCP server '{server_name}' configured"}
+    
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-
 
 @app.delete("/api/mcp/servers/{server_name}")
 async def delete_mcp_server(server_name: str):
@@ -637,16 +824,16 @@ async def delete_mcp_server(server_name: str):
             return {"status": "success", "message": f"MCP server '{server_name}' deleted"}
         else:
             raise HTTPException(status_code=404, detail="Server not found")
+    
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-
 
 @app.get("/api/tools")
 async def list_tools():
     """List all available tools"""
     agent = await agent_manager.get_agent()
-    
     tools_info = []
+    
     for tool in agent.tools:
         tools_info.append({
             "name": tool.name,
@@ -654,7 +841,6 @@ async def list_tools():
         })
     
     return {"tools": tools_info}
-
 
 @app.get("/api/health")
 async def health_check():
@@ -664,7 +850,6 @@ async def health_check():
         "agent_initialized": agent_manager.agent is not None,
         "model": config.MODEL
     }
-
 
 # ============================================================================
 # STARTUP
@@ -676,7 +861,6 @@ async def startup_event():
     print("Initializing DeepAgent server...")
     await agent_manager.initialize_agent()
     print("Server ready!")
-
 
 if __name__ == "__main__":
     import uvicorn
@@ -695,7 +879,7 @@ if __name__ == "__main__":
 ╠══════════════════════════════════════════════════════════════╣
 ║  Starting on: http://{config.HOST}:{config.PORT}                        ║
 ╚══════════════════════════════════════════════════════════════╝
-    """)
+""")
     
     uvicorn.run(
         "server:app",
