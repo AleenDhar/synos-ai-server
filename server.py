@@ -25,6 +25,24 @@ import dotenv
 # Load environment variables from .env file
 dotenv.load_dotenv()
 
+# Disable LangSmith tracing IMMEDIATELY if not configured
+# This must be done BEFORE importing any LangChain modules
+if not os.getenv("LANGCHAIN_API_KEY"):
+    os.environ["LANGCHAIN_TRACING_V2"] = "false"
+    os.environ["LANGCHAIN_API_KEY"] = ""  # Set empty to prevent auto-detection
+
+# Google Sheets OAuth (graceful degradation)
+from fastapi.responses import RedirectResponse
+try:
+    from google_sheets_auth import GoogleSheetsAuth
+    sheets_auth = GoogleSheetsAuth()
+    GOOGLE_SHEETS_ENABLED = sheets_auth.is_authenticated() or os.path.exists("client_secrets.json")
+    print(f"✓ Google Sheets integration: {'READY' if sheets_auth.is_authenticated() else 'NOT AUTHENTICATED'}")
+except Exception as e:
+    sheets_auth = None
+    GOOGLE_SHEETS_ENABLED = False
+    print(f"⚠️  Google Sheets integration disabled: {e}")
+
 # Configure logging to suppress verbose MCP warnings
 logging.getLogger("fastmcp").setLevel(logging.ERROR)
 logging.getLogger("mcp").setLevel(logging.ERROR)
@@ -533,6 +551,10 @@ class ChatMessage(BaseModel):
     role: str
     content: str
 
+class GoogleSheetConfig(BaseModel):
+    spreadsheet_id: str
+    sheet_name: Optional[str] = None  # Optional: specific tab name
+
 class ChatRequest(BaseModel):
     messages: List[ChatMessage]
     stream: bool = True
@@ -540,6 +562,7 @@ class ChatRequest(BaseModel):
     system_prompt: Optional[str] = None
     model: Optional[str] = None  # e.g., "openai:gpt-4", "anthropic:claude-sonnet-4"
     headless: bool = True  # Browser mode: True = invisible/fast, False = visible/slow
+    google_sheets: Optional[List[GoogleSheetConfig]] = None  # List of sheets to search
 
 class StructuredChatRequest(BaseModel):
     messages: List[ChatMessage]
@@ -548,6 +571,7 @@ class StructuredChatRequest(BaseModel):
     model: Optional[str] = None
     enable_research: bool = False
     headless: bool = True  # Browser mode: True = invisible/fast, False = visible/slow
+    google_sheets: Optional[List[GoogleSheetConfig]] = None  # List of sheets to search
 
 class ConfigRequest(BaseModel):
     instructions: Optional[str] = None
@@ -573,10 +597,34 @@ async def root():
 async def chat(request: ChatRequest):
     """Chat endpoint with streaming support and browser headless control"""
     try:
+        print(f"\n{'='*60}")
+        print(f"[API REQUEST] /api/chat")
+        print(f"Model: {request.model}")
+        print(f"Stream: {request.stream}")
+        print(f"Google Sheets: {len(request.google_sheets) if request.google_sheets else 0} sheets")
+        print(f"{'='*60}\n")
+        
+        # Build system prompt with Google Sheets context if provided
+        system_prompt = request.system_prompt
+        if request.google_sheets:
+            sheets_context = "\n\n## AVAILABLE GOOGLE SHEETS\n\nYou have access to the following Google Sheets. Use the find_in_google_sheet tool to search them:\n\n"
+            for idx, sheet in enumerate(request.google_sheets, 1):
+                sheets_context += f"{idx}. Spreadsheet ID: `{sheet.spreadsheet_id}`"
+                if sheet.sheet_name:
+                    sheets_context += f" (Sheet: {sheet.sheet_name})"
+                sheets_context += "\n"
+            
+            sheets_context += "\n**IMPORTANT**: When searching, use ONLY these spreadsheet IDs. Do not search other sheets.\n"
+            
+            if system_prompt:
+                system_prompt = system_prompt + sheets_context
+            else:
+                system_prompt = sheets_context
+        
         # If custom system prompt, model, or headless mode provided, reinitialize agent
-        if request.system_prompt or request.model or request.headless != True:
+        if system_prompt or request.model or request.headless != True:
             await agent_manager.reinitialize_agent(
-                instructions=request.system_prompt,
+                instructions=system_prompt,
                 model=request.model,
                 headless=request.headless
             )
@@ -601,6 +649,12 @@ async def chat(request: ChatRequest):
                     final_response = ""
                     step_count = 0
                     seen_tool_calls = set()
+                    seen_tool_results = set()
+                    
+                    print(f"\n{'🚀'*30}")
+                    print(f"[AGENT STREAM STARTED]")
+                    print(f"Messages: {len(messages)}")
+                    print(f"{'🚀'*30}\n")
                     
                     # Use stream_mode="values" to get complete state updates
                     async for chunk in agent.astream({"messages": messages}, stream_mode="values"):
@@ -610,6 +664,8 @@ async def chat(request: ChatRequest):
                         # Get the last message in the conversation
                         last_message = chunk["messages"][-1]
                         msg_type = type(last_message).__name__
+                        
+                        print(f"[STREAM CHUNK] Message type: {msg_type}")
                         
                         # Handle AIMessage with tool calls
                         if msg_type == "AIMessage" and hasattr(last_message, 'tool_calls') and last_message.tool_calls:
@@ -627,14 +683,25 @@ async def chat(request: ChatRequest):
                                 tool_args = tool_call.get('args', {})
                                 
                                 # Log tool call to console
-                                print(f"\n{'='*60}")
-                                print(f"[AGENT THINKING] Step {step_count}: Calling tool")
+                                print(f"\n{'🔧'*30}")
+                                print(f"[TOOL CALL] Step {step_count}")
                                 print(f"Tool: {tool_name}")
                                 print(f"Args: {json.dumps(tool_args, indent=2)}")
-                                print(f"{'='*60}\n")
+                                print(f"{'🔧'*30}\n")
                                 
                                 # Stream thinking message to client
                                 yield f"data: {json.dumps({'type': 'thinking', 'content': f'Calling {tool_name}...'})}\n\n"
+                        
+                        # Handle ToolMessage (tool results)
+                        elif msg_type == "ToolMessage":
+                            tool_result_id = getattr(last_message, 'tool_call_id', 'unknown')
+                            if tool_result_id not in seen_tool_results:
+                                seen_tool_results.add(tool_result_id)
+                                tool_content = str(last_message.content)[:500]  # First 500 chars
+                                print(f"\n{'✅'*30}")
+                                print(f"[TOOL RESULT]")
+                                print(f"Result preview: {tool_content}...")
+                                print(f"{'✅'*30}\n")
                         
                         # Handle AIMessage with content (final response)
                         elif msg_type == "AIMessage" and hasattr(last_message, 'content') and last_message.content:
@@ -648,13 +715,16 @@ async def chat(request: ChatRequest):
                     
                     # Send final event and log complete output
                     if final_response:
-                        print(f"\n{'='*60}")
-                        print(f"[AGENT OUTPUT]")
-                        print(final_response)
-                        print(f"{'='*60}\n")
+                        print(f"\n{'🎯'*30}")
+                        print(f"[FINAL RESPONSE]")
+                        print(f"Tool calls made: {step_count}")
+                        print(f"Response length: {len(final_response)} chars")
+                        print(f"Response preview: {final_response[:200]}...")
+                        print(f"{'🎯'*30}\n")
                         
                         yield f"data: {json.dumps({'type': 'final', 'content': final_response})}\n\n"
                     else:
+                        print(f"\n⚠️  WARNING: No final response generated!\n")
                         yield f"data: {json.dumps({'type': 'final', 'content': 'Task completed.'})}\n\n"
                     
                 except Exception as e:
@@ -665,13 +735,37 @@ async def chat(request: ChatRequest):
             
             return StreamingResponse(generate(), media_type="text/event-stream")
         else:
+            print(f"\n{'🚀'*30}")
+            print(f"[NON-STREAMING REQUEST]")
+            print(f"Messages: {len(messages)}")
+            print(f"{'🚀'*30}\n")
+            
             result = await agent.ainvoke({"messages": messages})
+            
+            # Count tool calls in result
+            tool_call_count = 0
+            for msg in result.get("messages", []):
+                if hasattr(msg, 'tool_calls') and msg.tool_calls:
+                    tool_call_count += len(msg.tool_calls)
+            
+            print(f"\n{'🎯'*30}")
+            print(f"[NON-STREAMING COMPLETE]")
+            print(f"Tool calls made: {tool_call_count}")
+            print(f"Total messages in result: {len(result.get('messages', []))}")
+            print(f"{'🎯'*30}\n")
+            
             return {
                 "response": result["messages"][-1].content,
                 "done": True
             }
     
     except Exception as e:
+        import traceback
+        error_detail = f"{str(e)}\n{traceback.format_exc()}"
+        print(f"\n{'='*60}")
+        print(f"[ERROR] /api/chat failed:")
+        print(error_detail)
+        print(f"{'='*60}\n")
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.post("/api/chat/structured")
@@ -681,10 +775,27 @@ async def structured_chat(request: StructuredChatRequest):
         from langchain_core.output_parsers import JsonOutputParser
         from langchain_core.prompts import ChatPromptTemplate
         
+        # Build system prompt with Google Sheets context if provided
+        system_prompt = request.system_prompt
+        if request.google_sheets:
+            sheets_context = "\n\n## AVAILABLE GOOGLE SHEETS\n\nYou have access to the following Google Sheets. Use the find_in_google_sheet tool to search them:\n\n"
+            for idx, sheet in enumerate(request.google_sheets, 1):
+                sheets_context += f"{idx}. Spreadsheet ID: `{sheet.spreadsheet_id}`"
+                if sheet.sheet_name:
+                    sheets_context += f" (Sheet: {sheet.sheet_name})"
+                sheets_context += "\n"
+            
+            sheets_context += "\n**IMPORTANT**: When searching, use ONLY these spreadsheet IDs. Do not search other sheets.\n"
+            
+            if system_prompt:
+                system_prompt = system_prompt + sheets_context
+            else:
+                system_prompt = sheets_context
+        
         # If custom system prompt, model, or headless mode provided, reinitialize agent
-        if request.system_prompt or request.model or request.headless != True:
+        if system_prompt or request.model or request.headless != True:
             await agent_manager.reinitialize_agent(
-                instructions=request.system_prompt,
+                instructions=system_prompt,
                 model=request.model,
                 headless=request.headless
             )
@@ -891,6 +1002,37 @@ async def health_check():
         "model": config.MODEL
     }
 
+# Google Sheets OAuth endpoints (conditional)
+if GOOGLE_SHEETS_ENABLED and sheets_auth:
+    @app.get("/oauth2callback")
+    async def oauth2callback(code: str):
+        """Handle Google OAuth callback"""
+        try:
+            sheets_auth.handle_callback(code)
+            return RedirectResponse(url="http://localhost:7860")  # Redirect to Gradio UI
+        except Exception as e:
+            raise HTTPException(status_code=400, detail=str(e))
+
+    @app.get("/api/sheets/status")
+    async def sheets_auth_status():
+        """Check Google Sheets authentication status"""
+        return {
+            "enabled": GOOGLE_SHEETS_ENABLED,
+            "authenticated": sheets_auth.is_authenticated() if sheets_auth else False
+        }
+
+    @app.get("/api/sheets/auth-url")
+    async def get_sheets_auth_url():
+        """Get Google Sheets OAuth URL"""
+        if not sheets_auth:
+            raise HTTPException(status_code=503, detail="Google Sheets not configured")
+        
+        auth_url = sheets_auth.get_auth_url()
+        if not auth_url:
+            raise HTTPException(status_code=503, detail="Cannot generate auth URL. Check client_secrets.json")
+        
+        return {"auth_url": auth_url}
+
 # ============================================================================
 # STARTUP
 # ============================================================================
@@ -910,15 +1052,15 @@ if __name__ == "__main__":
 ║                    DeepAgent Server v1.0                     ║
 ╠══════════════════════════════════════════════════════════════╣
 ║  Features:                                                   ║
-║  ✓ Free web search with DuckDuckGo                          ║
-║  ✓ Deep research with specialized agents                    ║
-║  ✓ MCP server support (dynamic tools)                       ║
-║  ✓ Custom tools integration                                 ║
-║  ✓ Streaming responses                                      ║
-║  ✓ Headless browser control (API parameter)                ║
-║  ✓ Web UI for easy interaction                             ║
+║  ✓ Free web search with DuckDuckGo                           ║
+║  ✓ Deep research with specialized agents                     ║
+║  ✓ MCP server support (dynamic tools)                        ║
+║  ✓ Custom tools integration                                  ║
+║  ✓ Streaming responses                                       ║
+║  ✓ Headless browser control (API parameter)                  ║
+║  ✓ Web UI for easy interaction                               ║
 ╠══════════════════════════════════════════════════════════════╣
-║  Starting on: http://{config.HOST}:{config.PORT}                        ║
+║  Starting on: http://{config.HOST}:{config.PORT}             ║          ║
 ╚══════════════════════════════════════════════════════════════╝
 """)
     

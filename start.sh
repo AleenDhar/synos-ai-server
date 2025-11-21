@@ -116,11 +116,78 @@ mkdir -p custom_tools
 mkdir -p workspace
 echo "✓ Directories ready"
 
-# Start server
-echo ""
-echo "🚀 Starting DeepAgent Server..."
-echo ""
-python server.py
+# Check for Google Sheets credentials
+if [ ! -f "client_secrets.json" ]; then
+    echo ""
+    echo "⚠️  Warning: client_secrets.json not found!"
+    echo "   Google Sheets integration will not work until you:"
+    echo "   1. Download OAuth credentials from Google Cloud Console"
+    echo "   2. Save as client_secrets.json in project root"
+    echo ""
+    echo "   See GOOGLE_SHEETS_SETUP.md for detailed instructions"
+    echo ""
+fi
 
-# Deactivate virtual environment on exit
-deactivate
+# Start servers
+echo ""
+echo "╔══════════════════════════════════════════════════════════════╗"
+echo "║           Starting DeepAgent with Gradio UI                  ║"
+echo "╚══════════════════════════════════════════════════════════════╝"
+echo ""
+
+# Function to cleanup on exit
+cleanup() {
+    echo ""
+    echo "🛑 Stopping servers..."
+    kill $SERVER_PID $UI_PID 2>/dev/null
+    deactivate
+    exit 0
+}
+
+# Set trap for cleanup
+trap cleanup INT TERM
+
+# Start FastAPI server in background
+echo "🚀 Starting FastAPI server on http://localhost:8000..."
+python server.py &
+SERVER_PID=$!
+
+# Wait for server to start
+sleep 3
+
+# Check if server started successfully
+if ! kill -0 $SERVER_PID 2>/dev/null; then
+    echo "❌ Failed to start FastAPI server"
+    exit 1
+fi
+
+# Start Gradio UI in background
+echo "🎨 Starting Gradio UI on http://localhost:7860..."
+python gradio_ui.py &
+UI_PID=$!
+
+# Wait for UI to start
+sleep 2
+
+# Check if UI started successfully
+if ! kill -0 $UI_PID 2>/dev/null; then
+    echo "❌ Failed to start Gradio UI"
+    kill $SERVER_PID 2>/dev/null
+    exit 1
+fi
+
+echo ""
+echo "╔══════════════════════════════════════════════════════════════╗"
+echo "║  ✅ Both servers are running!                                ║"
+echo "╠══════════════════════════════════════════════════════════════╣"
+echo "║  FastAPI Server: http://localhost:8000                      ║"
+echo "║  Gradio UI:      http://localhost:7860                      ║"
+echo "║                                                              ║"
+echo "║  Open Gradio UI in your browser to get started!             ║"
+echo "╠══════════════════════════════════════════════════════════════╣"
+echo "║  Press Ctrl+C to stop both servers                          ║"
+echo "╚══════════════════════════════════════════════════════════════╝"
+echo ""
+
+# Wait for both processes
+wait

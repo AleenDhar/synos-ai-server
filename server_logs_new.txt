@@ -1,0 +1,786 @@
+╔══════════════════════════════════════════════════════════════╗
+║                DeepAgent Server Launcher                     ║
+╚══════════════════════════════════════════════════════════════╝
+
+✓ Python version: 3.11
+
+🔧 Activating virtual environment...
+✓ Using Anthropic model: 
+
+📁 Checking directories...
+✓ Directories ready
+
+╔══════════════════════════════════════════════════════════════╗
+║           Starting DeepAgent with Gradio UI                  ║
+╚══════════════════════════════════════════════════════════════╝
+
+🚀 Starting FastAPI server on http://localhost:8000...
+🎨 Starting Gradio UI on http://localhost:7860...
+
+╔══════════════════════════════════════════════════════════════╗
+║  ✅ Both servers are running!                                ║
+╠══════════════════════════════════════════════════════════════╣
+║  FastAPI Server: http://localhost:8000                      ║
+║  Gradio UI:      http://localhost:7860                      ║
+║                                                              ║
+║  Open Gradio UI in your browser to get started!             ║
+╠══════════════════════════════════════════════════════════════╣
+║  Press Ctrl+C to stop both servers                          ║
+╚══════════════════════════════════════════════════════════════╝
+
+/Users/aleendg/Desktop/synosai-server/server.py:1000: DeprecationWarning: 
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+        
+  @app.on_event("startup")
+INFO:     Will watch for changes in these directories: ['/Users/aleendg/Desktop/synosai-server']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [56716] using WatchFiles
+✓ Google Sheets integration: READY
+
+╔══════════════════════════════════════════════════════════════╗
+║                    DeepAgent Server v1.0                     ║
+╠══════════════════════════════════════════════════════════════╣
+║  Features:                                                   ║
+║  ✓ Free web search with DuckDuckGo                          ║
+║  ✓ Deep research with specialized agents                    ║
+║  ✓ MCP server support (dynamic tools)                       ║
+║  ✓ Custom tools integration                                 ║
+║  ✓ Streaming responses                                      ║
+║  ✓ Headless browser control (API parameter)                ║
+║  ✓ Web UI for easy interaction                             ║
+╠══════════════════════════════════════════════════════════════╣
+║  Starting on: http://0.0.0.0:8000                        ║
+╚══════════════════════════════════════════════════════════════╝
+
+INFO:     Started server process [56732]
+INFO:     Waiting for application startup.
+/Users/aleendg/Desktop/synosai-server/gradio_ui.py:122: UserWarning: You have not specified a value for the `type` parameter. Defaulting to the 'tuples' format for chatbot messages, but this is deprecated and will be removed in a future version of Gradio. Please set type='messages' instead, which uses openai-style dictionaries with 'role' and 'content' keys.
+  chatbot = gr.Chatbot(
+
+
+╭────────────────────────────────────────────────────────────────────────────╮
+│                                                                            │
+│        _ __ ___  _____           __  __  _____________    ____    ____     │
+│       _ __ ___ .'____/___ ______/ /_/  |/  / ____/ __ \  |___ \  / __ \    │
+│      _ __ ___ / /_  / __ `/ ___/ __/ /|_/ / /   / /_/ /  ___/ / / / / /    │
+│     _ __ ___ / __/ / /_/ (__  ) /_/ /  / / /___/ ____/  /  __/_/ /_/ /     │
+│    _ __ ___ /_/    \____/____/\__/_/  /_/\____/_/      /_____(*)____/      │
+│                                                                            │
+│                                                                            │
+│                                FastMCP  2.0                                │
+│                                                                            │
+│                                                                            │
+│                 🖥️  Server name:     salesforce-mcp-server                  │
+│                 📦 Transport:       STDIO                                  │
+│                                                                            │
+│                 🏎️  FastMCP version: 2.12.4                                 │
+│                 🤝 MCP SDK version: 1.14.1                                 │
+│                                                                            │
+│                 📚 Docs:            https://gofastmcp.com                  │
+│                 🚀 Deploy:          https://fastmcp.cloud                  │
+│                                                                            │
+╰────────────────────────────────────────────────────────────────────────────╯
+
+
+[11/21/25 05:38:18] INFO     Starting MCP server                  server.py:1502
+                             'salesforce-mcp-server' with                       
+                             transport 'stdio'                                  
+INFO:     Application startup complete.
+
+
+╭────────────────────────────────────────────────────────────────────────────╮
+│                                                                            │
+│        _ __ ___  _____           __  __  _____________    ____    ____     │
+│       _ __ ___ .'____/___ ______/ /_/  |/  / ____/ __ \  |___ \  / __ \    │
+│      _ __ ___ / /_  / __ `/ ___/ __/ /|_/ / /   / /_/ /  ___/ / / / / /    │
+│     _ __ ___ / __/ / /_/ (__  ) /_/ /  / / /___/ ____/  /  __/_/ /_/ /     │
+│    _ __ ___ /_/    \____/____/\__/_/  /_/\____/_/      /_____(*)____/      │
+│                                                                            │
+│                                                                            │
+│                                FastMCP  2.0                                │
+│                                                                            │
+│                                                                            │
+│                 🖥️  Server name:     salesforce-mcp-server                  │
+│                 📦 Transport:       STDIO                                  │
+│                                                                            │
+│                 🏎️  FastMCP version: 2.12.4                                 │
+│                 🤝 MCP SDK version: 1.14.1                                 │
+│                                                                            │
+│                 📚 Docs:            https://gofastmcp.com                  │
+│                 🚀 Deploy:          https://fastmcp.cloud                  │
+│                                                                            │
+╰────────────────────────────────────────────────────────────────────────────╯
+
+
+[11/21/25 05:38:26] INFO     Starting MCP server                  server.py:1502
+                             'salesforce-mcp-server' with                       
+                             transport 'stdio'                                  
+✓ Google Sheets integration: READY
+✓ Google Sheets integration: READY
+Initializing DeepAgent server...
+Error loading tools from browser_research_tool.py: No module named 'playwright'
+Loaded custom tool: find_in_google_sheet
+Loaded custom tool: list_google_sheets
+Loaded custom tool: read_google_sheet
+Loaded custom tool: calculate_distance
+Loaded custom tool: calculate_percentage
+Loaded custom tool: calculator
+Loaded custom tool: convert_temperature
+Loaded custom tool: decode_base64
+Loaded custom tool: encode_base64
+Loaded custom tool: generate_uuid
+Loaded custom tool: json_formatter
+Loaded custom tool: text_statistics
+Enabled MCP servers: ['supabase', 'salesforce']
+Creating MCP client...
+Getting MCP tools...
+Loaded and wrapped 34 MCP tools from 2 servers
+MCP tool names: ['search_docs', 'list_organizations', 'get_organization', 'list_projects', 'get_project', 'get_cost', 'confirm_cost', 'create_project', 'pause_project', 'restore_project', 'list_tables', 'list_extensions', 'list_migrations', 'apply_migration', 'execute_sql', 'get_logs', 'get_advisors', 'get_project_url', 'get_publishable_keys', 'generate_typescript_types', 'list_edge_functions', 'get_edge_function', 'deploy_edge_function', 'create_branch', 'list_branches', 'delete_branch', 'merge_branch', 'reset_branch', 'rebase_branch', 'soql', 'get_record', 'describe_object', 'list_objects', 'search']
+Creating agent with model: anthropic:claude-sonnet-4-20250514
+Number of tools: 48
+Tool names: ['duckduckgo_search', 'get_current_time', 'find_in_google_sheet', 'list_google_sheets', 'read_google_sheet', 'calculate_distance', 'calculate_percentage', 'calculator', 'convert_temperature', 'decode_base64', 'encode_base64', 'generate_uuid', 'json_formatter', 'text_statistics', 'search_docs', 'list_organizations', 'get_organization', 'list_projects', 'get_project', 'get_cost', 'confirm_cost', 'create_project', 'pause_project', 'restore_project', 'list_tables', 'list_extensions', 'list_migrations', 'apply_migration', 'execute_sql', 'get_logs', 'get_advisors', 'get_project_url', 'get_publishable_keys', 'generate_typescript_types', 'list_edge_functions', 'get_edge_function', 'deploy_edge_function', 'create_branch', 'list_branches', 'delete_branch', 'merge_branch', 'reset_branch', 'rebase_branch', 'soql', 'get_record', 'describe_object', 'list_objects', 'search']
+Browser mode: headless
+Agent initialized with 48 tools and 2 subagents
+Server ready!
+Error loading tools from browser_research_tool.py: No module named 'playwright'
+Loaded custom tool: find_in_google_sheet
+Loaded custom tool: list_google_sheets
+Loaded custom tool: read_google_sheet
+Loaded custom tool: calculate_distance
+Loaded custom tool: calculate_percentage
+Loaded custom tool: calculator
+Loaded custom tool: convert_temperature
+Loaded custom tool: decode_base64
+Loaded custom tool: encode_base64
+Loaded custom tool: generate_uuid
+Loaded custom tool: json_formatter
+Loaded custom tool: text_statistics
+Enabled MCP servers: ['supabase', 'salesforce']
+Creating MCP client...
+Getting MCP tools...
+Loaded and wrapped 34 MCP tools from 2 servers
+MCP tool names: ['search_docs', 'list_organizations', 'get_organization', 'list_projects', 'get_project', 'get_cost', 'confirm_cost', 'create_project', 'pause_project', 'restore_project', 'list_tables', 'list_extensions', 'list_migrations', 'apply_migration', 'execute_sql', 'get_logs', 'get_advisors', 'get_project_url', 'get_publishable_keys', 'generate_typescript_types', 'list_edge_functions', 'get_edge_function', 'deploy_edge_function', 'create_branch', 'list_branches', 'delete_branch', 'merge_branch', 'reset_branch', 'rebase_branch', 'soql', 'get_record', 'describe_object', 'list_objects', 'search']
+Creating agent with model: openai:gpt-5
+Number of tools: 48
+Tool names: ['duckduckgo_search', 'get_current_time', 'find_in_google_sheet', 'list_google_sheets', 'read_google_sheet', 'calculate_distance', 'calculate_percentage', 'calculator', 'convert_temperature', 'decode_base64', 'encode_base64', 'generate_uuid', 'json_formatter', 'text_statistics', 'search_docs', 'list_organizations', 'get_organization', 'list_projects', 'get_project', 'get_cost', 'confirm_cost', 'create_project', 'pause_project', 'restore_project', 'list_tables', 'list_extensions', 'list_migrations', 'apply_migration', 'execute_sql', 'get_logs', 'get_advisors', 'get_project_url', 'get_publishable_keys', 'generate_typescript_types', 'list_edge_functions', 'get_edge_function', 'deploy_edge_function', 'create_branch', 'list_branches', 'delete_branch', 'merge_branch', 'reset_branch', 'rebase_branch', 'soql', 'get_record', 'describe_object', 'list_objects', 'search']
+Browser mode: headless
+Agent initialized with 48 tools and 2 subagents
+
+============================================================
+[STRUCTURED OUTPUT REQUEST]
+Schema: {
+  "data": {
+    "opportunity_id": "006P700000NAivWIAT",
+    "opportunity_name": "RTX_Spend_2025",
+    "analysis_timestamp": "2025-11-11T22:30:43Z",
+    "health_dashboard": {
+      "overall_health_status": "CRITICAL",
+      "overall_health_emoji": "\ud83d\udd34",
+      "stage_name": "Qualified",
+      "stage_age_days": 63,
+      "stage_age_text": "Stage Age: 63 days",
+      "health_finding": "28+ days of silence; timeline and budget specifics not confirmed; discovery partially complete though strong committee identified.",
+      "discovery_completion_percentage": 60,
+      "discovery_bant_level": "ADVANCED",
+      "discovery_shoefit_status": "STRONG_FIT",
+      "persona_coverage_count": "4/7 personas",
+      "persona_missing_list": [
+        "IT/SAP Integration Owner",
+        "Information Security",
+        "Legal/Compliance"
+      ],
+      "persona_impact": "CRITICAL",
+      "engagement_momentum": "DECREASING",
+      "engagement_momentum_emoji": "\u2198",
+      "last_response_days_ago": 28,
+      "last_response_text": "Last response: 28 days ago",
+      "engagement_pattern": "COLD",
+      "deal_status": "REAL"
+    },
+    "root_cause_summary": "Engagement cooled after initial momentum; budget holder/approval path and dated milestones remain undefined. We have strong procurement interest and committee mapped, but lack concrete timeline and funding clarity to progress.",
+    "critical_blockers": [
+      {
+        "blocker_rank": 1,
+        "blocker_name": "Undefined Budget Holder and Approval Path",
+        "blocker_impact": "Risk of stall at business case as funding authority and gates are unclear",
+        "blocker_remedy": "Share a concise budget/approval checklist and a 1-page value summary to help internal alignment (no action required)."
+      },
+      {
+        "blocker_rank": 2,
+        "blocker_name": "No Dated Milestones",
+        "blocker_impact": "Without checkpoints, evaluation drifts and prioritization suffers",
+        "blocker_remedy": "Offer a lightweight A&D evaluation roadmap (with security items) as an FYI; invite async feedback on preferred sequence."
+      },
+      {
+        "blocker_rank": 3,
+        "blocker_name": "Cooling Engagement",
+        "blocker_impact": "28 days of silence risks loss to status quo or competitors",
+        "blocker_remedy": "Send A&D case study plus security datasheet tailored to their pains; soft nudge with async consumption."
+      }
+    ],
+    "bant_basics": [
+      {
+        "bant_element": "BUDGET",
+        "bant_status": "PARTIAL",
+        "bant_details": "APD notes allocated investment for upgrading/replacing spend analytics; no amount, budget holder, or approval path confirmed.",
+        "bant_source": "APD: Budget__c; Opportunity: Is_there_a_Budget_related_discussion__c",
+        "bant_quality": "Medium"
+      },
+      {
+        "bant_element": "AUTHORITY",
+        "bant_status": "COMPLETE",
+        "bant_details": "Committee mapped: VP Non-Product Supply Chain (Decision Maker), CFO (Executive Sponsor), Procurement Director (Evaluator), Process Specialist (Influencer).",
+        "bant_source": "Contact Roles; Opportunity fields (Executive_Sponsor_Identified__c, Decision_Maker_Identified__c)",
+        "bant_quality": "High"
+      },
+      {
+        "bant_element": "NEED",
+        "bant_status": "COMPLETE",
+        "bant_details": "Pain: heavy manual reclassification; delayed/low-accuracy spend data; taxonomy harmonization; defense-grade security/compliance. Desired: 97\u2013100% AI classification; faster, reliable insights.",
+        "bant_source": "APD: Need__c, Challenges_Shared__c; Opportunity: Customer_Business_Problem__c",
+        "bant_quality": "High"
+      },
+      {
+        "bant_element": "TIMELINE",
+        "bant_status": "PARTIAL",
+        "bant_details": "Internal review in progress; urgency tied to realignment/taxonomy, but no fixed project deadline or dated milestones.",
+        "bant_source": "APD: Timeline__c; Opportunity: Compelling_Event__c",
+        "bant_quality": "Medium"
+      }
+    ],
+    "shoefit_status": {
+      "shoefit_assessment": "STRONG_FIT",
+      "shoefit_rationale": "Non-product (indirect) procurement focus, explicit need for high-accuracy AI classification, UNSPSC taxonomy, and defense-grade compliance align with Zycus strengths.",
+      "shoefit_top_concern": "SAP integration and security review sequencing may affect timeline if not planned early.",
+      "zycus_framework": {
+        "quick_assessment_score": 4,
+        "quick_assessment_recommendation": "PURSUE",
+        "gate_assessments": [
+          {
+            "gate_number": 1,
+            "gate_name": "Indirect Spend \u2265 $200M",
+            "gate_status": "PASS",
+            "gate_details": "Global A&D enterprise (~$80B revenue) focused on non-product procurement.",
+            "gate_rationale": "Scale implies indirect well above threshold; scope is indirect."
+          },
+          {
+            "gate_number": 2,
+            "gate_name": "Rip & Replace Intent",
+            "gate_status": "PASS",
+            "gate_details": "Stated intent to replace Accenture-built spend analytics due to manual reclassification and accuracy gaps.",
+            "gate_rationale": "Explicit replacement initiative captured in APD and Opportunity."
+          },
+          {
+            "gate_number": 3,
+            "gate_name": "Zero Direct Material Scope",
+            "gate_status": "PASS",
+            "gate_details": "Led by Non-Product Procurement; scope is indirect spend analytics.",
+            "gate_rationale": "Direct materials not in stated scope."
+          }
+        ],
+        "all_gates_passed": true,
+        "weak_capabilities": [],
+        "heavy_on_weak_capability": false,
+        "weak_capability_percentage": 0,
+        "thirty_percent_threshold_exceeded": false,
+        "product_fitment": {
+          "fitment_level": "GOOD",
+          "fitment_description": "Excellent alignment for AI spend analytics and taxonomy; plan early for SAP/security checkpoints.",
+          "required_modules": [
+            "iAnalyze (Spend)",
+            "ANA (AI Classification)",
+            "Supplier Data Enrichment",
+            "Merlin Intake (as part of integrated suite)"
+          ],
+          "threshold_met": true
+        },
+        "phased_deal": {
+          "is_phased": true,
+          "phase_1_scope": "Spend Analytics (iAnalyze + ANA) with taxonomy harmonization; security review concurrently",
+          "written_commitment": false
+        },
+        "final_decision": "PURSUE_ACTIVELY",
+        "final_rationale": "Strong pain/fit and clear replace intent; mitigate timeline risk via phased scope and early SAP/security alignment."
+      }
+    },
+    "remedy_phase": {
+      "remedy_phase": "PHASE_C",
+      "remedy_phase_display": "Phase C: Recover & Re-engage",
+      "remedy_rationale": "Silence \u226520 days and undefined milestones; requires unilateral value-first re-engagement and procurement-first multithreading without meeting pressure."
+    },
+    "next_30_days": [
+      {
+        "action_rank": 1,
+        "action_description": "Share A&D spend analytics case study + security datasheet aligned to RTX pains (manual reclass, UNSPSC, compliance).",
+        "action_owner": "Account Executive",
+        "action_owner_id": "005P7000006OD77IAG",
+        "action_due_date": "2025-11-13",
+        "action_due_date_display": "Nov 13, 2025",
+        "action_script_preview": "Sharing a short A&D case study and our security datasheet addressing taxonomy and accuracy. If helpful, skim async\u2014no action required. Happy to clarify anything via email."
+      },
+      {
+        "action_rank": 2,
+        "action_description": "Procurement-first multithread: soft FYI to VP Non-Product Procurement with evaluation roadmap (no meeting ask), CC champion.",
+        "action_owner": "Account Executive",
+        "action_owner_id": "005P7000006OD77IAG",
+        "action_due_date": "2025-11-25",
+        "action_due_date_display": "Nov 25, 2025",
+        "action_script_preview": "FYI: a lightweight evaluation roadmap (incl. SAP/security checkpoints) to de-risk timelines. Use if helpful; async is fine. No action needed."
+      },
+      {
+        "action_rank": 3,
+        "action_description": "Share neutral comparison scorecard vs. typical options and log updated BANT (budget/approvals checklist).",
+        "action_owner": "Account Executive",
+        "action_owner_id": "005P7000006OD77IAG",
+        "action_due_date": "2025-12-05",
+        "action_due_date_display": "Dec 5, 2025",
+        "action_script_preview": "Attaching a neutral scorecard to aid internal comparison and a one-page budget/approval checklist. Review async\u2014no action required. We\u2019ll update notes on our side."
+      }
+    ],
+    "persona_gap_analysis": {
+      "identified_personas": [
+        {
+          "name": "Darrell Wilson",
+          "title": "Vice President, Non-Product Supply Chain & Logistics",
+          "persona_type": "Procurement Executive Decision Maker",
+          "engagement_status": "Dormant \u2013 last logged activity Sep 2025",
+          "influence_level": "HIGH",
+          "decision_authority": "Decision Maker",
+          "key_concerns": [
+            "Reliable, fast spend visibility",
+            "Process efficiency"
+          ],
+          "motivations": [
+            "Strategic impact from clean data",
+            "Reduced manual workload"
+          ]
+        },
+        {
+          "name": "Neil Mitchill",
+          "title": "Chief Financial Officer",
+          "persona_type": "Economic Buyer / Executive Sponsor",
+          "engagement_status": "Dormant \u2013 listed as Executive Sponsor; no recent interaction logged",
+          "influence_level": "HIGH",
+          "decision_authority": "Economic Buyer",
+          "key_concerns": [
+            "Business case validation",
+            "Risk and compliance"
+          ],
+          "motivations": [
+            "Cost control",
+            "Governance"
+          ]
+        },
+        {
+          "name": "Cecil Robichon",
+          "title": "Non-Product Procurement Director International (EMEA & APAC)",
+          "persona_type": "End User Champion",
+          "engagement_status": "Dormant \u2013 last exchange Oct 2025 per activity",
+          "influence_level": "MEDIUM",
+          "decision_authority": "Recommender",
+          "key_concerns": [
+            "Manual reclassification",
+            "Taxonomy harmonization"
+          ],
+          "motivations": [
+            "Operational efficiency",
+            "Faster insights"
+          ]
+        },
+        {
+          "name": "Ronald Perpetua",
+          "title": "Associate Director, Strategic Sourcing Process Specialist",
+          "persona_type": "Process Influencer",
+          "engagement_status": "Dormant \u2013 last logged activity Sep 2025",
+          "influence_level": "MEDIUM",
+          "decision_authority": "Influencer",
+          "key_concerns": [
+            "Workflow practicality",
+            "Change management"
+          ],
+          "motivations": [
+            "Process reliability",
+            "User adoption"
+          ]
+        }
+      ],
+      "missing_personas": [
+        {
+          "persona_type": "IT/SAP Integration Owner",
+          "impact": "CRITICAL",
+          "strategy": "Procurement-first FYI to VP/Director attaching evaluation roadmap that flags SAP checkpoints; request async confirmation of the right IT contact.",
+          "timeline": "Within 14 days"
+        },
+        {
+          "persona_type": "Information Security",
+          "impact": "HIGH",
+          "strategy": "Share security datasheet and compliance summary; invite async review and capture required standards.",
+          "timeline": "Within 14 days"
+        },
+        {
+          "persona_type": "Legal/Compliance",
+          "impact": "MEDIUM",
+          "strategy": "Provide standard T&Cs summary and data residency FAQs as FYI; note any constraints asynchronously.",
+          "timeline": "Within 30 days"
+        }
+      ],
+      "engagement_gaps": [
+        "No dated milestones or checkpoint plan",
+        "Budget holder and approval path not documented",
+        "No identified IT/SAP or Security contacts"
+      ],
+      "multithreading_strategy": "Keep procurement as anchor. Send FYI assets (case study, roadmap, security) to VP/Director with champion transparently CC\u2019d. Ask for async confirmation of IT/SAP and Security counterparts; avoid meeting asks until re-engagement occurs."
+    },
+    "success_metrics": {
+      "success_metric_minimum": "Within 30 days: one soft reply or identification of IT/SAP or Security contact; confirm whether budget is allocated at VP/CFO level.",
+      "success_metric_good": "Within 30 days: procurement acknowledges evaluation roadmap; IT/SAP contact identified; initial security review opened; tentative target window captured.",
+      "success_metric_excellent": "Within 30 days: phase-1 scope (Spend Analytics + taxonomy) validated; budget path documented; executive sponsor alignment on outcomes; timeline checkpoints agreed."
+    }
+  }
+}
+Browser mode: headless
+============================================================
+
+INFO:     127.0.0.1:59116 - "GET /api/health HTTP/1.1" 200 OK
+
+
+╭────────────────────────────────────────────────────────────────────────────╮
+│                                                                            │
+│        _ __ ___  _____           __  __  _____________    ____    ____     │
+│       _ __ ___ .'____/___ ______/ /_/  |/  / ____/ __ \  |___ \  / __ \    │
+│      _ __ ___ / /_  / __ `/ ___/ __/ /|_/ / /   / /_/ /  ___/ / / / / /    │
+│     _ __ ___ / __/ / /_/ (__  ) /_/ /  / / /___/ ____/  /  __/_/ /_/ /     │
+│    _ __ ___ /_/    \____/____/\__/_/  /_/\____/_/      /_____(*)____/      │
+│                                                                            │
+│                                                                            │
+│                                FastMCP  2.0                                │
+│                                                                            │
+│                                                                            │
+│                 🖥️  Server name:     salesforce-mcp-server                  │
+│                 📦 Transport:       STDIO                                  │
+│                                                                            │
+│                 🏎️  FastMCP version: 2.12.4                                 │
+│                 🤝 MCP SDK version: 1.14.1                                 │
+│                                                                            │
+│                 📚 Docs:            https://gofastmcp.com                  │
+│                 🚀 Deploy:          https://fastmcp.cloud                  │
+│                                                                            │
+╰────────────────────────────────────────────────────────────────────────────╯
+
+
+[11/21/25 05:39:19] INFO     Starting MCP server                  server.py:1502
+                             'salesforce-mcp-server' with                       
+                             transport 'stdio'                                  
+
+============================================================
+[API REQUEST] /api/chat
+Model: openai:gpt-4o
+Stream: False
+Google Sheets: 0 sheets
+============================================================
+
+Error loading tools from browser_research_tool.py: No module named 'playwright'
+Loaded custom tool: find_in_google_sheet
+Loaded custom tool: list_google_sheets
+Loaded custom tool: read_google_sheet
+Loaded custom tool: calculate_distance
+Loaded custom tool: calculate_percentage
+Loaded custom tool: calculator
+Loaded custom tool: convert_temperature
+Loaded custom tool: decode_base64
+Loaded custom tool: encode_base64
+Loaded custom tool: generate_uuid
+Loaded custom tool: json_formatter
+Loaded custom tool: text_statistics
+Enabled MCP servers: ['supabase', 'salesforce']
+Creating MCP client...
+Getting MCP tools...
+Loaded and wrapped 34 MCP tools from 2 servers
+MCP tool names: ['search_docs', 'list_organizations', 'get_organization', 'list_projects', 'get_project', 'get_cost', 'confirm_cost', 'create_project', 'pause_project', 'restore_project', 'list_tables', 'list_extensions', 'list_migrations', 'apply_migration', 'execute_sql', 'get_logs', 'get_advisors', 'get_project_url', 'get_publishable_keys', 'generate_typescript_types', 'list_edge_functions', 'get_edge_function', 'deploy_edge_function', 'create_branch', 'list_branches', 'delete_branch', 'merge_branch', 'reset_branch', 'rebase_branch', 'soql', 'get_record', 'describe_object', 'list_objects', 'search']
+Creating agent with model: openai:gpt-4o
+Number of tools: 48
+Tool names: ['duckduckgo_search', 'get_current_time', 'find_in_google_sheet', 'list_google_sheets', 'read_google_sheet', 'calculate_distance', 'calculate_percentage', 'calculator', 'convert_temperature', 'decode_base64', 'encode_base64', 'generate_uuid', 'json_formatter', 'text_statistics', 'search_docs', 'list_organizations', 'get_organization', 'list_projects', 'get_project', 'get_cost', 'confirm_cost', 'create_project', 'pause_project', 'restore_project', 'list_tables', 'list_extensions', 'list_migrations', 'apply_migration', 'execute_sql', 'get_logs', 'get_advisors', 'get_project_url', 'get_publishable_keys', 'generate_typescript_types', 'list_edge_functions', 'get_edge_function', 'deploy_edge_function', 'create_branch', 'list_branches', 'delete_branch', 'merge_branch', 'reset_branch', 'rebase_branch', 'soql', 'get_record', 'describe_object', 'list_objects', 'search']
+Browser mode: headless
+Agent initialized with 48 tools and 2 subagents
+
+============================================================
+[STRUCTURED OUTPUT]
+{
+  "data": {
+    "opportunity_id": "006P700000NAivWIAT",
+    "opportunity_name": "RTX_Spend_2025",
+    "analysis_timestamp": "2025-11-11T22:30:43Z",
+    "health_dashboard": {
+      "overall_health_status": "CRITICAL",
+      "overall_health_emoji": "\ud83d\udd34",
+      "stage_name": "Qualified",
+      "stage_age_days": 63,
+      "stage_age_text": "Stage Age: 63 days",
+      "health_finding": "28+ days of silence; timeline and budget specifics not confirmed; discovery partially complete though strong committee identified.",
+      "discovery_completion_percentage": 60,
+      "discovery_bant_level": "ADVANCED",
+      "discovery_shoefit_status": "STRONG_FIT",
+      "persona_coverage_count": "4/7 personas",
+      "persona_missing_list": [
+        "IT/SAP Integration Owner",
+        "Information Security",
+        "Legal/Compliance"
+      ],
+      "persona_impact": "CRITICAL",
+      "engagement_momentum": "DECREASING",
+      "engagement_momentum_emoji": "\u2198",
+      "last_response_days_ago": 28,
+      "last_response_text": "Last response: 28 days ago",
+      "engagement_pattern": "COLD",
+      "deal_status": "REAL"
+    },
+    "root_cause_summary": "Engagement cooled after initial momentum; budget holder/approval path and dated milestones remain undefined. We have strong procurement interest and committee mapped, but lack concrete timeline and funding clarity to progress.",
+    "critical_blockers": [
+      {
+        "blocker_rank": 1,
+        "blocker_name": "Undefined Budget Holder and Approval Path",
+        "blocker_impact": "Risk of stall at business case as funding authority and gates are unclear",
+        "blocker_remedy": "Share a concise budget/approval checklist and a 1-page value summary to help internal alignment (no action required)."
+      },
+      {
+        "blocker_rank": 2,
+        "blocker_name": "No Dated Milestones",
+        "blocker_impact": "Without checkpoints, evaluation drifts and prioritization suffers",
+        "blocker_remedy": "Offer a lightweight A&D evaluation roadmap (with security items) as an FYI; invite async feedback on preferred sequence."
+      },
+      {
+        "blocker_rank": 3,
+        "blocker_name": "Cooling Engagement",
+        "blocker_impact": "28 days of silence risks loss to status quo or competitors",
+        "blocker_remedy": "Send A&D case study plus security datasheet tailored to their pains; soft nudge with async consumption."
+      }
+    ],
+    "bant_basics": [
+      {
+        "bant_element": "BUDGET",
+        "bant_status": "PARTIAL",
+        "bant_details": "APD notes allocated investment for upgrading/replacing spend analytics; no amount, budget holder, or approval path confirmed.",
+        "bant_source": "APD: Budget__c; Opportunity: Is_there_a_Budget_related_discussion__c",
+        "bant_quality": "Medium"
+      },
+      {
+        "bant_element": "AUTHORITY",
+        "bant_status": "COMPLETE",
+        "bant_details": "Committee mapped: VP Non-Product Supply Chain (Decision Maker), CFO (Executive Sponsor), Procurement Director (Evaluator), Process Specialist (Influencer).",
+        "bant_source": "Contact Roles; Opportunity fields (Executive_Sponsor_Identified__c, Decision_Maker_Identified__c)",
+        "bant_quality": "High"
+      },
+      {
+        "bant_element": "NEED",
+        "bant_status": "COMPLETE",
+        "bant_details": "Pain: heavy manual reclassification; delayed/low-accuracy spend data; taxonomy harmonization; defense-grade security/compliance. Desired: 97\u2013100% AI classification; faster, reliable insights.",
+        "bant_source": "APD: Need__c, Challenges_Shared__c; Opportunity: Customer_Business_Problem__c",
+        "bant_quality": "High"
+      },
+      {
+        "bant_element": "TIMELINE",
+        "bant_status": "PARTIAL",
+        "bant_details": "Internal review in progress; urgency tied to realignment/taxonomy, but no fixed project deadline or dated milestones.",
+        "bant_source": "APD: Timeline__c; Opportunity: Compelling_Event__c",
+        "bant_quality": "Medium"
+      }
+    ],
+    "shoefit_status": {
+      "shoefit_assessment": "STRONG_FIT",
+      "shoefit_rationale": "Non-product (indirect) procurement focus, explicit need for high-accuracy AI classification, UNSPSC taxonomy, and defense-grade compliance align with Zycus strengths.",
+      "shoefit_top_concern": "SAP integration and security review sequencing may affect timeline if not planned early.",
+      "zycus_framework": {
+        "quick_assessment_score": 4,
+        "quick_assessment_recommendation": "PURSUE",
+        "gate_assessments": [
+          {
+            "gate_number": 1,
+            "gate_name": "Indirect Spend \u2265 $200M",
+            "gate_status": "PASS",
+            "gate_details": "Global A&D enterprise (~$80B revenue) focused on non-product procurement.",
+            "gate_rationale": "Scale implies indirect well above threshold; scope is indirect."
+          },
+          {
+            "gate_number": 2,
+            "gate_name": "Rip & Replace Intent",
+            "gate_status": "PASS",
+            "gate_details": "Stated intent to replace Accenture-built spend analytics due to manual reclassification and accuracy gaps.",
+            "gate_rationale": "Explicit replacement initiative captured in APD and Opportunity."
+          },
+          {
+            "gate_number": 3,
+            "gate_name": "Zero Direct Material Scope",
+            "gate_status": "PASS",
+            "gate_details": "Led by Non-Product Procurement; scope is indirect spend analytics.",
+            "gate_rationale": "Direct materials not in stated scope."
+          }
+        ],
+        "all_gates_passed": true,
+        "weak_capabilities": [],
+        "heavy_on_weak_capability": false,
+        "weak_capability_percentage": 0,
+        "thirty_percent_threshold_exceeded": false,
+        "product_fitment": {
+          "fitment_level": "GOOD",
+          "fitment_description": "Excellent alignment for AI spend analytics and taxonomy; plan early for SAP/security checkpoints.",
+          "required_modules": [
+            "iAnalyze (Spend)",
+            "ANA (AI Classification)",
+            "Supplier Data Enrichment",
+            "Merlin Intake (as part of integrated suite)"
+          ],
+          "threshold_met": true
+        },
+        "phased_deal": {
+          "is_phased": true,
+          "phase_1_scope": "Spend Analytics (iAnalyze + ANA) with taxonomy harmonization; security review concurrently",
+          "written_commitment": false
+        },
+        "final_decision": "PURSUE_ACTIVELY",
+        "final_rationale": "Strong pain/fit and clear replace intent; mitigate timeline risk via phased scope and early SAP/security alignment."
+      }
+    },
+    "remedy_phase": {
+      "remedy_phase": "PHASE_C",
+      "remedy_phase_display": "Phase C: Recover & Re-engage",
+      "remedy_rationale": "Silence \u226520 days and undefined milestones; requires unilateral value-first re-engagement and procurement-first multithreading without meeting pressure."
+    },
+    "next_30_days": [
+      {
+        "action_rank": 1,
+        "action_description": "Share A&D spend analytics case study + security datasheet aligned to RTX pains (manual reclass, UNSPSC, compliance).",
+        "action_owner": "Account Executive",
+        "action_owner_id": "005P7000006OD77IAG",
+        "action_due_date": "2025-11-13",
+        "action_due_date_display": "Nov 13, 2025",
+        "action_script_preview": "Sharing a short A&D case study and our security datasheet addressing taxonomy and accuracy. If helpful, skim async\u2014no action required. Happy to clarify anything via email."
+      },
+      {
+        "action_rank": 2,
+        "action_description": "Procurement-first multithread: soft FYI to VP Non-Product Procurement with evaluation roadmap (no meeting ask), CC champion.",
+        "action_owner": "Account Executive",
+        "action_owner_id": "005P7000006OD77IAG",
+        "action_due_date": "2025-11-25",
+        "action_due_date_display": "Nov 25, 2025",
+        "action_script_preview": "FYI: a lightweight evaluation roadmap (incl. SAP/security checkpoints) to de-risk timelines. Use if helpful; async is fine. No action needed."
+      },
+      {
+        "action_rank": 3,
+        "action_description": "Share neutral comparison scorecard vs. typical options and log updated BANT (budget/approvals checklist).",
+        "action_owner": "Account Executive",
+        "action_owner_id": "005P7000006OD77IAG",
+        "action_due_date": "2025-12-05",
+        "action_due_date_display": "Dec 5, 2025",
+        "action_script_preview": "Attaching a neutral scorecard to aid internal comparison and a one-page budget/approval checklist. Review async\u2014no action required. We\u2019ll update notes on our side."
+      }
+    ],
+    "persona_gap_analysis": {
+      "identified_personas": [
+        {
+          "name": "Darrell Wilson",
+          "title": "Vice President, Non-Product Supply Chain & Logistics",
+          "persona_type": "Procurement Executive Decision Maker",
+          "engagement_status": "Dormant \u2013 last logged activity Sep 2025",
+          "influence_level": "HIGH",
+          "decision_authority": "Decision Maker",
+          "key_concerns": [
+            "Reliable, fast spend visibility",
+            "Process efficiency"
+          ],
+          "motivations": [
+            "Strategic impact from clean data",
+            "Reduced manual workload"
+          ]
+        },
+        {
+          "name": "Neil Mitchill",
+          "title": "Chief Financial Officer",
+          "persona_type": "Economic Buyer / Executive Sponsor",
+          "engagement_status": "Dormant \u2013 listed as Executive Sponsor; no recent interaction logged",
+          "influence_level": "HIGH",
+          "decision_authority": "Economic Buyer",
+          "key_concerns": [
+            "Business case validation",
+            "Risk and compliance"
+          ],
+          "motivations": [
+            "Cost control",
+            "Governance"
+          ]
+        },
+        {
+          "name": "Cecil Robichon",
+          "title": "Non-Product Procurement Director International (EMEA & APAC)",
+          "persona_type": "End User Champion",
+          "engagement_status": "Dormant \u2013 last exchange Oct 2025 per activity",
+          "influence_level": "MEDIUM",
+          "decision_authority": "Recommender",
+          "key_concerns": [
+            "Manual reclassification",
+            "Taxonomy harmonization"
+          ],
+          "motivations": [
+            "Operational efficiency",
+            "Faster insights"
+          ]
+        },
+        {
+          "name": "Ronald Perpetua",
+          "title": "Associate Director, Strategic Sourcing Process Specialist",
+          "persona_type": "Process Influencer",
+          "engagement_status": "Dormant \u2013 last logged activity Sep 2025",
+          "influence_level": "MEDIUM",
+          "decision_authority": "Influencer",
+          "key_concerns": [
+            "Workflow practicality",
+            "Change management"
+          ],
+          "motivations": [
+            "Process reliability",
+            "User adoption"
+          ]
+        }
+      ],
+      "missing_personas": [
+        {
+          "persona_type": "IT/SAP Integration Owner",
+          "impact": "CRITICAL",
+          "strategy": "Procurement-first FYI to VP/Director attaching evaluation roadmap that flags SAP checkpoints; request async confirmation of the right IT contact.",
+          "timeline": "Within 14 days"
+        },
+        {
+          "persona_type": "Information Security",
+          "impact": "HIGH",
+          "strategy": "Share security datasheet and compliance summary; invite async review and capture required standards.",
+          "timeline": "Within 14 days"
+        },
+        {
+          "persona_type": "Legal/Compliance",
+          "impact": "MEDIUM",
+          "strategy": "Provide standard T&Cs summary and data residency FAQs as FYI; note any constraints asynchronously.",
+          "timeline": "Within 30 days"
+        }
+      ],
+      "engagement_gaps": [
+        "No dated milestones or checkpoint plan",
+        "Budget holder and approval path not documented",
+        "No identified IT/SAP or Security contacts"
+      ],
+      "multithreading_strategy": "Keep procurement as anchor. Send FYI assets (case study, roadmap, security) to VP/Director with champion transparently CC\u2019d. Ask for async confirmation of IT/SAP and Security counterparts; avoid meeting asks until re-engagement occurs."
+    },
+    "success_metrics": {
+      "success_metric_minimum": "Within 30 days: one soft reply or identification of IT/SAP or Security contact; confirm whether budget is allocated at VP/CFO level.",
+      "success_metric_good": "Within 30 days: procurement acknowledges evaluation roadmap; IT/SAP contact identified; initial security review opened; tentative target window captured.",
+      "success_metric_excellent": "Within 30 days: phase-1 scope (Spend Analytics + taxonomy) validated; budget path documented; executive sponsor alignment on outcomes; timeline checkpoints agreed."
+    }
+  }
+}
+============================================================
+
+INFO:     127.0.0.1:59086 - "POST /api/chat/structured%0A HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59124 - "POST /api/chat HTTP/1.1" 200 OK
+./start.sh: line 193: 56716 Killed: 9               python server.py
+./start.sh: line 193: 56727 Killed: 9               python gradio_ui.py

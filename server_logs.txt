@@ -1,0 +1,547 @@
+╔══════════════════════════════════════════════════════════════╗
+║                DeepAgent Server Launcher                     ║
+╚══════════════════════════════════════════════════════════════╝
+
+✓ Python version: 3.11
+
+🔧 Activating virtual environment...
+✓ Using Anthropic model: 
+
+📁 Checking directories...
+✓ Directories ready
+
+╔══════════════════════════════════════════════════════════════╗
+║           Starting DeepAgent with Gradio UI                  ║
+╚══════════════════════════════════════════════════════════════╝
+
+🚀 Starting FastAPI server on http://localhost:8000...
+/Users/aleendg/Desktop/synosai-server/server.py:976: DeprecationWarning: 
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+        
+  @app.on_event("startup")
+INFO:     Will watch for changes in these directories: ['/Users/aleendg/Desktop/synosai-server']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [53477] using WatchFiles
+
+╔══════════════════════════════════════════════════════════════╗
+║                    DeepAgent Server v1.0                     ║
+╠══════════════════════════════════════════════════════════════╣
+║  Features:                                                   ║
+║  ✓ Free web search with DuckDuckGo                          ║
+║  ✓ Deep research with specialized agents                    ║
+║  ✓ MCP server support (dynamic tools)                       ║
+║  ✓ Custom tools integration                                 ║
+║  ✓ Streaming responses                                      ║
+║  ✓ Headless browser control (API parameter)                ║
+║  ✓ Web UI for easy interaction                             ║
+╠══════════════════════════════════════════════════════════════╣
+║  Starting on: http://0.0.0.0:8000                        ║
+╚══════════════════════════════════════════════════════════════╝
+
+INFO:     Started server process [53488]
+INFO:     Waiting for application startup.
+🎨 Starting Gradio UI on http://localhost:7860...
+
+
+╭────────────────────────────────────────────────────────────────────────────╮
+│                                                                            │
+│        _ __ ___  _____           __  __  _____________    ____    ____     │
+│       _ __ ___ .'____/___ ______/ /_/  |/  / ____/ __ \  |___ \  / __ \    │
+│      _ __ ___ / /_  / __ `/ ___/ __/ /|_/ / /   / /_/ /  ___/ / / / / /    │
+│     _ __ ___ / __/ / /_/ (__  ) /_/ /  / / /___/ ____/  /  __/_/ /_/ /     │
+│    _ __ ___ /_/    \____/____/\__/_/  /_/\____/_/      /_____(*)____/      │
+│                                                                            │
+│                                                                            │
+│                                FastMCP  2.0                                │
+│                                                                            │
+│                                                                            │
+│                 🖥️  Server name:     salesforce-mcp-server                  │
+│                 📦 Transport:       STDIO                                  │
+│                                                                            │
+│                 🏎️  FastMCP version: 2.12.4                                 │
+│                 🤝 MCP SDK version: 1.14.1                                 │
+│                                                                            │
+│                 📚 Docs:            https://gofastmcp.com                  │
+│                 🚀 Deploy:          https://fastmcp.cloud                  │
+│                                                                            │
+╰────────────────────────────────────────────────────────────────────────────╯
+
+
+[11/21/25 05:03:23] INFO     Starting MCP server                  server.py:1502
+                             'salesforce-mcp-server' with                       
+                             transport 'stdio'                                  
+
+╔══════════════════════════════════════════════════════════════╗
+║  ✅ Both servers are running!                                ║
+╠══════════════════════════════════════════════════════════════╣
+║  FastAPI Server: http://localhost:8000                      ║
+║  Gradio UI:      http://localhost:7860                      ║
+║                                                              ║
+║  Open Gradio UI in your browser to get started!             ║
+╠══════════════════════════════════════════════════════════════╣
+║  Press Ctrl+C to stop both servers                          ║
+╚══════════════════════════════════════════════════════════════╝
+
+INFO:     Application startup complete.
+/Users/aleendg/Desktop/synosai-server/gradio_ui.py:122: UserWarning: You have not specified a value for the `type` parameter. Defaulting to the 'tuples' format for chatbot messages, but this is deprecated and will be removed in a future version of Gradio. Please set type='messages' instead, which uses openai-style dictionaries with 'role' and 'content' keys.
+  chatbot = gr.Chatbot(
+ERROR:    [Errno 48] error while attempting to bind on address ('0.0.0.0', 7860): address already in use
+
+╔══════════════════════════════════════════════════════════════╗
+║              DeepAgent Gradio UI with Google Sheets          ║
+╠══════════════════════════════════════════════════════════════╣
+║  Make sure the FastAPI server is running on port 8000       ║
+║  Starting Gradio UI on: http://localhost:7860               ║
+╚══════════════════════════════════════════════════════════════╝
+    
+Traceback (most recent call last):
+  File "/Users/aleendg/Desktop/synosai-server/gradio_ui.py", line 274, in <module>
+    demo.launch(
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/gradio/blocks.py", line 2635, in launch
+    ) = http_server.start_server(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/gradio/http_server.py", line 157, in start_server
+    raise OSError(
+OSError: Cannot find empty port in range: 7860-7860. You can specify a different port by setting the GRADIO_SERVER_PORT environment variable or passing the `server_port` parameter to `launch()`.
+Initializing DeepAgent server...
+Error loading tools from browser_research_tool.py: No module named 'playwright'
+Loaded custom tool: find_in_google_sheet
+Loaded custom tool: list_google_sheets
+Loaded custom tool: read_google_sheet
+Loaded custom tool: calculate_distance
+Loaded custom tool: calculate_percentage
+Loaded custom tool: calculator
+Loaded custom tool: convert_temperature
+Loaded custom tool: decode_base64
+Loaded custom tool: encode_base64
+Loaded custom tool: generate_uuid
+Loaded custom tool: json_formatter
+Loaded custom tool: text_statistics
+Enabled MCP servers: ['supabase', 'salesforce']
+Creating MCP client...
+Getting MCP tools...
+Loaded and wrapped 34 MCP tools from 2 servers
+MCP tool names: ['search_docs', 'list_organizations', 'get_organization', 'list_projects', 'get_project', 'get_cost', 'confirm_cost', 'create_project', 'pause_project', 'restore_project', 'list_tables', 'list_extensions', 'list_migrations', 'apply_migration', 'execute_sql', 'get_logs', 'get_advisors', 'get_project_url', 'get_publishable_keys', 'generate_typescript_types', 'list_edge_functions', 'get_edge_function', 'deploy_edge_function', 'create_branch', 'list_branches', 'delete_branch', 'merge_branch', 'reset_branch', 'rebase_branch', 'soql', 'get_record', 'describe_object', 'list_objects', 'search']
+Creating agent with model: anthropic:claude-sonnet-4-20250514
+Number of tools: 48
+Tool names: ['duckduckgo_search', 'get_current_time', 'find_in_google_sheet', 'list_google_sheets', 'read_google_sheet', 'calculate_distance', 'calculate_percentage', 'calculator', 'convert_temperature', 'decode_base64', 'encode_base64', 'generate_uuid', 'json_formatter', 'text_statistics', 'search_docs', 'list_organizations', 'get_organization', 'list_projects', 'get_project', 'get_cost', 'confirm_cost', 'create_project', 'pause_project', 'restore_project', 'list_tables', 'list_extensions', 'list_migrations', 'apply_migration', 'execute_sql', 'get_logs', 'get_advisors', 'get_project_url', 'get_publishable_keys', 'generate_typescript_types', 'list_edge_functions', 'get_edge_function', 'deploy_edge_function', 'create_branch', 'list_branches', 'delete_branch', 'merge_branch', 'reset_branch', 'rebase_branch', 'soql', 'get_record', 'describe_object', 'list_objects', 'search']
+Browser mode: headless
+Agent initialized with 48 tools and 2 subagents
+Server ready!
+INFO:     127.0.0.1:58476 - "POST /api/health HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:58482 - "GET /api/health HTTP/1.1" 200 OK
+
+============================================================
+[API REQUEST] /api/chat
+Model: None
+Stream: False
+Google Sheets: 0 sheets
+============================================================
+
+
+============================================================
+[ERROR] /api/chat failed:
+"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted"
+Traceback (most recent call last):
+  File "/Users/aleendg/Desktop/synosai-server/server.py", line 709, in chat
+    result = await agent.ainvoke({"messages": messages})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langgraph/pregel/main.py", line 3182, in ainvoke
+    async for chunk in self.astream(
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langgraph/pregel/main.py", line 3000, in astream
+    async for _ in runner.atick(
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langgraph/pregel/_runner.py", line 304, in atick
+    await arun_with_retry(
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langgraph/pregel/_retry.py", line 137, in arun_with_retry
+    return await task.proc.ainvoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langgraph/_internal/_runnable.py", line 705, in ainvoke
+    input = await asyncio.create_task(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langgraph/_internal/_runnable.py", line 473, in ainvoke
+    ret = await self.afunc(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain/agents/factory.py", line 1129, in amodel_node
+    response = await awrap_model_call_handler(request, _execute_model_async)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain/agents/factory.py", line 265, in final_normalized
+    final_result = await result(request, handler)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain/agents/factory.py", line 249, in composed
+    outer_result = await outer(request, inner_handler)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain/agents/middleware/todo.py", line 220, in awrap_model_call
+    return await handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain/agents/factory.py", line 245, in inner_handler
+    inner_result = await inner(req, handler)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain/agents/factory.py", line 249, in composed
+    outer_result = await outer(request, inner_handler)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/deepagents/middleware/filesystem.py", line 595, in awrap_model_call
+    return await handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain/agents/factory.py", line 245, in inner_handler
+    inner_result = await inner(req, handler)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain/agents/factory.py", line 249, in composed
+    outer_result = await outer(request, inner_handler)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/deepagents/middleware/subagents.py", line 480, in awrap_model_call
+    return await handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain/agents/factory.py", line 245, in inner_handler
+    inner_result = await inner(req, handler)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain_anthropic/middleware/prompt_caching.py", line 143, in awrap_model_call
+    return await handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain/agents/factory.py", line 1099, in _execute_model_async
+    output = await model_.ainvoke(messages)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain_core/runnables/base.py", line 5502, in ainvoke
+    return await self.bound.ainvoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain_core/language_models/chat_models.py", line 405, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain_core/language_models/chat_models.py", line 1102, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain_core/language_models/chat_models.py", line 1060, in agenerate
+    raise exceptions[0]
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain_core/language_models/chat_models.py", line 1313, in _agenerate_with_cache
+    result = await self._agenerate(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain_anthropic/chat_models.py", line 1877, in _agenerate
+    data = await self._acreate(payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain_anthropic/chat_models.py", line 1730, in _acreate
+    return await self._async_client.messages.create(**payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/anthropic/resources/messages/messages.py", line 2107, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/anthropic/_base_client.py", line 1902, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/anthropic/_base_client.py", line 1623, in request
+    request = self._build_request(options, retries_taken=retries_taken)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/anthropic/_base_client.py", line 506, in _build_request
+    headers = self._build_headers(options, retries_taken=retries_taken)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/anthropic/_base_client.py", line 447, in _build_headers
+    self._validate_headers(headers_dict, custom_headers)
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/anthropic/_client.py", line 436, in _validate_headers
+    raise TypeError(
+TypeError: "Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted"
+During task with name 'model' and id 'b414dae2-a080-5492-1a43-8f070925dbe6'
+
+============================================================
+
+INFO:     127.0.0.1:58489 - "POST /api/chat HTTP/1.1" 500 Internal Server Error
+./start.sh: line 193: 53477 Killed: 9               python server.py
+
+============================================================
+[API REQUEST] /api/chat
+Model: None
+Stream: False
+Google Sheets: 0 sheets
+============================================================
+
+
+============================================================
+[ERROR] /api/chat failed:
+"Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted"
+Traceback (most recent call last):
+  File "/Users/aleendg/Desktop/synosai-server/server.py", line 709, in chat
+    result = await agent.ainvoke({"messages": messages})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langgraph/pregel/main.py", line 3182, in ainvoke
+    async for chunk in self.astream(
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langgraph/pregel/main.py", line 3000, in astream
+    async for _ in runner.atick(
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langgraph/pregel/_runner.py", line 304, in atick
+    await arun_with_retry(
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langgraph/pregel/_retry.py", line 137, in arun_with_retry
+    return await task.proc.ainvoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langgraph/_internal/_runnable.py", line 705, in ainvoke
+    input = await asyncio.create_task(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langgraph/_internal/_runnable.py", line 473, in ainvoke
+    ret = await self.afunc(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain/agents/factory.py", line 1129, in amodel_node
+    response = await awrap_model_call_handler(request, _execute_model_async)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain/agents/factory.py", line 265, in final_normalized
+    final_result = await result(request, handler)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain/agents/factory.py", line 249, in composed
+    outer_result = await outer(request, inner_handler)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain/agents/middleware/todo.py", line 220, in awrap_model_call
+    return await handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain/agents/factory.py", line 245, in inner_handler
+    inner_result = await inner(req, handler)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain/agents/factory.py", line 249, in composed
+    outer_result = await outer(request, inner_handler)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/deepagents/middleware/filesystem.py", line 595, in awrap_model_call
+    return await handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain/agents/factory.py", line 245, in inner_handler
+    inner_result = await inner(req, handler)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain/agents/factory.py", line 249, in composed
+    outer_result = await outer(request, inner_handler)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/deepagents/middleware/subagents.py", line 480, in awrap_model_call
+    return await handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain/agents/factory.py", line 245, in inner_handler
+    inner_result = await inner(req, handler)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain_anthropic/middleware/prompt_caching.py", line 143, in awrap_model_call
+    return await handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain/agents/factory.py", line 1099, in _execute_model_async
+    output = await model_.ainvoke(messages)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain_core/runnables/base.py", line 5502, in ainvoke
+    return await self.bound.ainvoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain_core/language_models/chat_models.py", line 405, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain_core/language_models/chat_models.py", line 1102, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain_core/language_models/chat_models.py", line 1060, in agenerate
+    raise exceptions[0]
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain_core/language_models/chat_models.py", line 1313, in _agenerate_with_cache
+    result = await self._agenerate(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain_anthropic/chat_models.py", line 1877, in _agenerate
+    data = await self._acreate(payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain_anthropic/chat_models.py", line 1730, in _acreate
+    return await self._async_client.messages.create(**payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/anthropic/resources/messages/messages.py", line 2107, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/anthropic/_base_client.py", line 1902, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/anthropic/_base_client.py", line 1623, in request
+    request = self._build_request(options, retries_taken=retries_taken)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/anthropic/_base_client.py", line 506, in _build_request
+    headers = self._build_headers(options, retries_taken=retries_taken)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/anthropic/_base_client.py", line 447, in _build_headers
+    self._validate_headers(headers_dict, custom_headers)
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/anthropic/_client.py", line 436, in _validate_headers
+    raise TypeError(
+TypeError: "Could not resolve authentication method. Expected either api_key or auth_token to be set. Or for one of the `X-Api-Key` or `Authorization` headers to be explicitly omitted"
+During task with name 'model' and id 'fb939059-1405-53e2-367d-b76330983b73'
+
+============================================================
+
+INFO:     127.0.0.1:58520 - "POST /api/chat HTTP/1.1" 500 Internal Server Error
+
+
+╭────────────────────────────────────────────────────────────────────────────╮
+│                                                                            │
+│        _ __ ___  _____           __  __  _____________    ____    ____     │
+│       _ __ ___ .'____/___ ______/ /_/  |/  / ____/ __ \  |___ \  / __ \    │
+│      _ __ ___ / /_  / __ `/ ___/ __/ /|_/ / /   / /_/ /  ___/ / / / / /    │
+│     _ __ ___ / __/ / /_/ (__  ) /_/ /  / / /___/ ____/  /  __/_/ /_/ /     │
+│    _ __ ___ /_/    \____/____/\__/_/  /_/\____/_/      /_____(*)____/      │
+│                                                                            │
+│                                                                            │
+│                                FastMCP  2.0                                │
+│                                                                            │
+│                                                                            │
+│                 🖥️  Server name:     salesforce-mcp-server                  │
+│                 📦 Transport:       STDIO                                  │
+│                                                                            │
+│                 🏎️  FastMCP version: 2.12.4                                 │
+│                 🤝 MCP SDK version: 1.14.1                                 │
+│                                                                            │
+│                 📚 Docs:            https://gofastmcp.com                  │
+│                 🚀 Deploy:          https://fastmcp.cloud                  │
+│                                                                            │
+╰────────────────────────────────────────────────────────────────────────────╯
+
+
+[11/21/25 05:06:05] INFO     Starting MCP server                  server.py:1502
+                             'salesforce-mcp-server' with                       
+                             transport 'stdio'                                  
+
+============================================================
+[API REQUEST] /api/chat
+Model: openai:gpt-4
+Stream: False
+Google Sheets: 0 sheets
+============================================================
+
+Error loading tools from browser_research_tool.py: No module named 'playwright'
+Loaded custom tool: find_in_google_sheet
+Loaded custom tool: list_google_sheets
+Loaded custom tool: read_google_sheet
+Loaded custom tool: calculate_distance
+Loaded custom tool: calculate_percentage
+Loaded custom tool: calculator
+Loaded custom tool: convert_temperature
+Loaded custom tool: decode_base64
+Loaded custom tool: encode_base64
+Loaded custom tool: generate_uuid
+Loaded custom tool: json_formatter
+Loaded custom tool: text_statistics
+Enabled MCP servers: ['supabase', 'salesforce']
+Creating MCP client...
+Getting MCP tools...
+Loaded and wrapped 34 MCP tools from 2 servers
+MCP tool names: ['search_docs', 'list_organizations', 'get_organization', 'list_projects', 'get_project', 'get_cost', 'confirm_cost', 'create_project', 'pause_project', 'restore_project', 'list_tables', 'list_extensions', 'list_migrations', 'apply_migration', 'execute_sql', 'get_logs', 'get_advisors', 'get_project_url', 'get_publishable_keys', 'generate_typescript_types', 'list_edge_functions', 'get_edge_function', 'deploy_edge_function', 'create_branch', 'list_branches', 'delete_branch', 'merge_branch', 'reset_branch', 'rebase_branch', 'soql', 'get_record', 'describe_object', 'list_objects', 'search']
+Creating agent with model: openai:gpt-4
+Number of tools: 48
+Tool names: ['duckduckgo_search', 'get_current_time', 'find_in_google_sheet', 'list_google_sheets', 'read_google_sheet', 'calculate_distance', 'calculate_percentage', 'calculator', 'convert_temperature', 'decode_base64', 'encode_base64', 'generate_uuid', 'json_formatter', 'text_statistics', 'search_docs', 'list_organizations', 'get_organization', 'list_projects', 'get_project', 'get_cost', 'confirm_cost', 'create_project', 'pause_project', 'restore_project', 'list_tables', 'list_extensions', 'list_migrations', 'apply_migration', 'execute_sql', 'get_logs', 'get_advisors', 'get_project_url', 'get_publishable_keys', 'generate_typescript_types', 'list_edge_functions', 'get_edge_function', 'deploy_edge_function', 'create_branch', 'list_branches', 'delete_branch', 'merge_branch', 'reset_branch', 'rebase_branch', 'soql', 'get_record', 'describe_object', 'list_objects', 'search']
+Browser mode: headless
+Agent initialized with 48 tools and 2 subagents
+
+============================================================
+[ERROR] /api/chat failed:
+Error code: 400 - {'error': {'message': "This model's maximum context length is 8192 tokens. However, your messages resulted in 9453 tokens (1434 in the messages, 8019 in the functions). Please reduce the length of the messages or functions.", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}
+Traceback (most recent call last):
+  File "/Users/aleendg/Desktop/synosai-server/server.py", line 709, in chat
+    return StreamingResponse(generate(), media_type="text/event-stream")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langgraph/pregel/main.py", line 3182, in ainvoke
+    async for chunk in self.astream(
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langgraph/pregel/main.py", line 3000, in astream
+    async for _ in runner.atick(
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langgraph/pregel/_runner.py", line 304, in atick
+    await arun_with_retry(
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langgraph/pregel/_retry.py", line 137, in arun_with_retry
+    return await task.proc.ainvoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langgraph/_internal/_runnable.py", line 705, in ainvoke
+    input = await asyncio.create_task(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langgraph/_internal/_runnable.py", line 473, in ainvoke
+    ret = await self.afunc(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain/agents/factory.py", line 1129, in amodel_node
+    response = await awrap_model_call_handler(request, _execute_model_async)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain/agents/factory.py", line 265, in final_normalized
+    final_result = await result(request, handler)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain/agents/factory.py", line 249, in composed
+    outer_result = await outer(request, inner_handler)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain/agents/middleware/todo.py", line 220, in awrap_model_call
+    return await handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain/agents/factory.py", line 245, in inner_handler
+    inner_result = await inner(req, handler)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain/agents/factory.py", line 249, in composed
+    outer_result = await outer(request, inner_handler)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/deepagents/middleware/filesystem.py", line 595, in awrap_model_call
+    return await handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain/agents/factory.py", line 245, in inner_handler
+    inner_result = await inner(req, handler)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain/agents/factory.py", line 249, in composed
+    outer_result = await outer(request, inner_handler)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/deepagents/middleware/subagents.py", line 480, in awrap_model_call
+    return await handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain/agents/factory.py", line 245, in inner_handler
+    inner_result = await inner(req, handler)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain_anthropic/middleware/prompt_caching.py", line 140, in awrap_model_call
+    return await handler(request)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain/agents/factory.py", line 1099, in _execute_model_async
+    output = await model_.ainvoke(messages)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain_core/runnables/base.py", line 5502, in ainvoke
+    return await self.bound.ainvoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain_core/language_models/chat_models.py", line 405, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain_core/language_models/chat_models.py", line 1102, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain_core/language_models/chat_models.py", line 1060, in agenerate
+    raise exceptions[0]
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain_core/language_models/chat_models.py", line 1313, in _agenerate_with_cache
+    result = await self._agenerate(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain_openai/chat_models/base.py", line 1546, in _agenerate
+    raise e
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/langchain_openai/chat_models/base.py", line 1539, in _agenerate
+    raw_response = await self.async_client.with_raw_response.create(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/openai/_legacy_response.py", line 381, in wrapped
+    return cast(LegacyAPIResponse[R], await func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/openai/resources/chat/completions/completions.py", line 2603, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/openai/_base_client.py", line 1794, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aleendg/Desktop/synosai-server/venv/lib/python3.11/site-packages/openai/_base_client.py", line 1594, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "This model's maximum context length is 8192 tokens. However, your messages resulted in 9453 tokens (1434 in the messages, 8019 in the functions). Please reduce the length of the messages or functions.", 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}}
+During task with name 'model' and id '6bc723c1-7859-542b-1d2e-f46f5a065d61'
+
+============================================================
+
+INFO:     127.0.0.1:58548 - "POST /api/chat HTTP/1.1" 500 Internal Server Error
+
+
+╭────────────────────────────────────────────────────────────────────────────╮
+│                                                                            │
+│        _ __ ___  _____           __  __  _____________    ____    ____     │
+│       _ __ ___ .'____/___ ______/ /_/  |/  / ____/ __ \  |___ \  / __ \    │
+│      _ __ ___ / /_  / __ `/ ___/ __/ /|_/ / /   / /_/ /  ___/ / / / / /    │
+│     _ __ ___ / __/ / /_/ (__  ) /_/ /  / / /___/ ____/  /  __/_/ /_/ /     │
+│    _ __ ___ /_/    \____/____/\__/_/  /_/\____/_/      /_____(*)____/      │
+│                                                                            │
+│                                                                            │
+│                                FastMCP  2.0                                │
+│                                                                            │
+│                                                                            │
+│                 🖥️  Server name:     salesforce-mcp-server                  │
+│                 📦 Transport:       STDIO                                  │
+│                                                                            │
+│                 🏎️  FastMCP version: 2.12.4                                 │
+│                 🤝 MCP SDK version: 1.14.1                                 │
+│                                                                            │
+│                 📚 Docs:            https://gofastmcp.com                  │
+│                 🚀 Deploy:          https://fastmcp.cloud                  │
+│                                                                            │
+╰────────────────────────────────────────────────────────────────────────────╯
+
+
+[11/21/25 05:06:39] INFO     Starting MCP server                  server.py:1502
+                             'salesforce-mcp-server' with                       
+                             transport 'stdio'                                  

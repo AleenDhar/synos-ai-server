@@ -63,3 +63,7 @@ mcp_config.json
 
 # Custom tools with sensitive data
 custom_tools/*.secret.py
+
+# Google Sheets OAuth credentials and tokens
+client_secrets.json
+google_sheets_tokens.json
